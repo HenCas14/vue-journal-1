@@ -8,6 +8,7 @@
 5. **Nunca "solo voz".** Máximo 3 segundos sin algo nuevo en pantalla. Cada frase de la narración trae un cambio visual (un objeto que aparece, una reacción, un dato, un cambio de toma).
 6. **Subtítulos dinámicos** tipo karaoke siempre activos (grupos de 2-4 palabras, palabra actual en amarillo, énfasis en rosa).
 7. **Cámara viva:** golpe de zoom al iniciar cada frase + movimiento lento constante.
+9. **Escenarios nuevos en cada video.** Lo que se repite es la marca (Leo, contador, subtítulos, estilo plano, transición de colores); los lugares cambian según el tema (cocina, desierto, dentro del cuerpo, mar, laboratorio...). El cuarto de Leo se usa solo como guiño breve, nunca como escenario principal de otro video.
 8. **Control de calidad:** antes de publicar, correr `animacion/motor/actividad.py` y rellenar cualquier tramo quieto de 3 s o más.
 
 Inspiración: animación 2D cinematográfica con personajes simples. **No copiamos personajes ni escenas de otros canales**: creamos los nuestros.

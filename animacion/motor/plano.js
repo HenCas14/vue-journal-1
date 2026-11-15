@@ -66,6 +66,7 @@ const PEOPLE = {
   amigo2: { skin: '#ffdbac', skinD: '#e8c08e', shirt: '#f4a261', shirtD: '#dd8c4c', pants: '#6d597a', hair: '#d4a24c', hairStyle: 'crew', glasses: true },
   cientifica: { skin: '#c68642', skinD: '#a96f33', shirt: '#9b5de5', shirtD: '#8148cc', pants: '#2b2d42', hair: '#2b1d14', hairStyle: 'bun', coat: true, glasses: true },
   adulto: { skin: '#f1c27d', skinD: '#d9a861', shirt: '#ef476f', shirtD: '#d23a5f', pants: '#073b4c', hair: '#5c3a21', hairStyle: 'long' },
+  andreas: { skin: '#f0c8a0', skinD: '#d9ab80', shirt: '#606c38', shirtD: '#4f5a2e', pants: '#3d5a80', hair: '#3b2416', hairStyle: 'long' },
   medico: { skin: '#8d5524', skinD: '#74441c', shirt: '#06d6a0', shirtD: '#05b386', pants: '#118ab2', hair: '#111', hairStyle: 'bald', coat: true },
 };
 function drawPerson(ctx, x, y, s, e, P) {
