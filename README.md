@@ -10,7 +10,7 @@ canal/                 Estrategia, nicho, lista de ideas y guía de estilo visua
 guiones/NNN-tema/      Un folder por video
   guion.md             Guion con escenas, notas visuales, títulos, miniatura y Shorts
   narracion.txt        Solo el texto a narrar (listo para pegar en ElevenLabs)
-animacion/              Motor de animación (personaje, escenarios, efectos, audio) y escenas
+animacion/             Motor de animación (personaje, escenarios, efectos, audio) y escenas
 audio/                 Narraciones exportadas de ElevenLabs (no se suben a git)
 renders/               Videos finales MP4 (no se suben a git)
 ```
