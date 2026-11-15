@@ -334,13 +334,14 @@ let COUNTER_FIRST = null;
   shot(a, (ctx, lt, d, t) => {
     road(ctx, t, 1400, 820, 0.8);
     const drift = t > nobody ? Math.sin((t - nobody) * 2) * 40 : 0;
-    // conductor dentro del coche
-    ctx.save(); ctx.translate(820, 690 + drift * 0.2);
-    ctx.save(); ctx.beginPath(); ctx.moveTo(-100, -45); ctx.quadraticCurveTo(-75, -130, 10, -130); ctx.lineTo(10, -45); ctx.rect(30, -130, 155, 85); ctx.clip();
-    const sleep = L(t, num + 1.2, num + 1.6) * (1 - L(t, acc - 0.6, acc));
-    leo(ctx, 60, 150, 0.55, blinkE(t, { red: 0.7, bags: 0.8, open: 1 - sleep, mouth: sleep > 0.5 ? 'o' : 'flat', mouthOpen: 0.2, noShadow: true, look: [1, 0] }));
-    ctx.restore(); ctx.restore();
+    // coche y conductor visible a través de las ventanas
     drawCar(ctx, 820, 690 + drift * 0.2, 1, t, FLAT.coral, 1);
+    const sleep = L(t, num + 1.2, num + 1.6) * (1 - L(t, acc - 0.6, acc));
+    ctx.save(); ctx.translate(820, 690 + drift * 0.2 + Math.sin(t * 20) * 2);
+    ctx.beginPath(); ctx.moveTo(-120, -45); ctx.quadraticCurveTo(-95, -130, -10, -130); ctx.lineTo(-10, -45); ctx.closePath(); ctx.rect(10, -130, 155, 85); ctx.clip();
+    leo(ctx, 70, 160, 0.55, blinkE(t, { red: 0.7, bags: 0.8, open: 1 - sleep, mouth: sleep > 0.5 ? 'o' : 'flat', mouthOpen: 0.2, noShadow: true, look: [1, 0] }));
+    ctx.fillStyle = 'rgba(189,224,254,0.25)'; ctx.fillRect(-130, -140, 320, 100);
+    ctx.restore();
     // velocímetro y distancia recorrida "dormido"
     card(ctx, 70, 80, 470, 230, 'rgba(0,0,0,0.45)', 30, false);
     text(ctx, '100 km/h', 305, 150, { size: 70, fill: '#fff' });
