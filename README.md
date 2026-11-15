@@ -10,6 +10,7 @@ canal/                 Estrategia, nicho, lista de ideas y guía de estilo visua
 guiones/NNN-tema/      Un folder por video
   guion.md             Guion con escenas, notas visuales, títulos, miniatura y Shorts
   narracion.txt        Solo el texto a narrar (listo para pegar en ElevenLabs)
+animacion/              Motor de animación (personaje, escenarios, efectos, audio) y escenas
 audio/                 Narraciones exportadas de ElevenLabs (no se suben a git)
 renders/               Videos finales MP4 (no se suben a git)
 ```
@@ -22,3 +23,11 @@ renders/               Videos finales MP4 (no se suben a git)
 4. **Animación** → Claude anima escena por escena sincronizado con el audio y renderiza el MP4.
 5. **Publicación** → subida manual a YouTube con título, descripción, capítulos y miniatura.
 6. **Shorts** → recortes verticales de los momentos marcados en el guion.
+
+## Renderizar una escena
+
+```
+animacion/render.sh prueba-estilo                       # video + efectos + música
+animacion/render.sh 001-sin-dormir audio/001.mp3 0.5    # con narración (empieza en 0.5 s)
+```
+Vista previa en vivo: abrir `animacion/motor/pagina.html?escena=prueba-estilo` en el navegador.

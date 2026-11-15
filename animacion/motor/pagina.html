@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: Lilita; src: url('../fuentes/LilitaOne.ttf'); }
+@font-face { font-family: Fredoka; src: url('../fuentes/Fredoka.ttf'); }
+html,body{margin:0;background:#000}
+canvas{width:100vw;height:auto;display:block}
+</style></head>
+<body><canvas id="c" width="1920" height="1080"></canvas>
+<script src="lib.js"></script>
+<script>
+// Carga la escena indicada en ?escena=nombre y expone renderFrame(t) para el renderizador.
+const nombre = new URLSearchParams(location.search).get('escena');
+const ctx = document.getElementById('c').getContext('2d');
+window.renderAt = t => { ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H); SCENE.render(ctx, t); };
+window.frameData = (t, type) => { renderAt(t); return ctx.canvas.toDataURL(type || 'image/png', 0.95); };
+const s = document.createElement('script'); s.src = `../escenas/${nombre}.js`;
+s.onload = async () => {
+  await document.fonts.load('80px Lilita'); await document.fonts.load('80px Fredoka');
+  window.READY = true;
+  // Vista previa en el navegador: reproduce en tiempo real
+  if (!navigator.webdriver) { const t0 = performance.now(); const loop = () => { renderAt(((performance.now()-t0)/1000) % SCENE.duration); requestAnimationFrame(loop); }; loop(); }
+};
+document.body.appendChild(s);
+</script></body></html>
