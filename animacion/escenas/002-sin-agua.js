@@ -200,7 +200,7 @@ const TITLE_AT = PE(0, 3) + 0.1, TITLE_LEN = 3.4;
     ctx.save(); rrect(ctx, 310, 210, 200, 680, 24); ctx.clip(); ctx.fillStyle = '#4cc9f0'; const top = 210 + 680 * (1 - lvl * 0.95);
     ctx.beginPath(); ctx.moveTo(310, top); for (let x = 0; x <= 200; x += 10) ctx.lineTo(310 + x, top + Math.sin(x * 0.06 + t * 4) * 8); ctx.lineTo(510, 890); ctx.lineTo(310, 890); ctx.fill(); ctx.restore();
     ctx.fillStyle = BAD; ctx.fillRect(280, 290, 260, 8); text(ctx, 'SED (1-2 %)', 620, 294, { size: 50, fill: BAD, align: 'left' });
-    if (t > late) { alarmClock(ctx, 1300, 520, 2, t); popIn(ctx, t, late, 1300, 160, () => text(ctx, '¡LLEGA TARDE!', 0, 0, { size: 110, fill: FLAT.accent })); }
+    if (t > late) { alarmClock(ctx, 1300, 520, 2, t); popIn(ctx, t, late, 1150, 230, () => text(ctx, '¡LLEGA TARDE!', 0, 0, { size: 110, fill: FLAT.accent })); }
     else bigStat(ctx, t, a + 0.3, 1300, 500, '1-2 %', { size: 200, color: '#caf0f8', label: 'YA PERDISTE' });
   }, { counter: t => counterLabel(2 + 2 * L(t, PS(1, 1), PE(1, 1))) });
 }
@@ -704,6 +704,8 @@ const TITLE_AT = PE(0, 3) + 0.1, TITLE_LEN = 3.4;
     leo(ctx, 960, 1000, 1.1, e0(t, { mouth: sip > 0.3 ? 'o' : 'grin', mouthOpen: 0.3, handR: [lerp(110, 30, sip), lerp(-300, -440, sip)] }));
     waterGlass(ctx, 960 + lerp(140, 40, sip) * 1.1, 1000 + lerp(-330, -480, sip) * 1.1, 0.8, t, 0.7);
     ctx.fillStyle = 'rgba(10,6,30,0.5)'; ctx.fillRect(0, 0, W, H);
+    for (let i = 0; i < 24; i++) { const r = rng(i + 1200), p = (t * (0.08 + r() * 0.1) + r()) % 1; ctx.strokeStyle = 'rgba(160,230,255,0.7)'; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(r() * W + Math.sin(t * 2 + i) * 30, H + 40 - p * (H + 120), 10 + r() * 22, 0, Math.PI * 2); ctx.stroke(); }
+    { const wv = Math.sin(t * 6); ctx.save(); ctx.translate(1500 + wv * 6, 330); ctx.rotate(wv * 0.05); text(ctx, '👋', 0, 0, { size: 130, lw: 0, shadow: false }); ctx.restore(); }
     ctx.fillStyle = 'rgba(255,255,255,0.12)'; rrect(ctx, 120, 230, 760, 428, 24); ctx.fill();
     ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 6; ctx.setLineDash([24, 16]); rrect(ctx, 120, 230, 760, 428, 24); ctx.stroke(); ctx.setLineDash([]);
     text(ctx, 'SIGUIENTE VIDEO', 500, 444, { size: 64, fill: '#fff' });
