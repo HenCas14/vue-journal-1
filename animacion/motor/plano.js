@@ -332,15 +332,31 @@ function thermometer(ctx, x, y, v, t) {
   ctx.fillStyle = '#adb5bd'; for (let i = 0; i < 8; i++) ctx.fillRect(18, -230 + i * 30, 16, 5);
   ctx.restore();
 }
-function calendar(ctx, x, y, s, top, big, color = FLAT.coral, flip = 0) {
+// Calendario de pared. big = texto fijo; para un número que avanza usa calendarV.
+function calendarPage(ctx, num, color) {
+  ctx.fillStyle = '#fff'; rrect(ctx, -150, -60, 300, 230, 24); ctx.fill();
+  ctx.fillStyle = 'rgba(0,0,0,0.05)'; ctx.fillRect(-150, -60, 300, 10);
+  ctx.fillStyle = FLAT.ink; ctx.font = (String(num).length > 3 ? '110px' : '150px') + ' Lilita'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(String(num), 0, 55);
+}
+function calendarBase(ctx, x, y, s, top, color) {
   ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
-  card(ctx, -150, -150, 300, 320, '#fff', 30);
+  card(ctx, -150, -150, 300, 320, '#f1f3f5', 30);
   ctx.fillStyle = color; rrect(ctx, -150, -150, 300, 90, 30); ctx.fill(); ctx.fillRect(-150, -90, 300, 30);
   for (const sx of [-1, 1]) { ctx.fillStyle = '#adb5bd'; rrect(ctx, sx * 80 - 10, -175, 20, 50, 10); ctx.fill(); }
   text(ctx, top, 0, -105, { size: 44, fill: '#fff', shadow: false, lw: 0 });
-  ctx.fillStyle = FLAT.ink; ctx.font = '150px Lilita'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(big, 0, 50);
-  if (flip > 0 && flip < 1) { // hoja que se arranca
-    ctx.save(); ctx.translate(0, -60); ctx.rotate(-flip * 1.2); ctx.globalAlpha = 1 - flip; ctx.fillStyle = '#f1f3f5'; ctx.fillRect(-150, 0, 300, 230 * (1 - flip * 0.5)); ctx.restore();
+}
+function calendar(ctx, x, y, s, top, big, color = FLAT.coral) {
+  calendarBase(ctx, x, y, s, top, color); calendarPage(ctx, big, color); ctx.restore();
+}
+// v = valor continuo (p. ej. 3.4). La hoja se arranca y cae al pasar de un número al siguiente.
+function calendarV(ctx, x, y, s, top, v, color = FLAT.coral) {
+  const n = Math.floor(v + 1e-6), p = v - n, q = clamp((p - 0.55) / 0.45);
+  calendarBase(ctx, x, y, s, top, color);
+  calendarPage(ctx, q > 0 ? n + 1 : n, color);
+  if (q > 0) { // hoja anterior que se desprende
+    ctx.save(); ctx.translate(-150, -60); ctx.rotate(q * 0.9); ctx.translate(150 + q * 60, 60 + q * q * 260);
+    ctx.globalAlpha = 1 - q * q; ctx.shadowColor = 'rgba(0,0,0,0.25)'; ctx.shadowBlur = 20; ctx.shadowOffsetY = 10;
+    calendarPage(ctx, n, color); ctx.restore();
   }
   ctx.restore();
 }

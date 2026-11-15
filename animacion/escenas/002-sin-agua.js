@@ -32,7 +32,7 @@ const OK_ = FLAT.mint, BAD = FLAT.coral;
     if (t < sem) { questionMarks(ctx, t, W / 2, 480, 3, FLAT.accent); popIn(ctx, t, a + 0.2, W / 2, 230, () => text(ctx, '¿CUÁNTO AGUANTARÍAS?', 0, 0, { size: 100, fill: '#fff' })); }
     [['¿1 SEMANA?', '7', sem], ['¿1 MES?', '30', mes]].forEach(([lab, n, st], i) => {
       if (t < st) return; const x = 640 + i * 640, crossed = t > menos + 0.5;
-      calendar(ctx, x, 470, 1, 'DÍAS', n, i ? FLAT.purple : FLAT.coral, (t * 3 + i) % 1 < 0.2 ? (t * 3 + i) % 1 * 5 : 0);
+      calendar(ctx, x, 470 + Math.sin(t * 3 + i) * 8, 1, 'DÍAS', n, i ? FLAT.purple : FLAT.coral);
       label(ctx, lab, x, 790, { size: 70 });
       if (crossed) { ctx.strokeStyle = '#ef233c'; ctx.lineWidth = 30; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(x - 170, 300); ctx.lineTo(x + 170, 640); ctx.moveTo(x + 170, 300); ctx.lineTo(x - 170, 640); ctx.stroke(); }
     });
@@ -52,7 +52,7 @@ const OK_ = FLAT.mint, BAD = FLAT.coral;
       drawPerson(ctx, gx, 1000, 1.05, e0(t, { walk: true, mouth: 'o', mouthOpen: 0.2, flip: false }), { skin: '#e0ac69', skinD: '#c68f50', shirt: '#264653', shirtD: '#1d3640', pants: '#1d3640', hair: '#2b1d14', hairStyle: 'crew' });
       for (let i = 0; i < 3; i++) { const p = (t * 0.8 + i / 3) % 1; ctx.globalAlpha = 1 - p; text(ctx, '♪', gx - 60 - p * 40, 480 - p * 120, { size: 50, fill: '#fff' }); ctx.globalAlpha = 1; }
     }
-    if (t > dias) calendar(ctx, 300, 300, 0.7, 'DÍA', String(Math.min(18, 1 + Math.floor(17 * L(t, dias, dias + 1.5)))), '#6b705c', (t * 6) % 1);
+    if (t > dias) calendarV(ctx, 300, 300, 0.7, 'DÍA', 1 + 17 * L(t, dias, dias + 1.5), '#6b705c');
     if (t > hizo) { const g = 0.5 + 0.5 * Math.sin(t * 6); ctx.fillStyle = `rgba(160,230,255,${0.35 * g})`; ctx.beginPath(); ctx.arc(1080, 500, 220, 0, Math.PI * 2); ctx.fill(); questionMarks(ctx, t, 1080, 300, 2, FLAT.accent); }
     popIn(ctx, t, a + 0.3, 330, 120, () => text(ctx, 'AUSTRIA, 1979', 0, 0, { size: 80, fill: FLAT.accent }));
     retroOverlay(ctx, t);

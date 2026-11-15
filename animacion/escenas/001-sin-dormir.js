@@ -72,7 +72,7 @@ let COUNTER_FIRST = null;
     if (t > p3 && t < hallu) speech(ctx, t, p3, 1250, 330, 'bla... ¿qué...?');
     if (t > other) { text(ctx, '¿?', 1250, 330, { size: 120, fill: FLAT.accent }); stars(ctx, t, 960, 420); }
     popIn(ctx, t, a + 0.1, 300, 170, () => text(ctx, '1964', 0, 0, { size: 150, fill: FLAT.accent }));
-    if (t > elevenAt) calendar(ctx, 1560, 260, 0.6, 'DÍA', String(days), FLAT.coral, (t * 8) % 1);
+    if (t > elevenAt) calendarV(ctx, 1560, 260, 0.6, 'DÍA', 1 + 10 * L(t, elevenAt, elevenAt + 1.2), FLAT.coral);
     retroOverlay(ctx, t);
   }, { trans: 'flash' });
 }
@@ -565,7 +565,7 @@ let COUNTER_FIRST = null;
     const e = blinkE(t, { red: day3 ? 0.6 : 0.4, bags: day3 ? 0.7 : 0.4, mouth: day3 ? 'angry' : 'flat', angry: day3 ? 1 : 0, open: day3 ? 0.8 : 0.6, look: day3 ? [0, 0] : [Math.sin(t * 3), 0] });
     ctx.save(); if (!day3) ctx.filter = 'blur(3px)'; drawPerson(ctx, 960, 1000, 1.2, e, PEOPLE.randy); ctx.restore();
     if (day3) speech(ctx, t, d3 + 0.4, 1350, 320, 'grrr... ¿qé dij... dije?');
-    calendar(ctx, 300, 330, 0.7, 'DÍA', day3 ? '3' : '2', '#bc6c25');
+    calendarV(ctx, 300, 330, 0.7, 'DÍA', 2 + L(t, d3 - 0.5, d3), '#bc6c25');
     retroOverlay(ctx, t);
   }, { mood: 'mystery', counter: t => t > SS(2, 7, 1) ? 'DÍA 3' : 'DÍA 2' });
 }
@@ -749,7 +749,7 @@ let COUNTER_FIRST = null;
   shot(a, (ctx, lt, d, t) => {
     bgFlat(ctx, t, '#3d348b', '#1c1a4a', 39);
     const day = Math.min(14, 1 + Math.floor(13 * L(t, a + 0.5, a + 3.5))), k = day / 14;
-    calendar(ctx, 380, 470, 1, 'DÍA', String(day), FLAT.coral, t < a + 3.5 ? (t * 4.3) % 1 : 0);
+    calendarV(ctx, 380, 470, 1, 'DÍA', 1 + 13 * L(t, a + 0.5, a + 3.5), FLAT.coral);
     const yk = Math.max(0, Math.sin(t * 1.4)) ** 3;
     leo(ctx, 960, 1000, 1.15, blinkE(t, { red: k * 0.5, bags: k * 0.8, mouth: yk > 0.2 ? 'yawn' : 'flat', mouthOpen: yk, open: 1 - k * 0.3 - yk * 0.5, rot: Math.sin(t * 2) * 0.03 * k }));
     zzz(ctx, t, 1060, 480, '#b9a8ff');
