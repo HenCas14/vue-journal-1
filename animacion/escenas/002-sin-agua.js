@@ -821,6 +821,13 @@ function plate(ctx, x, y, s, t) { ctx.save(); ctx.translate(x, y); ctx.scale(s, 
   ctx.restore(); }
 function stars(ctx, t, x, y) { for (let i = 0; i < 6; i++) { const a = t * 3 + i * 1.05; text(ctx, '★', x + Math.cos(a) * 160, y + Math.sin(a) * 50, { size: 50, fill: FLAT.accent }); } }
 function bolt(ctx, x, y, t) { ctx.save(); ctx.translate(x, y + Math.sin(t * 8) * 10); ctx.fillStyle = FLAT.accent; ctx.beginPath(); ctx.moveTo(10, -60); ctx.lineTo(-30, 10); ctx.lineTo(0, 10); ctx.lineTo(-15, 70); ctx.lineTo(35, -10); ctx.lineTo(5, -10); ctx.closePath(); ctx.fill(); ctx.restore(); }
+function alarmClock(ctx, x, y, s, t) {
+  ctx.save(); ctx.translate(x + Math.sin(t * 40) * 4, y); ctx.scale(s, s); ctx.rotate(Math.sin(t * 30) * 0.05);
+  for (const sx of [-1, 1]) { ctx.fillStyle = FLAT.accent; ctx.beginPath(); ctx.arc(sx * 60, -90, 30, Math.PI, 0); ctx.fill(); }
+  ctx.fillStyle = FLAT.coral; ctx.beginPath(); ctx.arc(0, 0, 110, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(0, 0, 88, 0, Math.PI * 2); ctx.fill();
+  ctx.strokeStyle = FLAT.ink; ctx.lineWidth = 10; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -60); ctx.moveTo(0, 0); ctx.lineTo(45, 25); ctx.stroke();
+  ctx.restore();
+}
 PEOPLE.abuela = { skin: '#f1c9a5', skinD: '#ddae86', shirt: '#9b5de5', shirtD: '#8148cc', pants: '#495057', hair: '#dee2e6', hairStyle: 'bun', glasses: true };
 
 V.terminar();

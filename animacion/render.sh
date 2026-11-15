@@ -14,13 +14,14 @@ if [ "${PARTES:-1}" -gt 1 ]; then
     await p.waitForFunction('window.READY===true');console.log(await p.evaluate(()=>SCENE.duration+' '+SCENE.fps));await b.close();})()")
   read total fps <<< "$dur"
   chunk=$(python3 -c "import math;print(math.ceil($total/$PARTES*$fps)/$fps)")
-  : > "renders/$esc-lista.txt"
+  : > "renders/$esc-lista.txt"; pids=()
   for k in $(seq 0 $((PARTES-1))); do
     a=$(python3 -c "print($k*$chunk)"); b=$(python3 -c "print(min($total, ($k+1)*$chunk))")
-    node animacion/motor/render.js "$url" "renders/$esc-p$k.mp4" --desde "$a" --hasta "$b" > "renders/$esc-p$k.log" 2>&1 &
+    node animacion/motor/render.js "$url" "renders/$esc-p$k.mp4" --desde "$a" --hasta "$b" > "renders/$esc-p$k.log" 2>&1 & pids+=($!)
     echo "file '$esc-p$k.mp4'" >> "renders/$esc-lista.txt"
   done
-  wait
+  fallo=0; for k in "${!pids[@]}"; do wait "${pids[$k]}" || { echo "ERROR en la parte $k:"; tail -3 "renders/$esc-p$k.log"; fallo=1; }; done
+  [ $fallo -eq 0 ] || exit 1
   ffmpeg -y -v error -f concat -safe 0 -i "renders/$esc-lista.txt" -c copy "renders/$esc-video.mp4"
   cp "renders/$esc-p0.sfx.json" "renders/$esc-video.sfx.json"
   rm -f renders/$esc-p*.mp4 renders/$esc-p*.sfx.json renders/$esc-p*.log "renders/$esc-lista.txt"
