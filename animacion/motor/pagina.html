@@ -14,10 +14,11 @@ canvas{width:100vw;height:auto;display:block}
 <script src="cuarto.js"></script>
 <script src="escenarios.js"></script>
 <script src="video.js"></script>
+<script src="apagon.js"></script>
 <script>
 // Carga la escena indicada en ?escena=nombre y expone renderFrame(t) para el renderizador.
 const nombre = new URLSearchParams(location.search).get('escena');
-const ctx = document.getElementById('c').getContext('2d');
+const ctx = document.getElementById('c').getContext('2d'); ctx.canvas.width = W; ctx.canvas.height = H;
 window.renderAt = t => { ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H); SCENE.render(ctx, t); };
 window.frameData = (t, type) => { renderAt(t); return ctx.canvas.toDataURL(type || 'image/png', 0.95); };
 const s = document.createElement('script'); s.src = `../escenas/${nombre}.js`;

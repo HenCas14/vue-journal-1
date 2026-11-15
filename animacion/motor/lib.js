@@ -1,7 +1,9 @@
 // Motor de animación del canal: utilidades, personaje, escenario y efectos.
 // Todo es determinista en función del tiempo t (segundos) para poder renderizar cuadro por cuadro.
 
-const W = 1920, H = 1080;
+// Formato: las escenas cuyo nombre contiene "short" son verticales (1080×1920)
+const VERTICAL = /short/i.test(new URLSearchParams(location.search).get("escena") || "");
+const W = VERTICAL ? 1080 : 1920, H = VERTICAL ? 1920 : 1080;
 const OUT = '#1d1830'; // color de contorno (estilo caricatura)
 
 // ---------- utilidades ----------

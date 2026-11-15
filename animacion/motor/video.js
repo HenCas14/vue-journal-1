@@ -47,7 +47,7 @@ function crearVideo(cfg) {
       ctx.restore();
       if (sh.trans === 'flash' && lt < 0.25) { ctx.fillStyle = `rgba(255,255,255,${0.6 * (1 - lt / 0.25)})`; ctx.fillRect(0, 0, W, H); }
       if (sh.counter && V.counterFirst != null) drawCounter(ctx, t, sh.counter(t), V.counterFirst, (sh.bump || []).concat([sh.a + 0.05]));
-      if (t < VOICE_END + 0.5) drawCaptions(ctx, t, CAPS);
+      if (t < VOICE_END + 0.5) drawCaptions(ctx, t, CAPS, VERTICAL ? H * 0.7 : H - 92);
       for (const s of SHOTS) if (s.trans === 'wipe' && Math.abs(t - s.a) < 0.6) wipe(ctx, t, s.a - 0.42);
     };
   };
