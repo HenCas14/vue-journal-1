@@ -14,7 +14,7 @@ const path = require('path'); const fs = require('fs');
   page.on('pageerror', e => { console.error('Error en la escena:', e.message); process.exit(1); });
   await page.goto('file://' + path.join(__dirname, 'pagina.html') + '?escena=' + escena);
   await page.waitForFunction('window.READY === true');
-  const meta = await page.evaluate(() => ({ duration: SCENE.duration, fps: SCENE.fps, sfx: SCENE.sfx || [], music: SCENE.music || [], ambience: SCENE.ambience || [] }));
+  const meta = await page.evaluate(() => ({ duration: SCENE.duration, fps: SCENE.fps, sfx: SCENE.sfx || [], music: SCENE.music || [], ambience: SCENE.ambience || [], voice: SCENE.voice || [], moods: SCENE.moods || [] }));
   const fps = opt('--fps', meta.fps), t0 = opt('--desde', 0), t1 = opt('--hasta', meta.duration);
   fs.writeFileSync(out.replace(/\.mp4$/, '.sfx.json'), JSON.stringify(meta, null, 1));
   const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-',

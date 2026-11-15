@@ -168,14 +168,31 @@ def crickets(dur):
 
 
 # ---------------- música ----------------
-def music(dur, bpm=112):
-    """Loop alegre: marimba en arpegio + bajo + hi-hat + bombo suave. Devuelve (plucks, ritmo)."""
+def music(dur, bpm=112, minor=False):
+    """Loop de marimba + bajo + hi-hat + bombo. minor=True: ambiente de misterio. Devuelve (plucks, ritmo)."""
     n = int(dur * SR)
     plucks, groove = np.zeros(n), np.zeros(n)
     beat = 60 / bpm
-    prog_ = [(60, [60, 64, 67, 72]), (57, [57, 60, 64, 69]), (53, [53, 57, 60, 65]), (55, [55, 59, 62, 67])]
-    pattern = [0, 1, 2, 3, 2, 1, 2, 3]
+    if minor:
+        prog_ = [(57, [57, 60, 64, 69]), (53, [53, 57, 60, 65]), (50, [50, 53, 57, 62]), (52, [52, 56, 59, 64])]
+        pattern = [0, 2, 1, 3, 0, 2, 1, 2]
+    else:
+        prog_ = [(60, [60, 64, 67, 72]), (57, [57, 60, 64, 69]), (53, [53, 57, 60, 65]), (55, [55, 59, 62, 67])]
+        pattern = [0, 1, 2, 3, 2, 1, 2, 3]
     mtof = lambda m: 440 * 2 ** ((m - 69) / 12)
+    hat = highpass(rnd.standard_normal(int(0.05 * SR)), 6000) * adsr(int(0.05 * SR), 0.001, 0.012)
+    snap = lowpass(rnd.standard_normal(int(0.12 * SR)), 2500) * adsr(int(0.12 * SR), 0.001, 0.04)
+    tk = t_axis(0.25); kick = osc(110 * np.exp(-tk * 25) + 45) * adsr(len(tk), 0.002, 0.1)
+    tn = t_axis(0.5); notes_cache = {}
+    def note(m):
+        if m not in notes_cache:
+            f = mtof(m)
+            notes_cache[m] = (np.sin(2 * np.pi * f * tn) + 0.25 * np.sin(2 * np.pi * 4 * f * tn) * np.exp(-tn / 0.03)) * adsr(len(tn), 0.002, 0.25 if minor else 0.18)
+        return notes_cache[m]
+    tb = t_axis(beat * 1.6); bass_cache = {}
+    def bassn(m):
+        if m not in bass_cache: bass_cache[m] = osc(np.full(len(tb), mtof(m)), "tri") * adsr(len(tb), 0.005, 0.35)
+        return bass_cache[m]
 
     def place(buf, at, sig, g=1.0):
         i = int(at * SR)
@@ -187,26 +204,30 @@ def music(dur, bpm=112):
     tt = 0.0
     while tt < dur:
         root, notes = prog_[bar % 4]
-        for k, idx in enumerate(pattern):  # corcheas
-            f = mtof(notes[idx] + 12)
-            t = t_axis(0.5)
-            mar = (np.sin(2 * np.pi * f * t) + 0.25 * np.sin(2 * np.pi * 4 * f * t) * np.exp(-t / 0.03)) * adsr(len(t), 0.002, 0.18)
-            place(plucks, tt + k * beat / 2, mar, 0.5 if k % 2 else 0.7)
-            hat = highpass(rnd.standard_normal(int(0.05 * SR)), 6000) * adsr(int(0.05 * SR), 0.001, 0.012)
-            place(groove, tt + k * beat / 2, hat, 0.25 if k % 2 == 0 else 0.45)
-        for b in (0, 2):  # bajo y bombo en tiempos 1 y 3
-            t = t_axis(beat * 1.6)
-            bass = osc(np.full(len(t), mtof(root - 12)), "tri") * adsr(len(t), 0.005, 0.35)
-            place(groove, tt + b * beat, bass, 0.8)
-            t = t_axis(0.25)
-            kick = osc(110 * np.exp(-t * 25) + 45) * adsr(len(t), 0.002, 0.1)
-            place(groove, tt + b * beat, kick, 0.7)
-        snap = lowpass(rnd.standard_normal(int(0.12 * SR)), 2500) * adsr(int(0.12 * SR), 0.001, 0.04)
-        for b in (1, 3):
-            place(groove, tt + b * beat, snap, 0.35)
+        for k, idx in enumerate(pattern):
+            place(plucks, tt + k * beat / 2, note(notes[idx] + (0 if minor else 12)), 0.5 if k % 2 else 0.7)
+            if not minor or k % 2 == 0:
+                place(groove, tt + k * beat / 2, hat, 0.25 if k % 2 == 0 else 0.45)
+        for b in (0, 2):
+            place(groove, tt + b * beat, bassn(root - 12), 0.8)
+            if not minor or b == 0:
+                place(groove, tt + b * beat, kick, 0.7)
+        if not minor:
+            for b in (1, 3):
+                place(groove, tt + b * beat, snap, 0.35)
         tt += 4 * beat
         bar += 1
     return plucks, groove
+
+
+def smooth(x, w):
+    """Media móvil rápida (vectorizada)."""
+    if w < 2:
+        return x
+    c = np.cumsum(np.insert(x, 0, 0.0))
+    y = (c[w:] - c[:-w]) / w
+    pad = w // 2
+    return np.concatenate([np.full(pad, y[0]), y, np.full(len(x) - len(y) - pad, y[-1])])
 
 
 def automation(points, n):
@@ -240,19 +261,42 @@ def main():
             seg *= np.minimum(1, np.minimum(np.arange(len(seg)) / (0.3 * SR), (len(seg) - np.arange(len(seg))) / (0.5 * SR)))
             i = int(a["from"] * SR)
             amb[i:i + len(seg)] += seg[: n - i] * a.get("vol", 0.3)
-    plucks, groove = music(dur)
     level = automation(meta.get("music", []), n)
     groove_gate = np.clip((level - 0.12) / 0.08, 0, 1)  # en las partes tranquilas solo suena la marimba
-    mus = (plucks + groove * groove_gate) * level
+    moods = meta.get("moods", [])
+    if moods:
+        minor_mask = np.zeros(n)
+        for k, (t0, m) in enumerate(moods):
+            t1 = moods[k + 1][0] if k + 1 < len(moods) else dur
+            if m in ("tense", "mystery"):
+                minor_mask[int(t0 * SR):int(t1 * SR)] = 1
+        minor_mask = smooth(minor_mask, int(1.0 * SR))
+        p1, g1 = music(dur)
+        p2, g2 = music(dur, bpm=92, minor=True)
+        mus = ((p1 + g1 * np.maximum(groove_gate, 0.6)) * (1 - minor_mask) + (p2 + g2 * 0.8) * minor_mask) * level
+    else:
+        plucks, groove = music(dur)
+        mus = (plucks + groove * groove_gate) * level
 
     voice = np.zeros(n)
+    segs = list(meta.get("voice", []))
     if "--voz" in args:
-        v = load_voice(args[args.index("--voz") + 1])
-        start = float(args[args.index("--voz-inicio") + 1]) if "--voz-inicio" in args else 0.0
-        i = int(start * SR)
-        voice[i:i + len(v)] += v[: max(0, n - i)]
-        env = lowpass(np.abs(voice), 4.0)
-        mus *= 1 - 0.6 * np.clip(env / (env.max() * 0.3 + 1e-9), 0, 1)
+        segs.append({"file": args[args.index("--voz") + 1], "from": 0, "to": None,
+                     "at": float(args[args.index("--voz-inicio") + 1]) if "--voz-inicio" in args else 0.0})
+    cache = {}
+    for sgm in segs:
+        if sgm["file"] not in cache:
+            cache[sgm["file"]] = load_voice(sgm["file"])
+        v = cache[sgm["file"]]
+        a0 = int(sgm["from"] * SR); a1 = len(v) if sgm.get("to") is None else min(len(v), int(sgm["to"] * SR))
+        piece = v[a0:a1].copy()
+        f = min(len(piece), int(0.01 * SR)); piece[:f] *= np.linspace(0, 1, f); piece[len(piece) - f:] *= np.linspace(1, 0, f)
+        i = int(sgm["at"] * SR)
+        voice[i:i + len(piece)] += piece[: max(0, n - i)]
+    if np.abs(voice).max() > 0:
+        env = smooth(np.abs(voice), int(0.25 * SR))
+        duck = np.clip(env / (env.max() * 0.25 + 1e-9), 0, 1)
+        mus *= 1 - 0.55 * duck
 
     mix = mus + fx * 0.8 + amb + voice
     mix = np.tanh(mix * 1.2) / np.tanh(1.2)  # limitador suave

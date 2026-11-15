@@ -24,6 +24,16 @@ renders/               Videos finales MP4 (no se suben a git)
 5. **Publicación** → subida manual a YouTube con título, descripción, capítulos y miniatura.
 6. **Shorts** → recortes verticales de los momentos marcados en el guion.
 
+## Producir un video con narración
+
+1. Guarda los audios de ElevenLabs en `audio/NNN-parteK.mp3`.
+2. Alinea el texto con el audio (tiempos de cada párrafo y frase):
+   ```
+   python3 animacion/motor/alinear.py guiones/NNN/narracion-elevenlabs.txt guiones/NNN/tiempos.json audio/NNN-parte1.mp3 ...
+   ```
+   y genera `animacion/escenas/NNN.datos.js` a partir de `tiempos.json`.
+3. Renderiza en paralelo: `PARTES=3 animacion/render.sh NNN-tema` → `renders/NNN-tema.mp4`.
+
 ## Renderizar una escena
 
 ```
