@@ -154,3 +154,8 @@ Personaje con ojos enormes, rojos y ojeras, sosteniendo una taza de café que ti
 - Rechtschaffen et al. (1983–1989) — privación total de sueño en ratas.
 - Insomnio familiar fatal: enfermedad priónica hereditaria, muy rara.
 - Van Dongen et al. (2003), *Sleep* — 6 h por noche durante 14 días ≈ rendimiento de 1–2 noches sin dormir, sin que los participantes lo notaran.
+
+---
+
+## Narración para ElevenLabs
+Versión con etiquetas de emoción en `narracion-elevenlabs.txt` (modelo **Eleven v3**, dividida en 4 partes de menos de 2,500 caracteres).
