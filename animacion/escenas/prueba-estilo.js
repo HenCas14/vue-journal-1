@@ -1,5 +1,10 @@
 // Prueba de estilo (gancho del video 001): ~20 s
 const SCENE = { duration: 20, fps: 30 };
+// Estilo visual: ?estilo=frijol (original) | plano (Leo) | silueta (Max)
+const ESTILO = new URLSearchParams(location.search).get('estilo') || 'frijol';
+if (ESTILO !== 'frijol') THEME.outline = 0;
+const DARK = [20, 12, 34];
+const darken = k => c => c.map((v, i) => lerp(v, DARK[i], k));
 
 const T = {
   clock: 2.4, counter: 3.0, yawn: 3.8, ffStart: 5.6, coffee: 6.8, h24: 9.4, ff2: 10.2,
@@ -52,7 +57,8 @@ function punch(t, at, amt = 0.07) { const p = prog(t, at, at + 0.6); return p > 
 function shake(t, at, amp, dur = 0.5) { const p = prog(t, at, at + dur); return p > 0 && p < 1 ? amp * (1 - p) : 0; }
 
 // ---------- escenario: cuarto de noche ----------
-function drawSkyWindow(ctx, t, h, d) {
+function drawSkyWindow(ctx, raw, t, h, d) {
+  const TC = ctx; ctx = raw;
   const X = 180, Y = 170, Wd = 520, Hd = 450;
   ctx.save(); rrect(ctx, X, Y, Wd, Hd, 16); ctx.clip();
   const dusk = clamp(d * (1 - d) * 4) * 0.8;
@@ -97,6 +103,7 @@ function drawSkyWindow(ctx, t, h, d) {
     bx += bw + 6;
   }
   ctx.restore();
+  ctx = TC;
   // marco
   rrect(ctx, X, Y, Wd, Hd, 16); ctx.lineWidth = 22; ctx.strokeStyle = '#efe3ff'; ctx.stroke();
   ctx.lineWidth = 8; ctx.strokeStyle = OUT; rrect(ctx, X - 11, Y - 11, Wd + 22, Hd + 22, 22); ctx.stroke();
@@ -158,18 +165,19 @@ function drawBed(ctx, t, front) {
     ctx.beginPath(); ctx.moveTo(780, 860);
     ctx.bezierCurveTo(900, 820 + br, 1050, 845 - br, 1180, 830 + br);
     ctx.bezierCurveTo(1300, 818, 1420, 845 + br, 1530, 835);
-    ctx.lineTo(1560, 1000); ctx.lineTo(760, 1000); ctx.closePath();
+    ctx.lineTo(1560, 1130); ctx.lineTo(760, 1130); ctx.closePath();
     fillStroke(ctx, '#6c63ff', 9);
     ctx.save(); ctx.clip(); ctx.strokeStyle = 'rgba(255,255,255,0.25)'; ctx.lineWidth = 16;
-    for (let i = 0; i < 12; i++) { ctx.beginPath(); ctx.moveTo(760 + i * 80, 820); ctx.lineTo(700 + i * 80, 1000); ctx.stroke(); }
+    for (let i = 0; i < 12; i++) { ctx.beginPath(); ctx.moveTo(760 + i * 80, 820); ctx.lineTo(680 + i * 80, 1130); ctx.stroke(); }
     ctx.restore();
   }
 }
 
-function drawNightstand(ctx, t, nCups) {
+function drawNightstand(ctx, raw, t, nCups) {
   rrect(ctx, 1520, 760, 230, 200, 18); fillStroke(ctx, '#c79a5b', 8);
   rrect(ctx, 1545, 820, 180, 50, 10); fillStroke(ctx, '#b0844b', 6);
-  // tazas que van apareciendo y se apilan
+  // tazas que van apareciendo y se apilan (siempre a color)
+  ctx = raw;
   T.cups.forEach((ct, i) => {
     const s = pop(t, ct, 0.5); if (s <= 0 || i >= nCups) return;
     ctx.save(); ctx.translate(1635 + (i % 2 ? 22 : -18), 722 - i * 74); ctx.rotate((i % 2 ? 1 : -1) * 0.06 + Math.sin(t * 6 + i) * 0.03); ctx.scale(s, s);
@@ -177,7 +185,7 @@ function drawNightstand(ctx, t, nCups) {
   });
 }
 
-function drawRoom(ctx, t) {
+function drawRoom(ctx, raw, t) {
   const hrs = hoursAt(t), h = clockHour(t), d = dayness(h);
   // pared
   const g = ctx.createLinearGradient(0, 0, 0, H);
@@ -192,7 +200,7 @@ function drawRoom(ctx, t) {
   // piso
   ctx.fillStyle = mix('#3b2c5e', '#c98a5e', d); ctx.fillRect(-200, 900, W + 400, 400);
   ctx.strokeStyle = OUT; ctx.lineWidth = 8; ctx.beginPath(); ctx.moveTo(-200, 900); ctx.lineTo(W + 200, 900); ctx.stroke();
-  drawSkyWindow(ctx, t, h, d);
+  drawSkyWindow(ctx, raw, t, h, d);
   drawWallClock(ctx, t, h);
   drawShelf(ctx, t, d);
   // luz de la ventana proyectada en el piso
@@ -234,7 +242,38 @@ function charState(t) {
   return o;
 }
 
+// ---------- personajes humanos (Leo = plano, Max = silueta) ----------
+const HP = {
+  plano: { x: 1150, y: 1045, s: 1.15, draw: (c, x, y, s, e) => drawLeo(c, x, y, s, e), rest: [-95, -185], phone: [105, -365], coffee: [110, -300], stretch: [-55, -570], up: [[-125, -560], [135, -560]], head: [-62, -425], mouth: 'smile' },
+  silueta: { x: 1150, y: 1000, s: 1.15, draw: (c, x, y, s, e) => drawMax(c, x, y, s, e), rest: [-62, -150], phone: [88, -335], coffee: [92, -280], stretch: [-45, -510], up: [[-110, -500], [118, -500]], head: [-70, -395], mouth: 'none' },
+};
+const lerp2 = (a, b, k) => [lerp(a[0], b[0], k), lerp(a[1], b[1], k)];
+function humanState(t) {
+  const P = HP[ESTILO];
+  const e = { t, open: blink(t), look: [0.6, -0.1], mouth: P.mouth, hold: 'phone', inBed: true, handR: P.phone };
+  let x = P.x;
+  const tired = prog(t, T.ffStart, T.h24), wrecked = prog(t, T.ff2, T.scream);
+  e.red = tired * 0.55 + wrecked * 0.45; e.bags = tired * 0.6 + wrecked * 0.4;
+  if (t > T.clock && t < T.clock + 1.0) { e.look = [0.9, -0.9]; e.mouth = 'o'; e.mouthOpen = 0.2; e.open = 1; }
+  const yp = prog(t, T.yawn, T.yawn + 1.4);
+  if (yp > 0 && yp < 1) { const k = Math.sin(yp * Math.PI); e.mouth = 'yawn'; e.mouthOpen = k; e.open = 1 - k * 0.9; e.handL = lerp2(P.rest, P.stretch, k); }
+  if (t > T.ffStart) { e.open = Math.min(e.open, 1 - tired * 0.25); e.mouth = 'flat'; e.look = [0.55 + Math.sin(t * 7) * 0.25, 0]; }
+  if (t > T.coffee) { e.hold = 'coffee'; e.handR = P.coffee; e.mouth = tired > 0.6 ? 'wobbly' : 'grin'; }
+  const hp = prog(t, T.h24, T.h24 + 0.8);
+  if (hp > 0 && hp < 1) { const k = Math.sin(hp * Math.PI); e.shock = k; e.eyeSize = 1 + 0.3 * k; e.pupil = 0.6; e.mouth = 'o'; e.mouthOpen = 0.8; e.open = 1; e.look = [0, 0]; e.handL = lerp2(P.rest, P.head, k); }
+  if (t > T.ff2) {
+    e.frazzle = wrecked; e.mouth = 'wobbly'; e.open = 1; e.eyeSize = 1 + wrecked * 0.25; e.pupil = 0.7;
+    x += Math.sin(t * 55) * 5 * wrecked; e.rot = Math.sin(t * 31) * 0.02 * wrecked; e.look = [Math.sin(t * 9) * 0.5, Math.cos(t * 7) * 0.3];
+  }
+  if (t > T.spiral) { e.spiral = true; e.rot = Math.sin(t * 6) * 0.06; }
+  const sp = prog(t, T.scream, T.scream + 0.7);
+  if (sp > 0) { e.spiral = false; e.shock = 1; e.eyeSize = 1.4; e.pupil = 0.45; e.mouth = 'o'; e.mouthOpen = 1; e.handL = P.up[0]; e.handR = P.up[1]; e.frazzle = 1; }
+  return { e, P, x, y: P.y };
+}
+
 function drawRoomScene(ctx, t) {
+  const raw = ctx;
+  const TC = ESTILO === 'silueta' ? themedCtx(ctx, darken(0.8)) : ctx;
   // cámara: acercamiento lento + "punch" + temblor
   const zoom = 1.1 + 0.16 * ease.inOut(prog(t, 0, T.wipe)) + punch(t, T.h24) + punch(t, T.scream, 0.12) + punch(t, T.coffee, 0.03);
   const sh = shake(t, T.h24, 12) + shake(t, T.scream, 28, 0.7) + (t > T.ff2 && t < T.scream ? 3 * prog(t, T.ff2, T.scream) : 0);
@@ -242,12 +281,26 @@ function drawRoomScene(ctx, t) {
   ctx.save();
   ctx.translate(W / 2 + Math.sin(t * 47) * sh, H / 2 + Math.cos(t * 39) * sh); ctx.scale(zoom, zoom); ctx.translate(-fx, -fy);
   ctx.translate(Math.sin(t * 0.5) * 6, Math.cos(t * 0.4) * 4); // deriva de cámara constante
-  const { d } = drawRoom(ctx, t);
-  drawBed(ctx, t, false);
-  drawNightstand(ctx, t, T.cups.length);
-  const o = charState(t);
-  drawChar(ctx, o);
-  drawBed(ctx, t, true);
+  const { d } = drawRoom(TC, raw, t);
+  // luz de contra que entra por la ventana (estilo silueta)
+  if (ESTILO === 'silueta') {
+    ctx.save(); ctx.globalCompositeOperation = 'screen';
+    const lg = ctx.createRadialGradient(440, 400, 50, 440, 400, 1100);
+    lg.addColorStop(0, d > 0.3 ? 'rgba(255,170,90,0.55)' : 'rgba(90,110,255,0.4)'); lg.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = lg; ctx.fillRect(-200, -200, W + 400, H + 400); ctx.restore();
+  }
+  drawBed(TC, t, false);
+  drawNightstand(TC, raw, t, T.cups.length);
+  let o;
+  if (ESTILO === 'frijol') { o = charState(t); drawChar(ctx, o); }
+  else {
+    const hs = humanState(t);
+    hs.e.rim = d > 0.35 ? '#ffd6a0' : hs.e.hold === 'phone' ? '#a6dcff' : '#c3b4ff';
+    hs.e.glow = d > 0.35 ? '#ffb36b' : hs.e.hold === 'phone' ? '#4aa8ff' : '#8a6bff';
+    hs.P.draw(ctx, hs.x, hs.y, hs.P.s, hs.e);
+    o = { holding: hs.e.hold === 'phone' ? 'phone' : null, x: hs.x + hs.e.handR[0] * hs.P.s - 205 * 0.95, y: hs.y + hs.e.handR[1] * hs.P.s + 220 * 0.95 - 40, s: 0.95 };
+  }
+  drawBed(TC, t, true);
   // brillo del celular de noche
   if (o.holding === 'phone') {
     ctx.save(); ctx.globalCompositeOperation = 'screen';
@@ -278,10 +331,14 @@ function drawRoomScene(ctx, t) {
 // ---------- tarjeta de título ----------
 function drawTitle(ctx, t) {
   const lt = t - T.switch;
+  if (ESTILO === 'silueta') { ctx.save(); ctx.scale(2, 2); bgCine(ctx, lt); ctx.restore(); }
+  else if (ESTILO === 'plano') { ctx.save(); ctx.scale(2, 2); bgPlano(themedCtx(ctx, c => c.map((v, i) => lerp(v, [45, 55, 160][i], 0.5))), lt); ctx.restore(); }
+  else {
   const g = ctx.createRadialGradient(W / 2, H * 0.45, 50, W / 2, H * 0.45, W * 0.7);
   g.addColorStop(0, '#5a3fd6'); g.addColorStop(1, '#1a1048'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  }
   // rayos girando
-  ctx.save(); ctx.translate(W / 2, H * 0.45); ctx.rotate(lt * 0.25); ctx.fillStyle = 'rgba(255,255,255,0.06)';
+  if (ESTILO === 'frijol') ctx.save(); else ctx.save(), ctx.globalAlpha = 0.5; ctx.translate(W / 2, H * 0.45); ctx.rotate(lt * 0.25); ctx.fillStyle = 'rgba(255,255,255,0.06)';
   for (let i = 0; i < 16; i++) { ctx.rotate(Math.PI / 8); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(1400, -120); ctx.lineTo(1400, 120); ctx.closePath(); if (i % 2) ctx.fill(); }
   ctx.restore();
   // "Z" y estrellitas flotando
@@ -312,6 +369,14 @@ function drawTitle(ctx, t) {
   const up = ease.back(prog(t, T.upChar, T.upChar + 0.6));
   if (up > 0) {
     const yp = prog(t, T.yawn2, T.yawn2 + 1.3), yk = yp > 0 && yp < 1 ? Math.sin(yp * Math.PI) : 0;
+    if (ESTILO !== 'frijol') {
+      const P = HP[ESTILO], s = ESTILO === 'plano' ? 1.1 : 1.15, base = ESTILO === 'plano' ? 1228 : 1176;
+      P.draw(ctx, W / 2 + Math.sin(t * 55) * 3, base + 500 * (1 - up), s, {
+        t, red: 1, bags: 1, frazzle: 0.8, eyeSize: 1.15, pupil: 0.7, look: [Math.sin(t * 3) * 0.4, -0.2], inBed: true,
+        open: yk ? 1 - yk * 0.85 : blink(t), mouth: yk ? 'yawn' : 'wobbly', mouthOpen: yk, hold: 'coffee', handR: P.coffee,
+        handL: lerp2(P.rest, P.stretch, yk), rim: '#ffd6a0', glow: '#ffb36b',
+      });
+    } else
     drawChar(ctx, {
       x: W / 2 + Math.sin(t * 55) * 3, y: H + 260 - up * 230, s: 1.05, t, red: 1, bags: 1, frazzle: 0.8,
       eyeSize: 1.15, pupil: 0.7, px: Math.sin(t * 3) * 0.4, py: -0.2, eyeOpen: yk ? 1 - yk * 0.85 : blink(t),

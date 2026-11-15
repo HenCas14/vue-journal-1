@@ -36,13 +36,16 @@ function rrect(ctx, x, y, w, h, r) {
   ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
   ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
 }
+// Estilo visual global: outline = 0 quita contornos (estilos plano y silueta)
+const THEME = { outline: 1 };
 function fillStroke(ctx, fill, lw = 8, stroke = OUT) {
   ctx.fillStyle = fill; ctx.fill();
+  lw *= THEME.outline;
   if (lw) { ctx.lineWidth = lw; ctx.strokeStyle = stroke; ctx.lineJoin = 'round'; ctx.stroke(); }
 }
 // Línea gruesa con contorno (brazos, etc.)
 function limb(ctx, pts, color, w = 22) {
-  for (const [c, lw] of [[OUT, w + 12], [color, w]]) {
+  for (const [c, lw] of THEME.outline ? [[OUT, w + 12], [color, w]] : [[color, w]]) {
     ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);
     if (pts.length === 3) ctx.quadraticCurveTo(pts[1][0], pts[1][1], pts[2][0], pts[2][1]);
     else for (const p of pts.slice(1)) ctx.lineTo(p[0], p[1]);
@@ -294,4 +297,28 @@ function wipe(ctx, t, start, dur = 0.7, colors = ['#ff6b5b', '#ffd23f', '#5ee0c0
     ctx.fillStyle = c; ctx.fillRect(x - 1400, -1400, 2800, 2800);
   });
   ctx.restore();
+}
+
+// ---------- tematizado de colores ----------
+function toRGB(c) {
+  if (c[0] === '#') return hex(c);
+  const m = c.match(/rgba?\(([^)]+)\)/); if (!m) return null;
+  return m[1].split(',').map(Number);
+}
+// Devuelve un contexto que transforma todos los colores con map([r,g,b]) -> [r,g,b]
+function themedCtx(ctx, map) {
+  const conv = c => {
+    if (typeof c !== 'string') return c;
+    const v = toRGB(c); if (!v) return c;
+    const [r, g, b] = map(v.slice(0, 3)); const a = v.length > 3 ? v[3] : 1;
+    return `rgba(${r | 0},${g | 0},${b | 0},${a})`;
+  };
+  const wrapGrad = gr => new Proxy(gr, { get: (o, k) => k === 'addColorStop' ? (p, c) => o.addColorStop(p, conv(c)) : (typeof o[k] === 'function' ? o[k].bind(o) : o[k]) });
+  return new Proxy(ctx, {
+    get(o, k) {
+      if (k === 'createLinearGradient' || k === 'createRadialGradient') return (...a) => wrapGrad(o[k](...a));
+      const v = o[k]; return typeof v === 'function' ? v.bind(o) : v;
+    },
+    set(o, k, v) { o[k] = (k === 'fillStyle' || k === 'strokeStyle' || k === 'shadowColor') ? conv(v) : v; return true; },
+  });
 }

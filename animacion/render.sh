@@ -4,7 +4,9 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 esc="$1"; mkdir -p renders
-node animacion/motor/render.js "$esc" "renders/$esc-video.mp4"
+# Estilo opcional: ESTILO=plano animacion/render.sh prueba-estilo
+url="$esc${ESTILO:+&estilo=$ESTILO}"; esc="$esc${ESTILO:+-$ESTILO}"
+node animacion/motor/render.js "$url" "renders/$esc-video.mp4"
 extra=(); [ $# -ge 2 ] && extra=(--voz "$2" --voz-inicio "${3:-0}")
 python3 animacion/motor/audio.py "renders/$esc-video.sfx.json" "renders/$esc-audio.wav" "${extra[@]}"
 ffmpeg -y -v error -i "renders/$esc-video.mp4" -i "renders/$esc-audio.wav" -c:v copy -c:a aac -b:a 192k -shortest "renders/$esc.mp4"
