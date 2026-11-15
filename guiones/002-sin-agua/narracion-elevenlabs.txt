@@ -12,7 +12,7 @@
 
 [curious] Y no está repartida igual. [surprised] Tu sangre es casi toda agua. [thoughtful] Tu cerebro y tu corazón, alrededor de tres cuartas partes. [playful] Y hasta tus huesos, que parecen secos, tienen cerca de una tercera parte de agua.
 
-[curious] Y esa agua no se queda quieta. Todos los días pierdes entre dos y tres litros: cuando vas al baño, cuando sudas... [whispers] y hasta cuando respiras. [playful] Sí, cada vez que exhalas, sale un poquito de vapor de agua.
+[curious] Y esa agua no se queda quieta. Todos los días pierdes entre dos y tres litros: cuando vas al baño, cuando sudas... [surprised] y hasta cuando respiras. [playful] Sí, cada vez que exhalas, sale un poquito de vapor de agua.
 
 [curious] ¿Y para qué tanta agua? [excited] Para casi todo. [thoughtful] El agua lleva los nutrientes a tus células, saca los desechos, protege tu cerebro como un cojín... [playful] y funciona como el aire acondicionado de tu cuerpo.
 
@@ -35,7 +35,7 @@
 
 [serious] Tu boca se seca. Tu piel pierde elasticidad. [playful] Si te pellizcas la mano, la piel tarda en regresar a su lugar. [annoyed] Y aparece un dolor de cabeza que no se quita.
 
-[curious] ¿Y por qué duele la cabeza? [dramatic] Algunos estudios han visto que, con deshidratación, el cerebro pierde un poquito de volumen. [whispers] Literalmente, se encoge un poco.
+[curious] ¿Y por qué duele la cabeza? [dramatic] Algunos estudios han visto que, con deshidratación, el cerebro pierde un poquito de volumen. [surprised] Literalmente, se encoge un poco.
 
 [excited] ¡Treinta y seis horas!
 
@@ -43,22 +43,22 @@
 
 [worried] Te mareas al levantarte. Sientes el pulso acelerado. [sighs] Y estás agotado.
 
-[mysterious] Y entonces tu cuerpo toma una decisión difícil. [serious] Empieza a mandar la poca agua que queda a lo más importante: [dramatic] el cerebro y el corazón. [thoughtful] La piel, los músculos y el estómago reciben menos. [curious] Por eso las manos y los pies pueden sentirse fríos... [whispers] aunque por dentro estés ardiendo.
+[mysterious] Y entonces tu cuerpo toma una decisión difícil. [serious] Empieza a mandar la poca agua que queda a lo más importante: [dramatic] el cerebro y el corazón. [thoughtful] La piel, los músculos y el estómago reciben menos. [curious] Por eso las manos y los pies pueden sentirse fríos... [dramatic] aunque por dentro estés ardiendo.
 
 
 ===== PARTE 3 =====
 
 [dramatic] Llegamos al día dos... [mysterious] y aquí tu cuerpo enfrenta un problema enorme: el calor.
 
-[curious] Normalmente, cuando tienes calor, sudas, y el sudor te enfría. [serious] Pero sin agua... [whispers] ya casi no puedes sudar.
+[curious] Normalmente, cuando tienes calor, sudas, y el sudor te enfría. [serious] Pero sin agua... [serious] ya casi no puedes sudar.
 
 [dramatic] Tu temperatura empieza a subir, y subir. [shocked] ¡Y si estás en un lugar caliente, todo esto pasa muchísimo más rápido! [serious] En un desierto, bajo el sol, una persona puede perder más de un litro de sudor por hora.
 
-[mysterious] Cuando pierdes cerca de diez por ciento del agua de tu cuerpo, empieza lo más peligroso: [slowly] confusión... [slowly] alucinaciones... [whispers] y tu cuerpo ya no puede controlar su temperatura.
+[mysterious] Cuando pierdes cerca de diez por ciento del agua de tu cuerpo, empieza lo más peligroso: [slowly] confusión... [slowly] alucinaciones... [dramatic] y tu cuerpo ya no puede controlar su temperatura.
 
 [serious] Los riñones, que llevan días trabajando sin descanso, empiezan a fallar. Y sin ellos, los desechos se acumulan en la sangre.
 
-[dramatic] Y si la pérdida llega a quince o veinte por ciento... [whispers] el cuerpo ya no puede más.
+[dramatic] Y si la pérdida llega a quince o veinte por ciento... [serious] el cuerpo ya no puede más.
 
 [curious] Entonces... ¿cuánto se puede aguantar en total? [thoughtful] Existe una regla famosa: tres minutos sin aire, tres días sin agua y tres semanas sin comida. [serious] No es exacta, pero da una idea: en condiciones normales, la mayoría de las personas aguantaría solo unos días. [dramatic] Y con mucho calor... podría ser menos de dos.
 
@@ -85,7 +85,7 @@
 
 [mischievously] Y aquí viene la sorpresa que te prometí: [dramatic] tomar DEMASIADA agua también es peligroso.
 
-[curious] Si tomas muchísima agua en muy poco tiempo, la sal de tu sangre se diluye demasiado. [serious] Tus células se hinchan como globos... [whispers] incluso las del cerebro. [dramatic] Se llama intoxicación por agua, y ha pasado en concursos y retos donde la gente bebe litros y litros sin parar.
+[curious] Si tomas muchísima agua en muy poco tiempo, la sal de tu sangre se diluye demasiado. [serious] Tus células se hinchan como globos... [dramatic] incluso las del cerebro. [dramatic] Se llama intoxicación por agua, y ha pasado en concursos y retos donde la gente bebe litros y litros sin parar.
 
 [thoughtful] Entonces, ¿cuánta agua necesitas de verdad? [curious] Las autoridades de salud europeas recomiendan alrededor de dos litros al día para las mujeres, y dos y medio para los hombres... [surprised] ¡pero contando el agua de la comida! [playful] La fruta, la sopa y hasta el pan tienen agua.
 
