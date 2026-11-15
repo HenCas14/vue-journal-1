@@ -13,15 +13,15 @@
 
 ⏱️ Capítulos
 0:00 Intro: ¿qué pasa si no duermes?
-0:31 Las primeras 16 horas
-1:17 24 horas: como si hubieras bebido
-2:15 36 horas: los microsueños
+0:32 Las primeras 16 horas
+1:18 24 horas: como si hubieras bebido
+2:11 36 horas: los microsueños
 3:03 Día 2: hambre y defensas bajas
-3:55 ¿Por qué necesitamos dormir? El cerebro se limpia
-4:41 La historia de Randy Gardner (11 días sin dormir)
-5:59 ¿Se puede morir por no dormir?
-6:42 ¿Y si duermes solo 6 horas?
-7:30 Resumen y pregunta
+3:51 ¿Por qué necesitamos dormir? El cerebro se limpia
+4:37 La historia de Randy Gardner (11 días sin dormir)
+5:56 ¿Se puede morir por no dormir?
+6:43 ¿Y si duermes solo 6 horas?
+7:28 Resumen y pregunta
 
 💬 ¿Cuál es el máximo tiempo que has aguantado sin dormir? ¡Cuéntanos en los comentarios!
 
