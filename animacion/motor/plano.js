@@ -507,7 +507,8 @@ function buildCaptions(sents) {
     const words = s.text.replace(/\s+/g, ' ').trim().split(' ').filter(Boolean);
     const weights = words.map(w => w.replace(/[^\wáéíóúñü]/gi, '').length + 2);
     const total = weights.reduce((x, y) => x + y, 0), dur = Math.max(0.3, s.b - s.a);
-    let acc = 0; const times = weights.map(wt => { const st = s.a + dur * acc / total; acc += wt; return [st, s.a + dur * acc / total]; });
+    let acc = 0; let times = weights.map(wt => { const st = s.a + dur * acc / total; acc += wt; return [st, s.a + dur * acc / total]; });
+    if (s.words && s.words.length === words.length) times = s.words.map(w => [w[1], w[2]]); // tiempos reales por palabra
     let cur = [], len = 0;
     const flush = () => { if (cur.length) { caps.push({ a: times[cur[0]][0], b: times[cur[cur.length - 1]][1], words: cur.map(i => ({ w: words[i], a: times[i][0] })) }); cur = []; len = 0; } };
     words.forEach((w, i) => {

@@ -10,8 +10,8 @@ const cutBefore = (pt, pi) => (PAR(pt, pi - 1).end + PAR(pt, pi).start) / 2;
 const SEG = []; let cursor = 0.4;
 function seg(part, from, to, gap) { SEG.push({ part, from, to, at: cursor }); cursor += to - from + gap; }
 const TITLE_LEN = 3.6, END_LEN = 15.5;
-seg(0, 0, cutBefore(0, 5), 0); const TITLE_AT = cursor; cursor += TITLE_LEN;
-seg(0, cutBefore(0, 5), TIEMPOS[0].duration, 0.8);
+// La tarjeta de título aparece sobre la voz (sin pausarla)
+seg(0, 0, TIEMPOS[0].duration, 0.8); const TITLE_AT = G(0, PAR(0, 4).end) + 0.1;
 seg(1, 0, TIEMPOS[1].duration, 0.8);
 seg(2, 0, cutBefore(2, 6), 1.6);
 seg(2, cutBefore(2, 6), TIEMPOS[2].duration, 0.8);
@@ -106,7 +106,7 @@ let COUNTER_FIRST = null;
 
 // ---------- 4. Un día normal (montaje) ----------
 {
-  const a = TITLE_AT + TITLE_LEN, p = PAR(0, 5), s1 = SS(0, 5, 1), s2 = SS(0, 5, 2);
+  const a = Math.max(TITLE_AT + TITLE_LEN, PS(0, 5) + 1.5), p = PAR(0, 5), s1 = SS(0, 5, 1), s2 = SS(0, 5, 2);
   const step = (s2 - s1) / 3;
   [0, 1, 2].forEach(k => fx(s1 + k * step, 'pop', 0.8, 1 + k * 0.2)); fx(s2, 'sparkle', 0.5);
   shot(a, (ctx, lt, d, t) => {
@@ -950,7 +950,7 @@ SCENE.music = [[0, 0.14], [TITLE_AT - 0.2, 0.14], [TITLE_AT, 0.3], [TITLE_AT + T
 
 // Subtítulos y golpes de cámara a partir de las frases de la narración
 const SENTS = [];
-TIEMPOS.forEach((p, pt) => p.paragraphs.forEach(par => par.sentences.forEach(s => SENTS.push({ a: G(pt, s.start), b: G(pt, s.end), text: s.text }))));
+TIEMPOS.forEach((p, pt) => p.paragraphs.forEach(par => par.sentences.forEach(s => SENTS.push({ a: G(pt, s.start), b: G(pt, s.end), text: s.text, words: (s.words || []).map(w => [w[0], G(pt, w[1]), G(pt, w[2])]) }))));
 const CAPS = buildCaptions(SENTS), SENT_STARTS = SENTS.map(s => s.a);
 
 SCENE.render = function (ctx, t) {

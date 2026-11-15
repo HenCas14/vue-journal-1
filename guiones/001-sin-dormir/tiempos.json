@@ -1,379 +1,2294 @@
 [
  {
-  "audio": "audio/001-parte1.mp3",
-  "duration": 130.35,
+  "audio": "guiones/001-sin-dormir/alineacion/parte1.json",
+  "duration": 130.36,
   "paragraphs": [
    {
-    "start": 0.14,
-    "end": 3.64,
+    "start": 0.16,
+    "end": 4.12,
     "text": "Imagina que esta noche... no duermes. Ni un minuto.",
     "sentences": [
      {
-      "p": 0,
       "text": "Imagina que esta noche...",
-      "start": 0.14,
-      "end": 1.56
+      "start": 0.16,
+      "end": 1.56,
+      "words": [
+       [
+        "Imagina",
+        0.16,
+        0.62
+       ],
+       [
+        "que",
+        0.7,
+        0.76
+       ],
+       [
+        "esta",
+        0.8,
+        1.04
+       ],
+       [
+        "noche...",
+        1.08,
+        1.56
+       ]
+      ]
      },
      {
-      "p": 0,
       "text": "no duermes.",
       "start": 2.06,
-      "end": 2.8
+      "end": 2.74,
+      "words": [
+       [
+        "no",
+        2.06,
+        2.14
+       ],
+       [
+        "duermes.",
+        2.2,
+        2.74
+       ]
+      ]
      },
      {
-      "p": 0,
       "text": "Ni un minuto.",
       "start": 3.22,
-      "end": 3.64
+      "end": 4.12,
+      "words": [
+       [
+        "Ni",
+        3.22,
+        3.34
+       ],
+       [
+        "un",
+        3.46,
+        3.56
+       ],
+       [
+        "minuto.",
+        3.64,
+        4.12
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 3.78,
-    "end": 5.64,
+    "start": 4.58,
+    "end": 7.12,
     "text": "Y mañana tampoco. ¡Ni pasado mañana!",
     "sentences": [
      {
-      "p": 1,
       "text": "Y mañana tampoco.",
-      "start": 3.78,
-      "end": 4.08
+      "start": 4.58,
+      "end": 5.6,
+      "words": [
+       [
+        "Y",
+        4.58,
+        4.64
+       ],
+       [
+        "mañana",
+        4.68,
+        5.02
+       ],
+       [
+        "tampoco.",
+        5.08,
+        5.6
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "¡Ni pasado mañana!",
-      "start": 4.54,
-      "end": 5.64
+      "start": 5.86,
+      "end": 7.12,
+      "words": [
+       [
+        "¡Ni",
+        5.86,
+        5.98
+       ],
+       [
+        "pasado",
+        6.1,
+        6.58
+       ],
+       [
+        "mañana!",
+        6.66,
+        7.12
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 5.76,
-    "end": 12.02,
+    "start": 7.54,
+    "end": 15.56,
     "text": "En 1964, un chico de diecisiete años hizo EXACTAMENTE eso. ¡Aguantó once días despierto!",
     "sentences": [
      {
-      "p": 2,
       "text": "En 1964, un chico de diecisiete años hizo EXACTAMENTE eso.",
-      "start": 5.76,
-      "end": 9.28
+      "start": 7.54,
+      "end": 13.12,
+      "words": [
+       [
+        "En",
+        7.54,
+        7.64
+       ],
+       [
+        "1964,",
+        7.68,
+        9.26
+       ],
+       [
+        "un",
+        9.48,
+        9.54
+       ],
+       [
+        "chico",
+        9.6,
+        9.86
+       ],
+       [
+        "de",
+        9.9,
+        9.96
+       ],
+       [
+        "diecisiete",
+        10.02,
+        10.72
+       ],
+       [
+        "años",
+        10.82,
+        11.16
+       ],
+       [
+        "hizo",
+        11.2,
+        11.44
+       ],
+       [
+        "EXACTAMENTE",
+        11.62,
+        12.74
+       ],
+       [
+        "eso.",
+        12.86,
+        13.12
+       ]
+      ]
      },
      {
-      "p": 2,
       "text": "¡Aguantó once días despierto!",
-      "start": 9.42,
-      "end": 12.02
+      "start": 13.4,
+      "end": 15.56,
+      "words": [
+       [
+        "¡Aguantó",
+        13.4,
+        13.9
+       ],
+       [
+        "once",
+        14.14,
+        14.5
+       ],
+       [
+        "días",
+        14.58,
+        14.88
+       ],
+       [
+        "despierto!",
+        14.92,
+        15.56
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 12.18,
-    "end": 18.22,
+    "start": 15.9,
+    "end": 24.0,
     "text": "Para el final, ya no podía hablar bien... veía cosas que no existían... y estaba convencido de que era OTRA persona.",
     "sentences": [
      {
-      "p": 3,
       "text": "Para el final, ya no podía hablar bien...",
-      "start": 12.18,
-      "end": 13.14
+      "start": 15.9,
+      "end": 18.18,
+      "words": [
+       [
+        "Para",
+        15.9,
+        16.0
+       ],
+       [
+        "el",
+        16.04,
+        16.1
+       ],
+       [
+        "final,",
+        16.18,
+        16.54
+       ],
+       [
+        "ya",
+        16.92,
+        16.98
+       ],
+       [
+        "no",
+        17.02,
+        17.14
+       ],
+       [
+        "podía",
+        17.18,
+        17.48
+       ],
+       [
+        "hablar",
+        17.5,
+        17.76
+       ],
+       [
+        "bien...",
+        17.84,
+        18.18
+       ]
+      ]
      },
      {
-      "p": 3,
       "text": "veía cosas que no existían...",
-      "start": 13.4,
-      "end": 15.58
+      "start": 18.58,
+      "end": 20.62,
+      "words": [
+       [
+        "veía",
+        18.58,
+        18.84
+       ],
+       [
+        "cosas",
+        18.94,
+        19.28
+       ],
+       [
+        "que",
+        19.38,
+        19.5
+       ],
+       [
+        "no",
+        19.62,
+        19.74
+       ],
+       [
+        "existían...",
+        19.78,
+        20.62
+       ]
+      ]
      },
      {
-      "p": 3,
       "text": "y estaba convencido de que era OTRA persona.",
-      "start": 15.88,
-      "end": 18.22
+      "start": 21.12,
+      "end": 24.0,
+      "words": [
+       [
+        "y",
+        21.12,
+        21.16
+       ],
+       [
+        "estaba",
+        21.22,
+        21.56
+       ],
+       [
+        "convencido",
+        21.6,
+        22.28
+       ],
+       [
+        "de",
+        22.32,
+        22.38
+       ],
+       [
+        "que",
+        22.48,
+        22.58
+       ],
+       [
+        "era",
+        22.66,
+        23.0
+       ],
+       [
+        "OTRA",
+        23.12,
+        23.4
+       ],
+       [
+        "persona.",
+        23.46,
+        24.0
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 18.5,
-    "end": 30.68,
+    "start": 24.4,
+    "end": 35.26,
     "text": "Hoy vamos a ver, hora por hora, qué le pasa a tu cuerpo y a tu cerebro cuando dejas de dormir. Y te adelanto algo: lo que ocurre después del tercer día... es lo más extraño de todo.",
     "sentences": [
      {
-      "p": 4,
       "text": "Hoy vamos a ver, hora por hora, qué le pasa a tu cuerpo y a tu cerebro cuando dejas de dormir.",
-      "start": 18.5,
-      "end": 23.96
+      "start": 24.4,
+      "end": 29.34,
+      "words": [
+       [
+        "Hoy",
+        24.4,
+        24.54
+       ],
+       [
+        "vamos",
+        24.56,
+        24.8
+       ],
+       [
+        "a",
+        24.86,
+        24.92
+       ],
+       [
+        "ver,",
+        24.96,
+        25.1
+       ],
+       [
+        "hora",
+        25.3,
+        25.48
+       ],
+       [
+        "por",
+        25.58,
+        25.7
+       ],
+       [
+        "hora,",
+        25.74,
+        25.96
+       ],
+       [
+        "qué",
+        26.12,
+        26.2
+       ],
+       [
+        "le",
+        26.24,
+        26.34
+       ],
+       [
+        "pasa",
+        26.38,
+        26.58
+       ],
+       [
+        "a",
+        26.62,
+        26.66
+       ],
+       [
+        "tu",
+        26.7,
+        26.84
+       ],
+       [
+        "cuerpo",
+        26.88,
+        27.22
+       ],
+       [
+        "y",
+        27.24,
+        27.26
+       ],
+       [
+        "a",
+        27.3,
+        27.34
+       ],
+       [
+        "tu",
+        27.38,
+        27.46
+       ],
+       [
+        "cerebro",
+        27.52,
+        27.96
+       ],
+       [
+        "cuando",
+        28.02,
+        28.38
+       ],
+       [
+        "dejas",
+        28.44,
+        28.78
+       ],
+       [
+        "de",
+        28.8,
+        28.88
+       ],
+       [
+        "dormir.",
+        28.92,
+        29.34
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "Y te adelanto algo: lo que ocurre después del tercer día...",
-      "start": 24.38,
-      "end": 29.32
+      "start": 29.66,
+      "end": 33.08,
+      "words": [
+       [
+        "Y",
+        29.66,
+        29.76
+       ],
+       [
+        "te",
+        29.84,
+        29.88
+       ],
+       [
+        "adelanto",
+        29.92,
+        30.36
+       ],
+       [
+        "algo:",
+        30.44,
+        30.68
+       ],
+       [
+        "lo",
+        31.06,
+        31.16
+       ],
+       [
+        "que",
+        31.18,
+        31.24
+       ],
+       [
+        "ocurre",
+        31.28,
+        31.62
+       ],
+       [
+        "después",
+        31.66,
+        32.04
+       ],
+       [
+        "del",
+        32.08,
+        32.24
+       ],
+       [
+        "tercer",
+        32.28,
+        32.72
+       ],
+       [
+        "día...",
+        32.78,
+        33.08
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "es lo más extraño de todo.",
-      "start": 29.56,
-      "end": 30.68
+      "start": 33.46,
+      "end": 35.26,
+      "words": [
+       [
+        "es",
+        33.46,
+        33.6
+       ],
+       [
+        "lo",
+        33.66,
+        33.74
+       ],
+       [
+        "más",
+        33.9,
+        34.1
+       ],
+       [
+        "extraño",
+        34.18,
+        34.68
+       ],
+       [
+        "de",
+        34.72,
+        34.86
+       ],
+       [
+        "todo.",
+        34.92,
+        35.26
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 31.0,
-    "end": 36.78,
+    "start": 35.72,
+    "end": 42.12,
     "text": "Empecemos por lo normal. Te despiertas, desayunas, vas a la escuela o al trabajo. Hasta aquí, nada raro.",
     "sentences": [
      {
-      "p": 5,
       "text": "Empecemos por lo normal.",
-      "start": 31.0,
-      "end": 33.06
+      "start": 35.72,
+      "end": 36.88,
+      "words": [
+       [
+        "Empecemos",
+        35.72,
+        36.18
+       ],
+       [
+        "por",
+        36.22,
+        36.32
+       ],
+       [
+        "lo",
+        36.36,
+        36.44
+       ],
+       [
+        "normal.",
+        36.48,
+        36.88
+       ]
+      ]
      },
      {
-      "p": 5,
       "text": "Te despiertas, desayunas, vas a la escuela o al trabajo.",
-      "start": 33.42,
-      "end": 35.02
+      "start": 37.16,
+      "end": 40.5,
+      "words": [
+       [
+        "Te",
+        37.16,
+        37.24
+       ],
+       [
+        "despiertas,",
+        37.26,
+        38.02
+       ],
+       [
+        "desayunas,",
+        38.12,
+        38.9
+       ],
+       [
+        "vas",
+        39.02,
+        39.14
+       ],
+       [
+        "a",
+        39.18,
+        39.22
+       ],
+       [
+        "la",
+        39.24,
+        39.28
+       ],
+       [
+        "escuela",
+        39.32,
+        39.82
+       ],
+       [
+        "o",
+        39.86,
+        39.9
+       ],
+       [
+        "al",
+        39.96,
+        40.04
+       ],
+       [
+        "trabajo.",
+        40.08,
+        40.5
+       ]
+      ]
      },
      {
-      "p": 5,
       "text": "Hasta aquí, nada raro.",
-      "start": 35.66,
-      "end": 36.78
+      "start": 40.78,
+      "end": 42.12,
+      "words": [
+       [
+        "Hasta",
+        40.78,
+        41.0
+       ],
+       [
+        "aquí,",
+        41.04,
+        41.26
+       ],
+       [
+        "nada",
+        41.58,
+        41.8
+       ],
+       [
+        "raro.",
+        41.88,
+        42.12
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 37.16,
-    "end": 53.7,
+    "start": 42.44,
+    "end": 55.66,
     "text": "Pero aunque no lo notes, dentro de tu cerebro se está acumulando una sustancia llamada adenosina. Cada hora que pasas despierto, hay un poquito más. Es como una barra de cansancio que se va llenando... y llenando... y llenando.",
     "sentences": [
      {
-      "p": 6,
       "text": "Pero aunque no lo notes, dentro de tu cerebro se está acumulando una sustancia llamada adenosina.",
-      "start": 37.16,
-      "end": 42.06
-     },
-     {
-      "p": 6,
-      "text": "Cada hora que pasas despierto, hay un poquito más.",
       "start": 42.44,
-      "end": 47.58
+      "end": 47.64,
+      "words": [
+       [
+        "Pero",
+        42.44,
+        42.58
+       ],
+       [
+        "aunque",
+        42.6,
+        42.84
+       ],
+       [
+        "no",
+        42.88,
+        42.98
+       ],
+       [
+        "lo",
+        43.02,
+        43.1
+       ],
+       [
+        "notes,",
+        43.14,
+        43.54
+       ],
+       [
+        "dentro",
+        43.74,
+        43.98
+       ],
+       [
+        "de",
+        44.02,
+        44.1
+       ],
+       [
+        "tu",
+        44.14,
+        44.24
+       ],
+       [
+        "cerebro",
+        44.28,
+        44.64
+       ],
+       [
+        "se",
+        44.68,
+        44.74
+       ],
+       [
+        "está",
+        44.78,
+        44.94
+       ],
+       [
+        "acumulando",
+        44.96,
+        45.48
+       ],
+       [
+        "una",
+        45.52,
+        45.66
+       ],
+       [
+        "sustancia",
+        45.72,
+        46.26
+       ],
+       [
+        "llamada",
+        46.28,
+        46.82
+       ],
+       [
+        "adenosina.",
+        46.92,
+        47.64
+       ]
+      ]
      },
      {
-      "p": 6,
+      "text": "Cada hora que pasas despierto, hay un poquito más.",
+      "start": 47.94,
+      "end": 50.84,
+      "words": [
+       [
+        "Cada",
+        47.94,
+        48.18
+       ],
+       [
+        "hora",
+        48.2,
+        48.36
+       ],
+       [
+        "que",
+        48.38,
+        48.5
+       ],
+       [
+        "pasas",
+        48.56,
+        48.8
+       ],
+       [
+        "despierto,",
+        48.84,
+        49.4
+       ],
+       [
+        "hay",
+        49.58,
+        49.74
+       ],
+       [
+        "un",
+        49.78,
+        49.92
+       ],
+       [
+        "poquito",
+        49.98,
+        50.5
+       ],
+       [
+        "más.",
+        50.56,
+        50.84
+       ]
+      ]
+     },
+     {
       "text": "Es como una barra de cansancio que se va llenando...",
-      "start": 47.92,
-      "end": 50.06
+      "start": 51.14,
+      "end": 53.62,
+      "words": [
+       [
+        "Es",
+        51.14,
+        51.2
+       ],
+       [
+        "como",
+        51.24,
+        51.36
+       ],
+       [
+        "una",
+        51.42,
+        51.56
+       ],
+       [
+        "barra",
+        51.6,
+        51.82
+       ],
+       [
+        "de",
+        51.86,
+        51.94
+       ],
+       [
+        "cansancio",
+        51.98,
+        52.52
+       ],
+       [
+        "que",
+        52.54,
+        52.64
+       ],
+       [
+        "se",
+        52.68,
+        52.76
+       ],
+       [
+        "va",
+        52.8,
+        52.9
+       ],
+       [
+        "llenando...",
+        52.94,
+        53.62
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "y llenando...",
-      "start": 50.18,
-      "end": 50.84
+      "start": 53.92,
+      "end": 54.72,
+      "words": [
+       [
+        "y",
+        53.92,
+        53.98
+       ],
+       [
+        "llenando...",
+        54.0,
+        54.72
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "y llenando.",
-      "start": 51.08,
-      "end": 53.7
+      "start": 55.08,
+      "end": 55.66,
+      "words": [
+       [
+        "y",
+        55.08,
+        55.16
+       ],
+       [
+        "llenando.",
+        55.18,
+        55.66
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 53.84,
-    "end": 65.12,
+    "start": 56.08,
+    "end": 68.92,
     "text": "El café funciona justamente porque ENGAÑA a tu cerebro. La cafeína se pone en el lugar donde debería actuar la adenosina, y por un rato no sientes el cansancio. Pero la barra se sigue llenando. Solo que no la ves.",
     "sentences": [
      {
-      "p": 7,
       "text": "El café funciona justamente porque ENGAÑA a tu cerebro.",
-      "start": 53.84,
-      "end": 55.68
+      "start": 56.08,
+      "end": 59.26,
+      "words": [
+       [
+        "El",
+        56.08,
+        56.16
+       ],
+       [
+        "café",
+        56.2,
+        56.42
+       ],
+       [
+        "funciona",
+        56.48,
+        56.92
+       ],
+       [
+        "justamente",
+        57.02,
+        57.7
+       ],
+       [
+        "porque",
+        57.74,
+        58.0
+       ],
+       [
+        "ENGAÑA",
+        58.04,
+        58.6
+       ],
+       [
+        "a",
+        58.62,
+        58.66
+       ],
+       [
+        "tu",
+        58.7,
+        58.78
+       ],
+       [
+        "cerebro.",
+        58.84,
+        59.26
+       ]
+      ]
      },
      {
-      "p": 7,
       "text": "La cafeína se pone en el lugar donde debería actuar la adenosina, y por un rato no sientes el cansancio.",
-      "start": 56.02,
-      "end": 59.24
+      "start": 59.52,
+      "end": 65.16,
+      "words": [
+       [
+        "La",
+        59.52,
+        59.6
+       ],
+       [
+        "cafeína",
+        59.66,
+        60.12
+       ],
+       [
+        "se",
+        60.18,
+        60.3
+       ],
+       [
+        "pone",
+        60.36,
+        60.5
+       ],
+       [
+        "en",
+        60.52,
+        60.58
+       ],
+       [
+        "el",
+        60.62,
+        60.68
+       ],
+       [
+        "lugar",
+        60.74,
+        61.0
+       ],
+       [
+        "donde",
+        61.04,
+        61.26
+       ],
+       [
+        "debería",
+        61.28,
+        61.66
+       ],
+       [
+        "actuar",
+        61.7,
+        62.0
+       ],
+       [
+        "la",
+        62.04,
+        62.08
+       ],
+       [
+        "adenosina,",
+        62.12,
+        62.68
+       ],
+       [
+        "y",
+        63.06,
+        63.16
+       ],
+       [
+        "por",
+        63.2,
+        63.3
+       ],
+       [
+        "un",
+        63.34,
+        63.42
+       ],
+       [
+        "rato",
+        63.5,
+        63.78
+       ],
+       [
+        "no",
+        63.94,
+        64.08
+       ],
+       [
+        "sientes",
+        64.14,
+        64.46
+       ],
+       [
+        "el",
+        64.52,
+        64.6
+       ],
+       [
+        "cansancio.",
+        64.64,
+        65.16
+       ]
+      ]
      },
      {
-      "p": 7,
       "text": "Pero la barra se sigue llenando.",
-      "start": 59.5,
-      "end": 62.7
+      "start": 65.44,
+      "end": 67.4,
+      "words": [
+       [
+        "Pero",
+        65.44,
+        65.62
+       ],
+       [
+        "la",
+        65.66,
+        65.76
+       ],
+       [
+        "barra",
+        65.82,
+        66.16
+       ],
+       [
+        "se",
+        66.22,
+        66.4
+       ],
+       [
+        "sigue",
+        66.5,
+        66.8
+       ],
+       [
+        "llenando.",
+        66.84,
+        67.4
+       ]
+      ]
      },
      {
-      "p": 7,
       "text": "Solo que no la ves.",
-      "start": 62.94,
-      "end": 65.12
+      "start": 67.84,
+      "end": 68.92,
+      "words": [
+       [
+        "Solo",
+        67.84,
+        68.08
+       ],
+       [
+        "que",
+        68.12,
+        68.24
+       ],
+       [
+        "no",
+        68.28,
+        68.4
+       ],
+       [
+        "la",
+        68.44,
+        68.56
+       ],
+       [
+        "ves.",
+        68.6,
+        68.92
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 65.44,
-    "end": 73.5,
+    "start": 69.38,
+    "end": 78.04,
     "text": "Normalmente, después de unas dieciséis horas, esa barra está casi llena y tu cuerpo te pide dormir. Pero hoy... no vas a hacerle caso.",
     "sentences": [
      {
-      "p": 8,
       "text": "Normalmente, después de unas dieciséis horas, esa barra está casi llena y tu cuerpo te pide dormir.",
-      "start": 65.44,
-      "end": 71.84
+      "start": 69.38,
+      "end": 75.46,
+      "words": [
+       [
+        "Normalmente,",
+        69.38,
+        70.0
+       ],
+       [
+        "después",
+        70.18,
+        70.46
+       ],
+       [
+        "de",
+        70.5,
+        70.56
+       ],
+       [
+        "unas",
+        70.6,
+        70.8
+       ],
+       [
+        "dieciséis",
+        70.84,
+        71.44
+       ],
+       [
+        "horas,",
+        71.46,
+        71.8
+       ],
+       [
+        "esa",
+        72.02,
+        72.18
+       ],
+       [
+        "barra",
+        72.22,
+        72.42
+       ],
+       [
+        "está",
+        72.44,
+        72.8
+       ],
+       [
+        "casi",
+        72.84,
+        73.14
+       ],
+       [
+        "llena",
+        73.2,
+        73.5
+       ],
+       [
+        "y",
+        73.74,
+        73.78
+       ],
+       [
+        "tu",
+        73.84,
+        73.96
+       ],
+       [
+        "cuerpo",
+        74.02,
+        74.36
+       ],
+       [
+        "te",
+        74.46,
+        74.54
+       ],
+       [
+        "pide",
+        74.72,
+        74.98
+       ],
+       [
+        "dormir.",
+        75.02,
+        75.46
+       ]
+      ]
      },
      {
-      "p": 8,
       "text": "Pero hoy...",
-      "start": 71.96,
-      "end": 72.68
+      "start": 75.82,
+      "end": 76.38,
+      "words": [
+       [
+        "Pero",
+        75.82,
+        76.04
+       ],
+       [
+        "hoy...",
+        76.08,
+        76.38
+       ]
+      ]
      },
      {
-      "p": 8,
       "text": "no vas a hacerle caso.",
-      "start": 72.82,
-      "end": 73.5
+      "start": 76.86,
+      "end": 78.04,
+      "words": [
+       [
+        "no",
+        76.86,
+        77.04
+       ],
+       [
+        "vas",
+        77.08,
+        77.26
+       ],
+       [
+        "a",
+        77.28,
+        77.3
+       ],
+       [
+        "hacerle",
+        77.32,
+        77.64
+       ],
+       [
+        "caso.",
+        77.74,
+        78.04
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 73.7,
-    "end": 78.02,
+    "start": 78.38,
+    "end": 82.2,
     "text": "¡Llegas a las veinticuatro horas! Un día completo sin dormir.",
     "sentences": [
      {
-      "p": 9,
       "text": "¡Llegas a las veinticuatro horas!",
-      "start": 73.7,
-      "end": 75.42
+      "start": 78.38,
+      "end": 80.16,
+      "words": [
+       [
+        "¡Llegas",
+        78.38,
+        78.7
+       ],
+       [
+        "a",
+        78.74,
+        78.76
+       ],
+       [
+        "las",
+        78.8,
+        78.92
+       ],
+       [
+        "veinticuatro",
+        79.0,
+        79.74
+       ],
+       [
+        "horas!",
+        79.82,
+        80.16
+       ]
+      ]
      },
      {
-      "p": 9,
       "text": "Un día completo sin dormir.",
-      "start": 75.8,
-      "end": 78.02
+      "start": 80.42,
+      "end": 82.2,
+      "words": [
+       [
+        "Un",
+        80.42,
+        80.52
+       ],
+       [
+        "día",
+        80.6,
+        80.78
+       ],
+       [
+        "completo",
+        80.92,
+        81.6
+       ],
+       [
+        "sin",
+        81.64,
+        81.78
+       ],
+       [
+        "dormir.",
+        81.82,
+        82.2
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 78.32,
-    "end": 92.96,
+    "start": 82.56,
+    "end": 97.64,
     "text": "Y aquí viene un dato que sorprende a mucha gente. Investigadores compararon a personas sin dormir... con personas que habían tomado alcohol. Después de unas diecisiete o dieciocho horas despierto, tus reflejos y tu concentración ya se parecen a los de alguien que se tomó un par de copas.",
     "sentences": [
      {
-      "p": 10,
       "text": "Y aquí viene un dato que sorprende a mucha gente.",
-      "start": 78.32,
-      "end": 80.2
+      "start": 82.56,
+      "end": 84.9,
+      "words": [
+       [
+        "Y",
+        82.56,
+        82.6
+       ],
+       [
+        "aquí",
+        82.66,
+        82.84
+       ],
+       [
+        "viene",
+        82.86,
+        83.02
+       ],
+       [
+        "un",
+        83.06,
+        83.12
+       ],
+       [
+        "dato",
+        83.16,
+        83.36
+       ],
+       [
+        "que",
+        83.44,
+        83.54
+       ],
+       [
+        "sorprende",
+        83.58,
+        84.02
+       ],
+       [
+        "a",
+        84.06,
+        84.08
+       ],
+       [
+        "mucha",
+        84.22,
+        84.52
+       ],
+       [
+        "gente.",
+        84.56,
+        84.9
+       ]
+      ]
      },
      {
-      "p": 10,
       "text": "Investigadores compararon a personas sin dormir...",
-      "start": 80.34,
-      "end": 82.22
+      "start": 85.22,
+      "end": 87.62,
+      "words": [
+       [
+        "Investigadores",
+        85.22,
+        85.9
+       ],
+       [
+        "compararon",
+        85.94,
+        86.4
+       ],
+       [
+        "a",
+        86.42,
+        86.46
+       ],
+       [
+        "personas",
+        86.54,
+        86.98
+       ],
+       [
+        "sin",
+        87.06,
+        87.2
+       ],
+       [
+        "dormir...",
+        87.24,
+        87.62
+       ]
+      ]
      },
      {
-      "p": 10,
       "text": "con personas que habían tomado alcohol.",
-      "start": 82.5,
-      "end": 84.9
+      "start": 87.84,
+      "end": 89.7,
+      "words": [
+       [
+        "con",
+        87.84,
+        87.98
+       ],
+       [
+        "personas",
+        88.0,
+        88.44
+       ],
+       [
+        "que",
+        88.52,
+        88.58
+       ],
+       [
+        "habían",
+        88.6,
+        88.96
+       ],
+       [
+        "tomado",
+        89.02,
+        89.32
+       ],
+       [
+        "alcohol.",
+        89.36,
+        89.7
+       ]
+      ]
      },
      {
-      "p": 10,
       "text": "Después de unas diecisiete o dieciocho horas despierto, tus reflejos y tu concentración ya se parecen a los de alguien que se tomó un par de copas.",
-      "start": 85.18,
-      "end": 92.96
+      "start": 90.0,
+      "end": 97.64,
+      "words": [
+       [
+        "Después",
+        90.0,
+        90.3
+       ],
+       [
+        "de",
+        90.32,
+        90.4
+       ],
+       [
+        "unas",
+        90.44,
+        90.64
+       ],
+       [
+        "diecisiete",
+        90.68,
+        91.4
+       ],
+       [
+        "o",
+        91.44,
+        91.5
+       ],
+       [
+        "dieciocho",
+        91.56,
+        92.12
+       ],
+       [
+        "horas",
+        92.14,
+        92.36
+       ],
+       [
+        "despierto,",
+        92.38,
+        92.92
+       ],
+       [
+        "tus",
+        93.16,
+        93.3
+       ],
+       [
+        "reflejos",
+        93.34,
+        93.82
+       ],
+       [
+        "y",
+        93.84,
+        93.88
+       ],
+       [
+        "tu",
+        93.94,
+        94.02
+       ],
+       [
+        "concentración",
+        94.06,
+        94.78
+       ],
+       [
+        "ya",
+        94.9,
+        94.96
+       ],
+       [
+        "se",
+        95.04,
+        95.16
+       ],
+       [
+        "parecen",
+        95.2,
+        95.52
+       ],
+       [
+        "a",
+        95.56,
+        95.58
+       ],
+       [
+        "los",
+        95.62,
+        95.76
+       ],
+       [
+        "de",
+        95.78,
+        95.86
+       ],
+       [
+        "alguien",
+        95.94,
+        96.2
+       ],
+       [
+        "que",
+        96.22,
+        96.3
+       ],
+       [
+        "se",
+        96.34,
+        96.4
+       ],
+       [
+        "tomó",
+        96.48,
+        96.74
+       ],
+       [
+        "un",
+        96.78,
+        96.9
+       ],
+       [
+        "par",
+        96.92,
+        97.04
+       ],
+       [
+        "de",
+        97.08,
+        97.14
+       ],
+       [
+        "copas.",
+        97.24,
+        97.64
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 93.16,
-    "end": 107.56,
+    "start": 97.92,
+    "end": 107.52,
     "text": "Y a las veinticuatro horas, el resultado es parecido a tener cero punto uno por ciento de alcohol en la sangre. ¡En muchos países, eso ya es más del límite legal para manejar!",
     "sentences": [
      {
-      "p": 11,
       "text": "Y a las veinticuatro horas, el resultado es parecido a tener cero punto uno por ciento de alcohol en la sangre.",
-      "start": 93.16,
-      "end": 103.68
+      "start": 97.92,
+      "end": 103.72,
+      "words": [
+       [
+        "Y",
+        97.92,
+        97.96
+       ],
+       [
+        "a",
+        97.98,
+        98.02
+       ],
+       [
+        "las",
+        98.06,
+        98.16
+       ],
+       [
+        "veinticuatro",
+        98.2,
+        98.86
+       ],
+       [
+        "horas,",
+        98.92,
+        99.24
+       ],
+       [
+        "el",
+        99.44,
+        99.5
+       ],
+       [
+        "resultado",
+        99.54,
+        100.0
+       ],
+       [
+        "es",
+        100.02,
+        100.14
+       ],
+       [
+        "parecido",
+        100.16,
+        100.56
+       ],
+       [
+        "a",
+        100.58,
+        100.6
+       ],
+       [
+        "tener",
+        100.66,
+        100.92
+       ],
+       [
+        "cero",
+        101.1,
+        101.3
+       ],
+       [
+        "punto",
+        101.42,
+        101.72
+       ],
+       [
+        "uno",
+        101.82,
+        101.94
+       ],
+       [
+        "por",
+        102.04,
+        102.14
+       ],
+       [
+        "ciento",
+        102.26,
+        102.58
+       ],
+       [
+        "de",
+        102.62,
+        102.66
+       ],
+       [
+        "alcohol",
+        102.72,
+        103.04
+       ],
+       [
+        "en",
+        103.08,
+        103.16
+       ],
+       [
+        "la",
+        103.2,
+        103.24
+       ],
+       [
+        "sangre.",
+        103.36,
+        103.72
+       ]
+      ]
      },
      {
-      "p": 11,
       "text": "¡En muchos países, eso ya es más del límite legal para manejar!",
-      "start": 103.96,
-      "end": 107.56
+      "start": 103.98,
+      "end": 107.52,
+      "words": [
+       [
+        "¡En",
+        103.98,
+        104.12
+       ],
+       [
+        "muchos",
+        104.18,
+        104.5
+       ],
+       [
+        "países,",
+        104.54,
+        104.96
+       ],
+       [
+        "eso",
+        105.08,
+        105.26
+       ],
+       [
+        "ya",
+        105.36,
+        105.46
+       ],
+       [
+        "es",
+        105.5,
+        105.64
+       ],
+       [
+        "más",
+        105.72,
+        105.92
+       ],
+       [
+        "del",
+        105.94,
+        106.06
+       ],
+       [
+        "límite",
+        106.12,
+        106.48
+       ],
+       [
+        "legal",
+        106.52,
+        106.78
+       ],
+       [
+        "para",
+        106.86,
+        106.98
+       ],
+       [
+        "manejar!",
+        107.04,
+        107.52
+       ]
+      ]
      }
     ]
    },
    {
     "start": 107.96,
-    "end": 130.02,
+    "end": 130.06,
     "text": "Tu cuerpo también lo siente. Sube el cortisol, la hormona del estrés. Tu temperatura baja un poco, así que empiezas a tener frío. Y te vuelves más irritable. Un estudio encontró que, sin dormir, la parte del cerebro que reacciona a las emociones fuertes, la amígdala, responde hasta un SESENTA por ciento más. Así que sí... cosas pequeñitas te parecen el fin del mundo.",
     "sentences": [
      {
-      "p": 12,
       "text": "Tu cuerpo también lo siente.",
       "start": 107.96,
-      "end": 109.5
+      "end": 109.52,
+      "words": [
+       [
+        "Tu",
+        107.96,
+        108.02
+       ],
+       [
+        "cuerpo",
+        108.12,
+        108.48
+       ],
+       [
+        "también",
+        108.52,
+        108.94
+       ],
+       [
+        "lo",
+        108.98,
+        109.04
+       ],
+       [
+        "siente.",
+        109.14,
+        109.52
+       ]
+      ]
      },
      {
-      "p": 12,
       "text": "Sube el cortisol, la hormona del estrés.",
-      "start": 109.72,
-      "end": 110.68
+      "start": 109.82,
+      "end": 111.92,
+      "words": [
+       [
+        "Sube",
+        109.82,
+        109.98
+       ],
+       [
+        "el",
+        110.02,
+        110.06
+       ],
+       [
+        "cortisol,",
+        110.14,
+        110.68
+       ],
+       [
+        "la",
+        110.92,
+        110.96
+       ],
+       [
+        "hormona",
+        110.98,
+        111.36
+       ],
+       [
+        "del",
+        111.4,
+        111.5
+       ],
+       [
+        "estrés.",
+        111.52,
+        111.92
+       ]
+      ]
      },
      {
-      "p": 12,
       "text": "Tu temperatura baja un poco, así que empiezas a tener frío.",
-      "start": 110.86,
-      "end": 113.6
+      "start": 112.18,
+      "end": 115.36,
+      "words": [
+       [
+        "Tu",
+        112.18,
+        112.24
+       ],
+       [
+        "temperatura",
+        112.3,
+        112.88
+       ],
+       [
+        "baja",
+        112.92,
+        113.12
+       ],
+       [
+        "un",
+        113.16,
+        113.28
+       ],
+       [
+        "poco,",
+        113.3,
+        113.58
+       ],
+       [
+        "así",
+        113.86,
+        114.04
+       ],
+       [
+        "que",
+        114.1,
+        114.18
+       ],
+       [
+        "empiezas",
+        114.2,
+        114.66
+       ],
+       [
+        "a",
+        114.7,
+        114.74
+       ],
+       [
+        "tener",
+        114.78,
+        115.06
+       ],
+       [
+        "frío.",
+        115.1,
+        115.36
+       ]
+      ]
      },
      {
-      "p": 12,
       "text": "Y te vuelves más irritable.",
-      "start": 113.78,
-      "end": 115.36
+      "start": 115.68,
+      "end": 117.42,
+      "words": [
+       [
+        "Y",
+        115.68,
+        115.72
+       ],
+       [
+        "te",
+        115.82,
+        115.92
+       ],
+       [
+        "vuelves",
+        115.96,
+        116.34
+       ],
+       [
+        "más",
+        116.56,
+        116.76
+       ],
+       [
+        "irritable.",
+        116.82,
+        117.42
+       ]
+      ]
      },
      {
-      "p": 12,
       "text": "Un estudio encontró que, sin dormir, la parte del cerebro que reacciona a las emociones fuertes, la amígdala, responde hasta un SESENTA por ciento más.",
-      "start": 115.64,
-      "end": 126.3
+      "start": 117.8,
+      "end": 126.26,
+      "words": [
+       [
+        "Un",
+        117.8,
+        117.88
+       ],
+       [
+        "estudio",
+        117.92,
+        118.24
+       ],
+       [
+        "encontró",
+        118.26,
+        118.72
+       ],
+       [
+        "que,",
+        118.76,
+        118.86
+       ],
+       [
+        "sin",
+        119.02,
+        119.16
+       ],
+       [
+        "dormir,",
+        119.2,
+        119.58
+       ],
+       [
+        "la",
+        119.82,
+        119.86
+       ],
+       [
+        "parte",
+        119.96,
+        120.18
+       ],
+       [
+        "del",
+        120.22,
+        120.3
+       ],
+       [
+        "cerebro",
+        120.38,
+        120.68
+       ],
+       [
+        "que",
+        120.76,
+        120.84
+       ],
+       [
+        "reacciona",
+        120.9,
+        121.36
+       ],
+       [
+        "a",
+        121.38,
+        121.4
+       ],
+       [
+        "las",
+        121.44,
+        121.54
+       ],
+       [
+        "emociones",
+        121.58,
+        122.02
+       ],
+       [
+        "fuertes,",
+        122.1,
+        122.54
+       ],
+       [
+        "la",
+        122.74,
+        122.8
+       ],
+       [
+        "amígdala,",
+        122.84,
+        123.32
+       ],
+       [
+        "responde",
+        123.54,
+        123.96
+       ],
+       [
+        "hasta",
+        123.98,
+        124.2
+       ],
+       [
+        "un",
+        124.26,
+        124.38
+       ],
+       [
+        "SESENTA",
+        124.44,
+        125.08
+       ],
+       [
+        "por",
+        125.2,
+        125.32
+       ],
+       [
+        "ciento",
+        125.46,
+        125.82
+       ],
+       [
+        "más.",
+        125.96,
+        126.26
+       ]
+      ]
      },
      {
-      "p": 12,
       "text": "Así que sí...",
-      "start": 126.52,
-      "end": 127.26
+      "start": 126.64,
+      "end": 127.2,
+      "words": [
+       [
+        "Así",
+        126.64,
+        126.82
+       ],
+       [
+        "que",
+        126.9,
+        127.02
+       ],
+       [
+        "sí...",
+        127.08,
+        127.2
+       ]
+      ]
      },
      {
-      "p": 12,
       "text": "cosas pequeñitas te parecen el fin del mundo.",
-      "start": 127.5,
-      "end": 130.02
+      "start": 127.52,
+      "end": 130.06,
+      "words": [
+       [
+        "cosas",
+        127.52,
+        127.78
+       ],
+       [
+        "pequeñitas",
+        127.88,
+        128.58
+       ],
+       [
+        "te",
+        128.64,
+        128.76
+       ],
+       [
+        "parecen",
+        128.8,
+        129.12
+       ],
+       [
+        "el",
+        129.16,
+        129.22
+       ],
+       [
+        "fin",
+        129.36,
+        129.52
+       ],
+       [
+        "del",
+        129.56,
+        129.66
+       ],
+       [
+        "mundo.",
+        129.76,
+        130.06
+       ]
+      ]
      }
     ]
    }
   ]
  },
  {
-  "audio": "audio/001-parte2.mp3",
-  "duration": 99.0,
+  "audio": "guiones/001-sin-dormir/alineacion/parte2.json",
+  "duration": 99.08,
   "paragraphs": [
    {
     "start": 0.12,
-    "end": 3.82,
+    "end": 3.86,
     "text": "Treinta y seis horas. Y ahora pasa algo inquietante.",
     "sentences": [
      {
-      "p": 0,
       "text": "Treinta y seis horas.",
       "start": 0.12,
-      "end": 1.68
+      "end": 1.62,
+      "words": [
+       [
+        "Treinta",
+        0.12,
+        0.46
+       ],
+       [
+        "y",
+        0.54,
+        0.58
+       ],
+       [
+        "seis",
+        0.66,
+        1.02
+       ],
+       [
+        "horas.",
+        1.06,
+        1.62
+       ]
+      ]
      },
      {
-      "p": 0,
       "text": "Y ahora pasa algo inquietante.",
-      "start": 2.06,
-      "end": 3.82
+      "start": 2.08,
+      "end": 3.86,
+      "words": [
+       [
+        "Y",
+        2.08,
+        2.12
+       ],
+       [
+        "ahora",
+        2.2,
+        2.44
+       ],
+       [
+        "pasa",
+        2.58,
+        2.84
+       ],
+       [
+        "algo",
+        2.9,
+        3.1
+       ],
+       [
+        "inquietante.",
+        3.14,
+        3.86
+       ]
+      ]
      }
     ]
    },
@@ -383,827 +2298,5631 @@
     "text": "Tu cerebro empieza a tomar decisiones... sin pedirte permiso. Algunas partes de él se APAGAN por unos segundos, aunque tú sigas con los ojos abiertos. Esto se llama: microsueño.",
     "sentences": [
      {
-      "p": 1,
       "text": "Tu cerebro empieza a tomar decisiones...",
       "start": 4.2,
-      "end": 6.5
+      "end": 6.44,
+      "words": [
+       [
+        "Tu",
+        4.2,
+        4.28
+       ],
+       [
+        "cerebro",
+        4.36,
+        4.68
+       ],
+       [
+        "empieza",
+        4.72,
+        5.2
+       ],
+       [
+        "a",
+        5.22,
+        5.24
+       ],
+       [
+        "tomar",
+        5.32,
+        5.58
+       ],
+       [
+        "decisiones...",
+        5.64,
+        6.44
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "sin pedirte permiso.",
-      "start": 6.72,
-      "end": 7.98
+      "start": 6.8,
+      "end": 7.96,
+      "words": [
+       [
+        "sin",
+        6.8,
+        6.92
+       ],
+       [
+        "pedirte",
+        7.0,
+        7.46
+       ],
+       [
+        "permiso.",
+        7.5,
+        7.96
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "Algunas partes de él se APAGAN por unos segundos, aunque tú sigas con los ojos abiertos.",
-      "start": 8.28,
-      "end": 13.24
+      "start": 8.32,
+      "end": 13.22,
+      "words": [
+       [
+        "Algunas",
+        8.32,
+        8.66
+       ],
+       [
+        "partes",
+        8.7,
+        8.98
+       ],
+       [
+        "de",
+        9.02,
+        9.1
+       ],
+       [
+        "él",
+        9.16,
+        9.24
+       ],
+       [
+        "se",
+        9.34,
+        9.42
+       ],
+       [
+        "APAGAN",
+        9.46,
+        10.0
+       ],
+       [
+        "por",
+        10.04,
+        10.14
+       ],
+       [
+        "unos",
+        10.18,
+        10.34
+       ],
+       [
+        "segundos,",
+        10.38,
+        10.92
+       ],
+       [
+        "aunque",
+        11.12,
+        11.44
+       ],
+       [
+        "tú",
+        11.48,
+        11.64
+       ],
+       [
+        "sigas",
+        11.72,
+        12.06
+       ],
+       [
+        "con",
+        12.1,
+        12.18
+       ],
+       [
+        "los",
+        12.22,
+        12.34
+       ],
+       [
+        "ojos",
+        12.4,
+        12.6
+       ],
+       [
+        "abiertos.",
+        12.66,
+        13.22
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "Esto se llama: microsueño.",
-      "start": 13.46,
-      "end": 15.16
+      "start": 13.54,
+      "end": 15.16,
+      "words": [
+       [
+        "Esto",
+        13.54,
+        13.74
+       ],
+       [
+        "se",
+        13.78,
+        13.86
+       ],
+       [
+        "llama:",
+        13.9,
+        14.2
+       ],
+       [
+        "microsueño.",
+        14.42,
+        15.16
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 15.34,
-    "end": 26.0,
+    "start": 15.42,
+    "end": 25.96,
     "text": "Dura entre medio segundo y unos pocos segundos. Y lo peor es que normalmente no te das cuenta. Estás leyendo, parpadeas... ¡y de repente no recuerdas el último párrafo!",
     "sentences": [
      {
-      "p": 2,
       "text": "Dura entre medio segundo y unos pocos segundos.",
-      "start": 15.34,
-      "end": 18.06
+      "start": 15.42,
+      "end": 18.06,
+      "words": [
+       [
+        "Dura",
+        15.42,
+        15.58
+       ],
+       [
+        "entre",
+        15.6,
+        15.88
+       ],
+       [
+        "medio",
+        15.96,
+        16.18
+       ],
+       [
+        "segundo",
+        16.28,
+        16.78
+       ],
+       [
+        "y",
+        16.8,
+        16.84
+       ],
+       [
+        "unos",
+        16.9,
+        17.18
+       ],
+       [
+        "pocos",
+        17.22,
+        17.5
+       ],
+       [
+        "segundos.",
+        17.54,
+        18.06
+       ]
+      ]
      },
      {
-      "p": 2,
       "text": "Y lo peor es que normalmente no te das cuenta.",
-      "start": 18.28,
-      "end": 18.98
+      "start": 18.3,
+      "end": 21.26,
+      "words": [
+       [
+        "Y",
+        18.3,
+        18.36
+       ],
+       [
+        "lo",
+        18.4,
+        18.5
+       ],
+       [
+        "peor",
+        18.54,
+        18.84
+       ],
+       [
+        "es",
+        19.14,
+        19.24
+       ],
+       [
+        "que",
+        19.26,
+        19.36
+       ],
+       [
+        "normalmente",
+        19.4,
+        20.16
+       ],
+       [
+        "no",
+        20.28,
+        20.38
+       ],
+       [
+        "te",
+        20.48,
+        20.58
+       ],
+       [
+        "das",
+        20.62,
+        20.82
+       ],
+       [
+        "cuenta.",
+        20.86,
+        21.26
+       ]
+      ]
      },
      {
-      "p": 2,
       "text": "Estás leyendo, parpadeas...",
-      "start": 19.1,
-      "end": 21.22
+      "start": 21.6,
+      "end": 23.46,
+      "words": [
+       [
+        "Estás",
+        21.6,
+        21.86
+       ],
+       [
+        "leyendo,",
+        21.9,
+        22.44
+       ],
+       [
+        "parpadeas...",
+        22.7,
+        23.46
+       ]
+      ]
      },
      {
-      "p": 2,
       "text": "¡y de repente no recuerdas el último párrafo!",
-      "start": 21.54,
-      "end": 26.0
+      "start": 23.72,
+      "end": 25.96,
+      "words": [
+       [
+        "¡y",
+        23.72,
+        23.78
+       ],
+       [
+        "de",
+        23.82,
+        23.88
+       ],
+       [
+        "repente",
+        23.94,
+        24.32
+       ],
+       [
+        "no",
+        24.4,
+        24.52
+       ],
+       [
+        "recuerdas",
+        24.56,
+        25.0
+       ],
+       [
+        "el",
+        25.06,
+        25.12
+       ],
+       [
+        "último",
+        25.18,
+        25.42
+       ],
+       [
+        "párrafo!",
+        25.54,
+        25.96
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 26.28,
-    "end": 40.34,
+    "start": 26.36,
+    "end": 40.36,
     "text": "Ahora imagina que eso te pasa manejando. A cien kilómetros por hora, un microsueño de cuatro segundos significa recorrer más de CIEN METROS... sin nadie al volante. Por eso el cansancio está detrás de muchísimos accidentes de tráfico.",
     "sentences": [
      {
-      "p": 3,
       "text": "Ahora imagina que eso te pasa manejando.",
-      "start": 26.28,
-      "end": 28.48
+      "start": 26.36,
+      "end": 28.54,
+      "words": [
+       [
+        "Ahora",
+        26.36,
+        26.5
+       ],
+       [
+        "imagina",
+        26.54,
+        27.04
+       ],
+       [
+        "que",
+        27.08,
+        27.16
+       ],
+       [
+        "eso",
+        27.22,
+        27.4
+       ],
+       [
+        "te",
+        27.44,
+        27.56
+       ],
+       [
+        "pasa",
+        27.6,
+        27.84
+       ],
+       [
+        "manejando.",
+        27.9,
+        28.54
+       ]
+      ]
      },
      {
-      "p": 3,
       "text": "A cien kilómetros por hora, un microsueño de cuatro segundos significa recorrer más de CIEN METROS...",
-      "start": 28.76,
-      "end": 34.58
+      "start": 28.82,
+      "end": 34.56,
+      "words": [
+       [
+        "A",
+        28.82,
+        28.9
+       ],
+       [
+        "cien",
+        29.0,
+        29.22
+       ],
+       [
+        "kilómetros",
+        29.26,
+        29.78
+       ],
+       [
+        "por",
+        29.82,
+        29.94
+       ],
+       [
+        "hora,",
+        30.0,
+        30.18
+       ],
+       [
+        "un",
+        30.4,
+        30.46
+       ],
+       [
+        "microsueño",
+        30.5,
+        31.02
+       ],
+       [
+        "de",
+        31.06,
+        31.2
+       ],
+       [
+        "cuatro",
+        31.26,
+        31.56
+       ],
+       [
+        "segundos",
+        31.66,
+        32.14
+       ],
+       [
+        "significa",
+        32.2,
+        32.62
+       ],
+       [
+        "recorrer",
+        32.68,
+        33.1
+       ],
+       [
+        "más",
+        33.14,
+        33.32
+       ],
+       [
+        "de",
+        33.36,
+        33.5
+       ],
+       [
+        "CIEN",
+        33.62,
+        33.92
+       ],
+       [
+        "METROS...",
+        34.04,
+        34.56
+       ]
+      ]
      },
      {
-      "p": 3,
       "text": "sin nadie al volante.",
-      "start": 34.84,
-      "end": 36.22
+      "start": 34.98,
+      "end": 36.24,
+      "words": [
+       [
+        "sin",
+        34.98,
+        35.16
+       ],
+       [
+        "nadie",
+        35.24,
+        35.52
+       ],
+       [
+        "al",
+        35.56,
+        35.66
+       ],
+       [
+        "volante.",
+        35.7,
+        36.24
+       ]
+      ]
      },
      {
-      "p": 3,
       "text": "Por eso el cansancio está detrás de muchísimos accidentes de tráfico.",
-      "start": 36.68,
-      "end": 40.34
+      "start": 36.7,
+      "end": 40.36,
+      "words": [
+       [
+        "Por",
+        36.7,
+        36.8
+       ],
+       [
+        "eso",
+        36.86,
+        36.98
+       ],
+       [
+        "el",
+        37.02,
+        37.1
+       ],
+       [
+        "cansancio",
+        37.14,
+        37.7
+       ],
+       [
+        "está",
+        37.74,
+        37.92
+       ],
+       [
+        "detrás",
+        37.96,
+        38.28
+       ],
+       [
+        "de",
+        38.32,
+        38.4
+       ],
+       [
+        "muchísimos",
+        38.46,
+        39.16
+       ],
+       [
+        "accidentes",
+        39.24,
+        39.74
+       ],
+       [
+        "de",
+        39.78,
+        39.86
+       ],
+       [
+        "tráfico.",
+        39.92,
+        40.36
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 40.66,
-    "end": 48.26,
+    "start": 40.7,
+    "end": 51.6,
     "text": "Y tu memoria también empieza a fallar. Sin dormir, al cerebro le cuesta guardar recuerdos nuevos. Puedes estudiar toda la noche... pero mucho de lo que leíste simplemente no se queda.",
     "sentences": [
      {
-      "p": 4,
       "text": "Y tu memoria también empieza a fallar.",
-      "start": 40.66,
-      "end": 42.7
+      "start": 40.7,
+      "end": 42.72,
+      "words": [
+       [
+        "Y",
+        40.7,
+        40.74
+       ],
+       [
+        "tu",
+        40.78,
+        40.84
+       ],
+       [
+        "memoria",
+        40.88,
+        41.3
+       ],
+       [
+        "también",
+        41.36,
+        41.78
+       ],
+       [
+        "empieza",
+        41.84,
+        42.24
+       ],
+       [
+        "a",
+        42.26,
+        42.28
+       ],
+       [
+        "fallar.",
+        42.38,
+        42.72
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "Sin dormir, al cerebro le cuesta guardar recuerdos nuevos.",
-      "start": 42.94,
-      "end": 46.14
+      "start": 43.02,
+      "end": 46.14,
+      "words": [
+       [
+        "Sin",
+        43.02,
+        43.12
+       ],
+       [
+        "dormir,",
+        43.16,
+        43.54
+       ],
+       [
+        "al",
+        43.8,
+        43.88
+       ],
+       [
+        "cerebro",
+        43.92,
+        44.24
+       ],
+       [
+        "le",
+        44.28,
+        44.42
+       ],
+       [
+        "cuesta",
+        44.48,
+        44.84
+       ],
+       [
+        "guardar",
+        44.88,
+        45.16
+       ],
+       [
+        "recuerdos",
+        45.22,
+        45.66
+       ],
+       [
+        "nuevos.",
+        45.7,
+        46.14
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "Puedes estudiar toda la noche...",
       "start": 46.36,
-      "end": 47.1
+      "end": 48.18,
+      "words": [
+       [
+        "Puedes",
+        46.36,
+        46.6
+       ],
+       [
+        "estudiar",
+        46.68,
+        47.22
+       ],
+       [
+        "toda",
+        47.28,
+        47.62
+       ],
+       [
+        "la",
+        47.66,
+        47.76
+       ],
+       [
+        "noche...",
+        47.82,
+        48.18
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "pero mucho de lo que leíste simplemente no se queda.",
-      "start": 47.26,
-      "end": 48.26
+      "start": 48.54,
+      "end": 51.6,
+      "words": [
+       [
+        "pero",
+        48.54,
+        48.76
+       ],
+       [
+        "mucho",
+        48.84,
+        49.1
+       ],
+       [
+        "de",
+        49.14,
+        49.2
+       ],
+       [
+        "lo",
+        49.24,
+        49.32
+       ],
+       [
+        "que",
+        49.34,
+        49.42
+       ],
+       [
+        "leíste",
+        49.46,
+        50.04
+       ],
+       [
+        "simplemente",
+        50.12,
+        50.74
+       ],
+       [
+        "no",
+        50.92,
+        51.06
+       ],
+       [
+        "se",
+        51.12,
+        51.24
+       ],
+       [
+        "queda.",
+        51.28,
+        51.6
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 48.54,
-    "end": 51.52,
+    "start": 51.96,
+    "end": 53.16,
     "text": "¡Dos días sin dormir!",
     "sentences": [
      {
-      "p": 5,
       "text": "¡Dos días sin dormir!",
-      "start": 48.54,
-      "end": 51.52
+      "start": 51.96,
+      "end": 53.16,
+      "words": [
+       [
+        "¡Dos",
+        51.96,
+        52.2
+       ],
+       [
+        "días",
+        52.3,
+        52.54
+       ],
+       [
+        "sin",
+        52.6,
+        52.72
+       ],
+       [
+        "dormir!",
+        52.76,
+        53.16
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 51.84,
-    "end": 76.54,
+    "start": 53.48,
+    "end": 76.56,
     "text": "Y ahora tienes hambre. MUCHA hambre. Y no precisamente de ensalada. Esto pasa porque la falta de sueño desordena dos hormonas: la grelina, que te dice \"¡tengo hambre!\", sube... y la leptina, que te dice \"ya estoy lleno\", baja. Tu cerebro te pide comida rápida, azúcar, grasa... y es una de las razones por las que dormir poco está relacionado con subir de peso.",
     "sentences": [
      {
-      "p": 6,
       "text": "Y ahora tienes hambre.",
-      "start": 51.84,
-      "end": 53.22
+      "start": 53.48,
+      "end": 54.58,
+      "words": [
+       [
+        "Y",
+        53.48,
+        53.5
+       ],
+       [
+        "ahora",
+        53.56,
+        53.8
+       ],
+       [
+        "tienes",
+        53.92,
+        54.2
+       ],
+       [
+        "hambre.",
+        54.22,
+        54.58
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "MUCHA hambre.",
-      "start": 53.42,
-      "end": 54.58
+      "start": 55.0,
+      "end": 55.9,
+      "words": [
+       [
+        "MUCHA",
+        55.0,
+        55.48
+       ],
+       [
+        "hambre.",
+        55.52,
+        55.9
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "Y no precisamente de ensalada.",
-      "start": 54.76,
-      "end": 56.04
+      "start": 56.76,
+      "end": 58.24,
+      "words": [
+       [
+        "Y",
+        56.76,
+        56.8
+       ],
+       [
+        "no",
+        56.84,
+        56.96
+       ],
+       [
+        "precisamente",
+        57.0,
+        57.64
+       ],
+       [
+        "de",
+        57.68,
+        57.72
+       ],
+       [
+        "ensalada.",
+        57.74,
+        58.24
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "Esto pasa porque la falta de sueño desordena dos hormonas: la grelina, que te dice \"¡tengo hambre!\", sube...",
-      "start": 56.2,
-      "end": 64.3
+      "start": 58.54,
+      "end": 64.88,
+      "words": [
+       [
+        "Esto",
+        58.54,
+        58.76
+       ],
+       [
+        "pasa",
+        58.8,
+        59.06
+       ],
+       [
+        "porque",
+        59.16,
+        59.36
+       ],
+       [
+        "la",
+        59.4,
+        59.44
+       ],
+       [
+        "falta",
+        59.56,
+        59.82
+       ],
+       [
+        "de",
+        59.86,
+        59.92
+       ],
+       [
+        "sueño",
+        60.02,
+        60.36
+       ],
+       [
+        "desordena",
+        60.4,
+        60.9
+       ],
+       [
+        "dos",
+        61.06,
+        61.24
+       ],
+       [
+        "hormonas:",
+        61.3,
+        61.84
+       ],
+       [
+        "la",
+        62.06,
+        62.14
+       ],
+       [
+        "grelina,",
+        62.18,
+        62.64
+       ],
+       [
+        "que",
+        62.78,
+        62.86
+       ],
+       [
+        "te",
+        62.92,
+        63.0
+       ],
+       [
+        "dice",
+        63.04,
+        63.32
+       ],
+       [
+        "\"¡tengo",
+        63.46,
+        63.82
+       ],
+       [
+        "hambre!\",",
+        63.88,
+        64.26
+       ],
+       [
+        "sube...",
+        64.58,
+        64.88
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "y la leptina, que te dice \"ya estoy lleno\", baja.",
-      "start": 64.44,
-      "end": 67.54
+      "start": 65.16,
+      "end": 68.2,
+      "words": [
+       [
+        "y",
+        65.16,
+        65.2
+       ],
+       [
+        "la",
+        65.24,
+        65.3
+       ],
+       [
+        "leptina,",
+        65.34,
+        65.86
+       ],
+       [
+        "que",
+        66.04,
+        66.1
+       ],
+       [
+        "te",
+        66.16,
+        66.24
+       ],
+       [
+        "dice",
+        66.28,
+        66.6
+       ],
+       [
+        "\"ya",
+        66.82,
+        66.94
+       ],
+       [
+        "estoy",
+        66.98,
+        67.24
+       ],
+       [
+        "lleno\",",
+        67.26,
+        67.54
+       ],
+       [
+        "baja.",
+        67.9,
+        68.2
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "Tu cerebro te pide comida rápida, azúcar, grasa...",
-      "start": 67.78,
-      "end": 70.3
+      "start": 68.44,
+      "end": 71.88,
+      "words": [
+       [
+        "Tu",
+        68.44,
+        68.5
+       ],
+       [
+        "cerebro",
+        68.56,
+        68.88
+       ],
+       [
+        "te",
+        68.94,
+        69.06
+       ],
+       [
+        "pide",
+        69.08,
+        69.3
+       ],
+       [
+        "comida",
+        69.34,
+        69.68
+       ],
+       [
+        "rápida,",
+        69.8,
+        70.28
+       ],
+       [
+        "azúcar,",
+        70.54,
+        71.12
+       ],
+       [
+        "grasa...",
+        71.38,
+        71.88
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "y es una de las razones por las que dormir poco está relacionado con subir de peso.",
-      "start": 70.46,
-      "end": 76.54
+      "start": 72.12,
+      "end": 76.56,
+      "words": [
+       [
+        "y",
+        72.12,
+        72.16
+       ],
+       [
+        "es",
+        72.22,
+        72.32
+       ],
+       [
+        "una",
+        72.38,
+        72.5
+       ],
+       [
+        "de",
+        72.54,
+        72.58
+       ],
+       [
+        "las",
+        72.62,
+        72.74
+       ],
+       [
+        "razones",
+        72.82,
+        73.32
+       ],
+       [
+        "por",
+        73.34,
+        73.44
+       ],
+       [
+        "las",
+        73.48,
+        73.58
+       ],
+       [
+        "que",
+        73.64,
+        73.72
+       ],
+       [
+        "dormir",
+        73.74,
+        74.06
+       ],
+       [
+        "poco",
+        74.22,
+        74.6
+       ],
+       [
+        "está",
+        74.66,
+        74.86
+       ],
+       [
+        "relacionado",
+        74.9,
+        75.5
+       ],
+       [
+        "con",
+        75.54,
+        75.64
+       ],
+       [
+        "subir",
+        75.74,
+        76.06
+       ],
+       [
+        "de",
+        76.1,
+        76.16
+       ],
+       [
+        "peso.",
+        76.28,
+        76.56
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 76.82,
-    "end": 91.68,
+    "start": 76.84,
+    "end": 91.7,
     "text": "Tus defensas también se debilitan. En un experimento, a un grupo de personas les pusieron el virus del resfriado directamente en la nariz. ¡Las que dormían menos de seis horas tenían unas CUATRO veces más probabilidades de enfermarse que las que dormían más de siete!",
     "sentences": [
      {
-      "p": 7,
       "text": "Tus defensas también se debilitan.",
-      "start": 76.82,
-      "end": 78.86
+      "start": 76.84,
+      "end": 78.86,
+      "words": [
+       [
+        "Tus",
+        76.84,
+        76.98
+       ],
+       [
+        "defensas",
+        77.02,
+        77.54
+       ],
+       [
+        "también",
+        77.64,
+        78.08
+       ],
+       [
+        "se",
+        78.16,
+        78.24
+       ],
+       [
+        "debilitan.",
+        78.28,
+        78.86
+       ]
+      ]
      },
      {
-      "p": 7,
       "text": "En un experimento, a un grupo de personas les pusieron el virus del resfriado directamente en la nariz.",
-      "start": 79.08,
-      "end": 84.52
+      "start": 79.12,
+      "end": 84.5,
+      "words": [
+       [
+        "En",
+        79.12,
+        79.18
+       ],
+       [
+        "un",
+        79.24,
+        79.3
+       ],
+       [
+        "experimento,",
+        79.34,
+        80.02
+       ],
+       [
+        "a",
+        80.22,
+        80.26
+       ],
+       [
+        "un",
+        80.3,
+        80.36
+       ],
+       [
+        "grupo",
+        80.4,
+        80.6
+       ],
+       [
+        "de",
+        80.62,
+        80.68
+       ],
+       [
+        "personas",
+        80.76,
+        81.18
+       ],
+       [
+        "les",
+        81.22,
+        81.38
+       ],
+       [
+        "pusieron",
+        81.4,
+        81.74
+       ],
+       [
+        "el",
+        81.8,
+        81.86
+       ],
+       [
+        "virus",
+        81.96,
+        82.2
+       ],
+       [
+        "del",
+        82.22,
+        82.34
+       ],
+       [
+        "resfriado",
+        82.4,
+        82.9
+       ],
+       [
+        "directamente",
+        83.02,
+        83.86
+       ],
+       [
+        "en",
+        83.88,
+        83.94
+       ],
+       [
+        "la",
+        83.98,
+        84.04
+       ],
+       [
+        "nariz.",
+        84.1,
+        84.5
+       ]
+      ]
      },
      {
-      "p": 7,
       "text": "¡Las que dormían menos de seis horas tenían unas CUATRO veces más probabilidades de enfermarse que las que dormían más de siete!",
       "start": 84.72,
-      "end": 91.68
+      "end": 91.7,
+      "words": [
+       [
+        "¡Las",
+        84.72,
+        84.86
+       ],
+       [
+        "que",
+        84.9,
+        84.98
+       ],
+       [
+        "dormían",
+        85.0,
+        85.44
+       ],
+       [
+        "menos",
+        85.48,
+        85.76
+       ],
+       [
+        "de",
+        85.8,
+        85.86
+       ],
+       [
+        "seis",
+        86.0,
+        86.28
+       ],
+       [
+        "horas",
+        86.3,
+        86.62
+       ],
+       [
+        "tenían",
+        86.68,
+        86.96
+       ],
+       [
+        "unas",
+        87.0,
+        87.18
+       ],
+       [
+        "CUATRO",
+        87.34,
+        87.72
+       ],
+       [
+        "veces",
+        87.78,
+        88.08
+       ],
+       [
+        "más",
+        88.24,
+        88.46
+       ],
+       [
+        "probabilidades",
+        88.48,
+        89.2
+       ],
+       [
+        "de",
+        89.24,
+        89.28
+       ],
+       [
+        "enfermarse",
+        89.3,
+        89.92
+       ],
+       [
+        "que",
+        90.02,
+        90.1
+       ],
+       [
+        "las",
+        90.12,
+        90.24
+       ],
+       [
+        "que",
+        90.28,
+        90.36
+       ],
+       [
+        "dormían",
+        90.38,
+        90.78
+       ],
+       [
+        "más",
+        90.84,
+        91.02
+       ],
+       [
+        "de",
+        91.06,
+        91.18
+       ],
+       [
+        "siete!",
+        91.24,
+        91.7
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 91.96,
-    "end": 98.74,
+    "start": 92.0,
+    "end": 98.78,
     "text": "Y tus ojos empiezan a fallar. Te cuesta enfocar, todo se ve borroso... y la luz te molesta más de lo normal.",
     "sentences": [
      {
-      "p": 8,
       "text": "Y tus ojos empiezan a fallar.",
-      "start": 91.96,
-      "end": 93.78
+      "start": 92.0,
+      "end": 93.78,
+      "words": [
+       [
+        "Y",
+        92.0,
+        92.04
+       ],
+       [
+        "tus",
+        92.1,
+        92.28
+       ],
+       [
+        "ojos",
+        92.38,
+        92.68
+       ],
+       [
+        "empiezan",
+        92.76,
+        93.26
+       ],
+       [
+        "a",
+        93.3,
+        93.32
+       ],
+       [
+        "fallar.",
+        93.42,
+        93.78
+       ]
+      ]
      },
      {
-      "p": 8,
       "text": "Te cuesta enfocar, todo se ve borroso...",
       "start": 94.02,
-      "end": 96.44
+      "end": 96.42,
+      "words": [
+       [
+        "Te",
+        94.02,
+        94.12
+       ],
+       [
+        "cuesta",
+        94.14,
+        94.36
+       ],
+       [
+        "enfocar,",
+        94.38,
+        94.98
+       ],
+       [
+        "todo",
+        95.36,
+        95.52
+       ],
+       [
+        "se",
+        95.6,
+        95.7
+       ],
+       [
+        "ve",
+        95.72,
+        95.82
+       ],
+       [
+        "borroso...",
+        95.86,
+        96.42
+       ]
+      ]
      },
      {
-      "p": 8,
       "text": "y la luz te molesta más de lo normal.",
-      "start": 96.66,
-      "end": 98.74
+      "start": 96.68,
+      "end": 98.78,
+      "words": [
+       [
+        "y",
+        96.68,
+        96.74
+       ],
+       [
+        "la",
+        96.78,
+        96.84
+       ],
+       [
+        "luz",
+        96.92,
+        97.16
+       ],
+       [
+        "te",
+        97.22,
+        97.3
+       ],
+       [
+        "molesta",
+        97.34,
+        97.76
+       ],
+       [
+        "más",
+        97.92,
+        98.12
+       ],
+       [
+        "de",
+        98.16,
+        98.22
+       ],
+       [
+        "lo",
+        98.26,
+        98.32
+       ],
+       [
+        "normal.",
+        98.38,
+        98.78
+       ]
+      ]
      }
     ]
    }
   ]
  },
  {
-  "audio": "audio/001-parte3.mp3",
-  "duration": 122.28,
+  "audio": "guiones/001-sin-dormir/alineacion/parte3.json",
+  "duration": 122.42,
   "paragraphs": [
    {
     "start": 0.14,
-    "end": 4.6,
+    "end": 4.58,
     "text": "Pero... ¿por qué pasa todo esto? ¿Qué hace el sueño que es TAN importante?",
     "sentences": [
      {
-      "p": 0,
       "text": "Pero...",
       "start": 0.14,
-      "end": 0.46
+      "end": 0.38,
+      "words": [
+       [
+        "Pero...",
+        0.14,
+        0.38
+       ]
+      ]
      },
      {
-      "p": 0,
       "text": "¿por qué pasa todo esto?",
       "start": 0.74,
-      "end": 2.14
+      "end": 2.04,
+      "words": [
+       [
+        "¿por",
+        0.74,
+        0.86
+       ],
+       [
+        "qué",
+        0.94,
+        1.02
+       ],
+       [
+        "pasa",
+        1.12,
+        1.34
+       ],
+       [
+        "todo",
+        1.42,
+        1.66
+       ],
+       [
+        "esto?",
+        1.74,
+        2.04
+       ]
+      ]
      },
      {
-      "p": 0,
       "text": "¿Qué hace el sueño que es TAN importante?",
-      "start": 2.48,
-      "end": 4.6
+      "start": 2.04,
+      "end": 4.58,
+      "words": [
+       [
+        "¿Qué",
+        2.04,
+        2.58
+       ],
+       [
+        "hace",
+        2.62,
+        2.76
+       ],
+       [
+        "el",
+        2.8,
+        2.84
+       ],
+       [
+        "sueño",
+        2.94,
+        3.18
+       ],
+       [
+        "que",
+        3.28,
+        3.34
+       ],
+       [
+        "es",
+        3.36,
+        3.48
+       ],
+       [
+        "TAN",
+        3.66,
+        3.86
+       ],
+       [
+        "importante?",
+        3.92,
+        4.58
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 4.92,
-    "end": 11.98,
+    "start": 4.98,
+    "end": 11.96,
     "text": "Una de las respuestas más sorprendentes se descubrió hace muy poco. Mientras duermes... ¡tu cerebro se LIMPIA!",
     "sentences": [
      {
-      "p": 1,
       "text": "Una de las respuestas más sorprendentes se descubrió hace muy poco.",
-      "start": 4.92,
-      "end": 8.8
+      "start": 4.98,
+      "end": 8.84,
+      "words": [
+       [
+        "Una",
+        4.98,
+        5.1
+       ],
+       [
+        "de",
+        5.14,
+        5.2
+       ],
+       [
+        "las",
+        5.24,
+        5.34
+       ],
+       [
+        "respuestas",
+        5.44,
+        5.96
+       ],
+       [
+        "más",
+        6.18,
+        6.34
+       ],
+       [
+        "sorprendentes",
+        6.38,
+        7.14
+       ],
+       [
+        "se",
+        7.18,
+        7.26
+       ],
+       [
+        "descubrió",
+        7.28,
+        7.76
+       ],
+       [
+        "hace",
+        7.8,
+        8.02
+       ],
+       [
+        "muy",
+        8.24,
+        8.4
+       ],
+       [
+        "poco.",
+        8.54,
+        8.84
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "Mientras duermes...",
       "start": 9.24,
-      "end": 10.26
+      "end": 10.24,
+      "words": [
+       [
+        "Mientras",
+        9.24,
+        9.6
+       ],
+       [
+        "duermes...",
+        9.66,
+        10.24
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "¡tu cerebro se LIMPIA!",
-      "start": 10.56,
-      "end": 11.98
+      "start": 10.54,
+      "end": 11.96,
+      "words": [
+       [
+        "¡tu",
+        10.54,
+        10.64
+       ],
+       [
+        "cerebro",
+        10.74,
+        11.14
+       ],
+       [
+        "se",
+        11.24,
+        11.36
+       ],
+       [
+        "LIMPIA!",
+        11.42,
+        11.96
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 12.3,
-    "end": 24.76,
+    "start": 12.34,
+    "end": 24.74,
     "text": "En estudios con ratones, los científicos vieron que durante el sueño el espacio entre las neuronas se agranda, y un líquido pasa por el cerebro arrastrando los desechos que se acumularon durante el día. ¡Como un servicio de limpieza nocturno!",
     "sentences": [
      {
-      "p": 2,
       "text": "En estudios con ratones, los científicos vieron que durante el sueño el espacio entre las neuronas se agranda, y un líquido pasa por el cerebro arrastrando los desechos que se acumularon durante el día.",
-      "start": 12.3,
-      "end": 22.62
+      "start": 12.34,
+      "end": 22.64,
+      "words": [
+       [
+        "En",
+        12.34,
+        12.4
+       ],
+       [
+        "estudios",
+        12.44,
+        12.84
+       ],
+       [
+        "con",
+        12.86,
+        12.98
+       ],
+       [
+        "ratones,",
+        13.04,
+        13.56
+       ],
+       [
+        "los",
+        13.74,
+        13.82
+       ],
+       [
+        "científicos",
+        13.86,
+        14.36
+       ],
+       [
+        "vieron",
+        14.44,
+        14.68
+       ],
+       [
+        "que",
+        14.7,
+        14.8
+       ],
+       [
+        "durante",
+        14.82,
+        15.12
+       ],
+       [
+        "el",
+        15.16,
+        15.2
+       ],
+       [
+        "sueño",
+        15.32,
+        15.68
+       ],
+       [
+        "el",
+        15.84,
+        15.9
+       ],
+       [
+        "espacio",
+        15.96,
+        16.36
+       ],
+       [
+        "entre",
+        16.4,
+        16.58
+       ],
+       [
+        "las",
+        16.62,
+        16.74
+       ],
+       [
+        "neuronas",
+        16.8,
+        17.28
+       ],
+       [
+        "se",
+        17.34,
+        17.4
+       ],
+       [
+        "agranda,",
+        17.46,
+        17.92
+       ],
+       [
+        "y",
+        18.16,
+        18.22
+       ],
+       [
+        "un",
+        18.26,
+        18.34
+       ],
+       [
+        "líquido",
+        18.38,
+        18.84
+       ],
+       [
+        "pasa",
+        18.88,
+        19.1
+       ],
+       [
+        "por",
+        19.2,
+        19.28
+       ],
+       [
+        "el",
+        19.32,
+        19.38
+       ],
+       [
+        "cerebro",
+        19.46,
+        19.86
+       ],
+       [
+        "arrastrando",
+        19.92,
+        20.42
+       ],
+       [
+        "los",
+        20.46,
+        20.6
+       ],
+       [
+        "desechos",
+        20.62,
+        21.16
+       ],
+       [
+        "que",
+        21.18,
+        21.26
+       ],
+       [
+        "se",
+        21.3,
+        21.34
+       ],
+       [
+        "acumularon",
+        21.36,
+        21.9
+       ],
+       [
+        "durante",
+        21.94,
+        22.22
+       ],
+       [
+        "el",
+        22.26,
+        22.32
+       ],
+       [
+        "día.",
+        22.38,
+        22.64
+       ]
+      ]
      },
      {
-      "p": 2,
       "text": "¡Como un servicio de limpieza nocturno!",
       "start": 22.88,
-      "end": 24.76
+      "end": 24.74,
+      "words": [
+       [
+        "¡Como",
+        22.88,
+        23.1
+       ],
+       [
+        "un",
+        23.14,
+        23.18
+       ],
+       [
+        "servicio",
+        23.26,
+        23.66
+       ],
+       [
+        "de",
+        23.7,
+        23.74
+       ],
+       [
+        "limpieza",
+        23.78,
+        24.2
+       ],
+       [
+        "nocturno!",
+        24.24,
+        24.74
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 25.0,
-    "end": 41.18,
+    "start": 25.06,
+    "end": 37.92,
     "text": "Entre esos desechos hay una proteína llamada beta amiloide, que está relacionada con el Alzheimer. Y en un estudio con personas, después de UNA sola noche sin dormir, los niveles de esta proteína en el cerebro ya habían subido.",
     "sentences": [
      {
-      "p": 3,
       "text": "Entre esos desechos hay una proteína llamada beta amiloide, que está relacionada con el Alzheimer.",
-      "start": 25.0,
-      "end": 30.44
+      "start": 25.06,
+      "end": 30.46,
+      "words": [
+       [
+        "Entre",
+        25.06,
+        25.28
+       ],
+       [
+        "esos",
+        25.3,
+        25.52
+       ],
+       [
+        "desechos",
+        25.56,
+        26.12
+       ],
+       [
+        "hay",
+        26.16,
+        26.28
+       ],
+       [
+        "una",
+        26.32,
+        26.46
+       ],
+       [
+        "proteína",
+        26.48,
+        26.96
+       ],
+       [
+        "llamada",
+        26.98,
+        27.4
+       ],
+       [
+        "beta",
+        27.58,
+        27.84
+       ],
+       [
+        "amiloide,",
+        27.9,
+        28.46
+       ],
+       [
+        "que",
+        28.66,
+        28.72
+       ],
+       [
+        "está",
+        28.76,
+        28.96
+       ],
+       [
+        "relacionada",
+        29.0,
+        29.64
+       ],
+       [
+        "con",
+        29.66,
+        29.76
+       ],
+       [
+        "el",
+        29.8,
+        29.88
+       ],
+       [
+        "Alzheimer.",
+        29.92,
+        30.46
+       ]
+      ]
      },
      {
-      "p": 3,
       "text": "Y en un estudio con personas, después de UNA sola noche sin dormir, los niveles de esta proteína en el cerebro ya habían subido.",
-      "start": 30.68,
-      "end": 41.18
+      "start": 30.72,
+      "end": 37.92,
+      "words": [
+       [
+        "Y",
+        30.72,
+        30.76
+       ],
+       [
+        "en",
+        30.8,
+        30.86
+       ],
+       [
+        "un",
+        30.9,
+        30.96
+       ],
+       [
+        "estudio",
+        31.02,
+        31.44
+       ],
+       [
+        "con",
+        31.48,
+        31.62
+       ],
+       [
+        "personas,",
+        31.64,
+        32.22
+       ],
+       [
+        "después",
+        32.4,
+        32.78
+       ],
+       [
+        "de",
+        32.82,
+        33.02
+       ],
+       [
+        "UNA",
+        33.1,
+        33.28
+       ],
+       [
+        "sola",
+        33.4,
+        33.68
+       ],
+       [
+        "noche",
+        33.72,
+        34.0
+       ],
+       [
+        "sin",
+        34.06,
+        34.16
+       ],
+       [
+        "dormir,",
+        34.2,
+        34.58
+       ],
+       [
+        "los",
+        34.8,
+        34.92
+       ],
+       [
+        "niveles",
+        34.96,
+        35.32
+       ],
+       [
+        "de",
+        35.36,
+        35.42
+       ],
+       [
+        "esta",
+        35.48,
+        35.68
+       ],
+       [
+        "proteína",
+        35.7,
+        36.12
+       ],
+       [
+        "en",
+        36.16,
+        36.22
+       ],
+       [
+        "el",
+        36.26,
+        36.32
+       ],
+       [
+        "cerebro",
+        36.4,
+        36.8
+       ],
+       [
+        "ya",
+        36.92,
+        37.02
+       ],
+       [
+        "habían",
+        37.06,
+        37.38
+       ],
+       [
+        "subido.",
+        37.48,
+        37.92
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 41.48,
-    "end": 46.7,
+    "start": 38.22,
+    "end": 45.54,
     "text": "Así que cuando no duermes, no solo estás cansado. Tu cerebro está trabajando... lleno de basura que no pudo sacar.",
     "sentences": [
      {
-      "p": 4,
       "text": "Así que cuando no duermes, no solo estás cansado.",
-      "start": 41.48,
-      "end": 43.08
+      "start": 38.22,
+      "end": 41.24,
+      "words": [
+       [
+        "Así",
+        38.22,
+        38.44
+       ],
+       [
+        "que",
+        38.48,
+        38.58
+       ],
+       [
+        "cuando",
+        38.64,
+        38.92
+       ],
+       [
+        "no",
+        39.0,
+        39.12
+       ],
+       [
+        "duermes,",
+        39.16,
+        39.7
+       ],
+       [
+        "no",
+        39.98,
+        40.12
+       ],
+       [
+        "solo",
+        40.2,
+        40.42
+       ],
+       [
+        "estás",
+        40.46,
+        40.7
+       ],
+       [
+        "cansado.",
+        40.74,
+        41.24
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "Tu cerebro está trabajando...",
-      "start": 43.28,
-      "end": 45.52
+      "start": 41.48,
+      "end": 43.12,
+      "words": [
+       [
+        "Tu",
+        41.48,
+        41.6
+       ],
+       [
+        "cerebro",
+        41.64,
+        42.02
+       ],
+       [
+        "está",
+        42.08,
+        42.32
+       ],
+       [
+        "trabajando...",
+        42.36,
+        43.12
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "lleno de basura que no pudo sacar.",
-      "start": 45.86,
-      "end": 46.7
+      "start": 43.42,
+      "end": 45.54,
+      "words": [
+       [
+        "lleno",
+        43.42,
+        43.64
+       ],
+       [
+        "de",
+        43.68,
+        43.76
+       ],
+       [
+        "basura",
+        43.8,
+        44.32
+       ],
+       [
+        "que",
+        44.36,
+        44.48
+       ],
+       [
+        "no",
+        44.6,
+        44.8
+       ],
+       [
+        "pudo",
+        44.86,
+        45.12
+       ],
+       [
+        "sacar.",
+        45.16,
+        45.54
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 46.94,
-    "end": 52.38,
+    "start": 45.96,
+    "end": 49.28,
     "text": "Y ahora sí... lo que pasa después del tercer día.",
     "sentences": [
      {
-      "p": 5,
       "text": "Y ahora sí...",
-      "start": 46.94,
-      "end": 49.26
+      "start": 45.96,
+      "end": 46.68,
+      "words": [
+       [
+        "Y",
+        45.96,
+        45.98
+       ],
+       [
+        "ahora",
+        46.08,
+        46.4
+       ],
+       [
+        "sí...",
+        46.46,
+        46.68
+       ]
+      ]
      },
      {
-      "p": 5,
       "text": "lo que pasa después del tercer día.",
-      "start": 49.56,
-      "end": 52.38
+      "start": 47.02,
+      "end": 49.28,
+      "words": [
+       [
+        "lo",
+        47.02,
+        47.08
+       ],
+       [
+        "que",
+        47.16,
+        47.32
+       ],
+       [
+        "pasa",
+        47.38,
+        47.66
+       ],
+       [
+        "después",
+        47.7,
+        48.24
+       ],
+       [
+        "del",
+        48.28,
+        48.44
+       ],
+       [
+        "tercer",
+        48.48,
+        48.86
+       ],
+       [
+        "día.",
+        48.96,
+        49.28
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 52.58,
-    "end": 64.18,
+    "start": 49.62,
+    "end": 61.28,
     "text": "Volvamos a ese chico de mil novecientos sesenta y cuatro. Se llamaba Randy Gardner, vivía en San Diego, y quería romper un récord para una feria de ciencias. Sus amigos lo vigilaban día y noche para que no se durmiera.",
     "sentences": [
      {
-      "p": 6,
       "text": "Volvamos a ese chico de mil novecientos sesenta y cuatro.",
-      "start": 52.58,
-      "end": 54.0
+      "start": 49.62,
+      "end": 52.42,
+      "words": [
+       [
+        "Volvamos",
+        49.62,
+        49.98
+       ],
+       [
+        "a",
+        50.02,
+        50.04
+       ],
+       [
+        "ese",
+        50.08,
+        50.26
+       ],
+       [
+        "chico",
+        50.3,
+        50.58
+       ],
+       [
+        "de",
+        50.62,
+        50.72
+       ],
+       [
+        "mil",
+        50.82,
+        50.98
+       ],
+       [
+        "novecientos",
+        51.04,
+        51.64
+       ],
+       [
+        "sesenta",
+        51.68,
+        51.96
+       ],
+       [
+        "y",
+        51.98,
+        52.04
+       ],
+       [
+        "cuatro.",
+        52.1,
+        52.42
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "Se llamaba Randy Gardner, vivía en San Diego, y quería romper un récord para una feria de ciencias.",
-      "start": 54.14,
-      "end": 61.26
+      "start": 52.62,
+      "end": 57.84,
+      "words": [
+       [
+        "Se",
+        52.62,
+        52.7
+       ],
+       [
+        "llamaba",
+        52.72,
+        53.12
+       ],
+       [
+        "Randy",
+        53.22,
+        53.5
+       ],
+       [
+        "Gardner,",
+        53.62,
+        53.98
+       ],
+       [
+        "vivía",
+        54.2,
+        54.44
+       ],
+       [
+        "en",
+        54.46,
+        54.52
+       ],
+       [
+        "San",
+        54.58,
+        54.72
+       ],
+       [
+        "Diego,",
+        54.76,
+        55.08
+       ],
+       [
+        "y",
+        55.24,
+        55.32
+       ],
+       [
+        "quería",
+        55.34,
+        55.58
+       ],
+       [
+        "romper",
+        55.64,
+        55.9
+       ],
+       [
+        "un",
+        55.96,
+        56.02
+       ],
+       [
+        "récord",
+        56.1,
+        56.44
+       ],
+       [
+        "para",
+        56.48,
+        56.64
+       ],
+       [
+        "una",
+        56.7,
+        56.88
+       ],
+       [
+        "feria",
+        56.94,
+        57.18
+       ],
+       [
+        "de",
+        57.22,
+        57.32
+       ],
+       [
+        "ciencias.",
+        57.36,
+        57.84
+       ]
+      ]
      },
      {
-      "p": 6,
       "text": "Sus amigos lo vigilaban día y noche para que no se durmiera.",
-      "start": 61.48,
-      "end": 64.18
+      "start": 58.08,
+      "end": 61.28,
+      "words": [
+       [
+        "Sus",
+        58.08,
+        58.2
+       ],
+       [
+        "amigos",
+        58.24,
+        58.54
+       ],
+       [
+        "lo",
+        58.58,
+        58.64
+       ],
+       [
+        "vigilaban",
+        58.68,
+        59.28
+       ],
+       [
+        "día",
+        59.34,
+        59.56
+       ],
+       [
+        "y",
+        59.6,
+        59.66
+       ],
+       [
+        "noche",
+        59.74,
+        60.08
+       ],
+       [
+        "para",
+        60.12,
+        60.3
+       ],
+       [
+        "que",
+        60.34,
+        60.44
+       ],
+       [
+        "no",
+        60.54,
+        60.66
+       ],
+       [
+        "se",
+        60.72,
+        60.8
+       ],
+       [
+        "durmiera.",
+        60.84,
+        61.28
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 64.44,
-    "end": 71.18,
+    "start": 61.54,
+    "end": 68.48,
     "text": "Al segundo día, ya le costaba enfocar la vista. Al tercero, estaba de mal humor y tenía problemas para hablar con claridad.",
     "sentences": [
      {
-      "p": 7,
       "text": "Al segundo día, ya le costaba enfocar la vista.",
-      "start": 64.44,
-      "end": 68.4
+      "start": 61.54,
+      "end": 64.18,
+      "words": [
+       [
+        "Al",
+        61.54,
+        61.62
+       ],
+       [
+        "segundo",
+        61.68,
+        62.02
+       ],
+       [
+        "día,",
+        62.08,
+        62.32
+       ],
+       [
+        "ya",
+        62.62,
+        62.68
+       ],
+       [
+        "le",
+        62.72,
+        62.82
+       ],
+       [
+        "costaba",
+        62.86,
+        63.26
+       ],
+       [
+        "enfocar",
+        63.3,
+        63.68
+       ],
+       [
+        "la",
+        63.72,
+        63.8
+       ],
+       [
+        "vista.",
+        63.84,
+        64.18
+       ]
+      ]
      },
      {
-      "p": 7,
       "text": "Al tercero, estaba de mal humor y tenía problemas para hablar con claridad.",
-      "start": 68.72,
-      "end": 71.18
+      "start": 64.5,
+      "end": 68.48,
+      "words": [
+       [
+        "Al",
+        64.5,
+        64.58
+       ],
+       [
+        "tercero,",
+        64.62,
+        65.08
+       ],
+       [
+        "estaba",
+        65.3,
+        65.6
+       ],
+       [
+        "de",
+        65.64,
+        65.78
+       ],
+       [
+        "mal",
+        65.86,
+        66.04
+       ],
+       [
+        "humor",
+        66.08,
+        66.4
+       ],
+       [
+        "y",
+        66.44,
+        66.5
+       ],
+       [
+        "tenía",
+        66.56,
+        66.82
+       ],
+       [
+        "problemas",
+        66.86,
+        67.4
+       ],
+       [
+        "para",
+        67.44,
+        67.56
+       ],
+       [
+        "hablar",
+        67.58,
+        67.84
+       ],
+       [
+        "con",
+        67.88,
+        67.98
+       ],
+       [
+        "claridad.",
+        68.02,
+        68.48
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 71.62,
-    "end": 82.18,
+    "start": 68.76,
+    "end": 80.36,
     "text": "Y al cuarto día... empezó lo raro. Comenzó a ver cosas que no estaban ahí. ¡Confundía un letrero de la calle con una persona! Y llegó a creer que era un famoso jugador de fútbol americano.",
     "sentences": [
      {
-      "p": 8,
       "text": "Y al cuarto día...",
-      "start": 71.62,
-      "end": 72.92
+      "start": 68.76,
+      "end": 69.84,
+      "words": [
+       [
+        "Y",
+        68.76,
+        68.8
+       ],
+       [
+        "al",
+        68.86,
+        68.98
+       ],
+       [
+        "cuarto",
+        69.04,
+        69.4
+       ],
+       [
+        "día...",
+        69.46,
+        69.84
+       ]
+      ]
      },
      {
-      "p": 8,
       "text": "empezó lo raro.",
-      "start": 73.06,
-      "end": 73.82
+      "start": 70.22,
+      "end": 71.28,
+      "words": [
+       [
+        "empezó",
+        70.22,
+        70.68
+       ],
+       [
+        "lo",
+        70.72,
+        70.82
+       ],
+       [
+        "raro.",
+        70.94,
+        71.28
+       ]
+      ]
      },
      {
-      "p": 8,
       "text": "Comenzó a ver cosas que no estaban ahí.",
-      "start": 74.26,
-      "end": 76.9
+      "start": 71.62,
+      "end": 74.02,
+      "words": [
+       [
+        "Comenzó",
+        71.62,
+        72.0
+       ],
+       [
+        "a",
+        72.04,
+        72.08
+       ],
+       [
+        "ver",
+        72.12,
+        72.3
+       ],
+       [
+        "cosas",
+        72.36,
+        72.8
+       ],
+       [
+        "que",
+        72.84,
+        72.94
+       ],
+       [
+        "no",
+        73.06,
+        73.18
+       ],
+       [
+        "estaban",
+        73.24,
+        73.68
+       ],
+       [
+        "ahí.",
+        73.76,
+        74.02
+       ]
+      ]
      },
      {
-      "p": 8,
       "text": "¡Confundía un letrero de la calle con una persona!",
-      "start": 77.12,
-      "end": 80.32
+      "start": 74.26,
+      "end": 76.88,
+      "words": [
+       [
+        "¡Confundía",
+        74.26,
+        74.8
+       ],
+       [
+        "un",
+        74.84,
+        74.88
+       ],
+       [
+        "letrero",
+        74.92,
+        75.3
+       ],
+       [
+        "de",
+        75.34,
+        75.4
+       ],
+       [
+        "la",
+        75.44,
+        75.56
+       ],
+       [
+        "calle",
+        75.6,
+        75.86
+       ],
+       [
+        "con",
+        75.92,
+        76.04
+       ],
+       [
+        "una",
+        76.1,
+        76.26
+       ],
+       [
+        "persona!",
+        76.32,
+        76.88
+       ]
+      ]
      },
      {
-      "p": 8,
       "text": "Y llegó a creer que era un famoso jugador de fútbol americano.",
-      "start": 80.58,
-      "end": 82.18
+      "start": 77.24,
+      "end": 80.36,
+      "words": [
+       [
+        "Y",
+        77.24,
+        77.3
+       ],
+       [
+        "llegó",
+        77.32,
+        77.54
+       ],
+       [
+        "a",
+        77.58,
+        77.64
+       ],
+       [
+        "creer",
+        77.68,
+        77.96
+       ],
+       [
+        "que",
+        77.98,
+        78.04
+       ],
+       [
+        "era",
+        78.06,
+        78.14
+       ],
+       [
+        "un",
+        78.18,
+        78.26
+       ],
+       [
+        "famoso",
+        78.32,
+        78.8
+       ],
+       [
+        "jugador",
+        78.86,
+        79.26
+       ],
+       [
+        "de",
+        79.3,
+        79.4
+       ],
+       [
+        "fútbol",
+        79.48,
+        79.76
+       ],
+       [
+        "americano.",
+        79.8,
+        80.36
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 82.36,
-    "end": 90.42,
+    "start": 80.6,
+    "end": 89.58,
     "text": "Conforme pasaban los días, se le olvidaba lo que estaba diciendo... a mitad de una frase. No podía concentrarse ni para hacer restas sencillas.",
     "sentences": [
      {
-      "p": 9,
       "text": "Conforme pasaban los días, se le olvidaba lo que estaba diciendo...",
-      "start": 82.36,
-      "end": 85.68
+      "start": 80.6,
+      "end": 84.24,
+      "words": [
+       [
+        "Conforme",
+        80.6,
+        81.04
+       ],
+       [
+        "pasaban",
+        81.08,
+        81.44
+       ],
+       [
+        "los",
+        81.5,
+        81.64
+       ],
+       [
+        "días,",
+        81.72,
+        82.12
+       ],
+       [
+        "se",
+        82.42,
+        82.5
+       ],
+       [
+        "le",
+        82.52,
+        82.56
+       ],
+       [
+        "olvidaba",
+        82.6,
+        83.02
+       ],
+       [
+        "lo",
+        83.06,
+        83.14
+       ],
+       [
+        "que",
+        83.16,
+        83.22
+       ],
+       [
+        "estaba",
+        83.24,
+        83.56
+       ],
+       [
+        "diciendo...",
+        83.6,
+        84.24
+       ]
+      ]
      },
      {
-      "p": 9,
       "text": "a mitad de una frase.",
-      "start": 86.12,
-      "end": 86.36
+      "start": 84.48,
+      "end": 85.82,
+      "words": [
+       [
+        "a",
+        84.48,
+        84.54
+       ],
+       [
+        "mitad",
+        84.6,
+        85.0
+       ],
+       [
+        "de",
+        85.04,
+        85.12
+       ],
+       [
+        "una",
+        85.18,
+        85.36
+       ],
+       [
+        "frase.",
+        85.42,
+        85.82
+       ]
+      ]
      },
      {
-      "p": 9,
       "text": "No podía concentrarse ni para hacer restas sencillas.",
-      "start": 86.6,
-      "end": 90.42
+      "start": 86.68,
+      "end": 89.58,
+      "words": [
+       [
+        "No",
+        86.68,
+        86.8
+       ],
+       [
+        "podía",
+        86.84,
+        87.12
+       ],
+       [
+        "concentrarse",
+        87.16,
+        87.88
+       ],
+       [
+        "ni",
+        87.92,
+        88.02
+       ],
+       [
+        "para",
+        88.06,
+        88.2
+       ],
+       [
+        "hacer",
+        88.22,
+        88.48
+       ],
+       [
+        "restas",
+        88.56,
+        88.86
+       ],
+       [
+        "sencillas.",
+        88.9,
+        89.58
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 90.6,
-    "end": 95.88,
+    "start": 89.88,
+    "end": 95.84,
     "text": "Al final, aguantó doscientas sesenta y cuatro horas. ¡Once días completos sin dormir!",
     "sentences": [
      {
-      "p": 10,
       "text": "Al final, aguantó doscientas sesenta y cuatro horas.",
-      "start": 90.6,
-      "end": 93.46
+      "start": 89.88,
+      "end": 93.44,
+      "words": [
+       [
+        "Al",
+        89.88,
+        89.98
+       ],
+       [
+        "final,",
+        90.04,
+        90.36
+       ],
+       [
+        "aguantó",
+        90.68,
+        91.12
+       ],
+       [
+        "doscientas",
+        91.18,
+        91.9
+       ],
+       [
+        "sesenta",
+        91.96,
+        92.36
+       ],
+       [
+        "y",
+        92.4,
+        92.42
+       ],
+       [
+        "cuatro",
+        92.58,
+        92.98
+       ],
+       [
+        "horas.",
+        93.02,
+        93.44
+       ]
+      ]
      },
      {
-      "p": 10,
       "text": "¡Once días completos sin dormir!",
-      "start": 93.68,
-      "end": 95.88
+      "start": 93.7,
+      "end": 95.84,
+      "words": [
+       [
+        "¡Once",
+        93.7,
+        94.1
+       ],
+       [
+        "días",
+        94.16,
+        94.4
+       ],
+       [
+        "completos",
+        94.5,
+        95.18
+       ],
+       [
+        "sin",
+        95.24,
+        95.36
+       ],
+       [
+        "dormir!",
+        95.4,
+        95.84
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 96.14,
-    "end": 109.66,
+    "start": 95.84,
+    "end": 109.72,
     "text": "¿Y qué pasó después? Durmió unas catorce horas seguidas. Y lo curioso es que no necesitó recuperar todas las horas perdidas: su cerebro le dio prioridad al sueño más profundo y reparador, y en unos días volvió a la normalidad.",
     "sentences": [
      {
-      "p": 11,
       "text": "¿Y qué pasó después?",
-      "start": 96.14,
-      "end": 97.34
+      "start": 95.84,
+      "end": 97.28,
+      "words": [
+       [
+        "¿Y",
+        95.84,
+        96.3
+       ],
+       [
+        "qué",
+        96.44,
+        96.56
+       ],
+       [
+        "pasó",
+        96.6,
+        96.8
+       ],
+       [
+        "después?",
+        96.84,
+        97.28
+       ]
+      ]
      },
      {
-      "p": 11,
       "text": "Durmió unas catorce horas seguidas.",
-      "start": 97.54,
-      "end": 99.84
+      "start": 97.64,
+      "end": 99.82,
+      "words": [
+       [
+        "Durmió",
+        97.64,
+        97.96
+       ],
+       [
+        "unas",
+        98.0,
+        98.2
+       ],
+       [
+        "catorce",
+        98.32,
+        98.98
+       ],
+       [
+        "horas",
+        99.02,
+        99.26
+       ],
+       [
+        "seguidas.",
+        99.3,
+        99.82
+       ]
+      ]
      },
      {
-      "p": 11,
       "text": "Y lo curioso es que no necesitó recuperar todas las horas perdidas: su cerebro le dio prioridad al sueño más profundo y reparador, y en unos días volvió a la normalidad.",
-      "start": 100.04,
-      "end": 109.66
+      "start": 100.08,
+      "end": 109.72,
+      "words": [
+       [
+        "Y",
+        100.08,
+        100.1
+       ],
+       [
+        "lo",
+        100.14,
+        100.24
+       ],
+       [
+        "curioso",
+        100.28,
+        100.78
+       ],
+       [
+        "es",
+        100.84,
+        100.96
+       ],
+       [
+        "que",
+        100.98,
+        101.1
+       ],
+       [
+        "no",
+        101.22,
+        101.32
+       ],
+       [
+        "necesitó",
+        101.38,
+        101.84
+       ],
+       [
+        "recuperar",
+        101.9,
+        102.36
+       ],
+       [
+        "todas",
+        102.54,
+        102.84
+       ],
+       [
+        "las",
+        102.88,
+        103.0
+       ],
+       [
+        "horas",
+        103.02,
+        103.26
+       ],
+       [
+        "perdidas:",
+        103.3,
+        103.8
+       ],
+       [
+        "su",
+        104.04,
+        104.1
+       ],
+       [
+        "cerebro",
+        104.18,
+        104.52
+       ],
+       [
+        "le",
+        104.56,
+        104.62
+       ],
+       [
+        "dio",
+        104.68,
+        104.84
+       ],
+       [
+        "prioridad",
+        104.86,
+        105.3
+       ],
+       [
+        "al",
+        105.36,
+        105.46
+       ],
+       [
+        "sueño",
+        105.52,
+        105.82
+       ],
+       [
+        "más",
+        105.96,
+        106.14
+       ],
+       [
+        "profundo",
+        106.24,
+        106.72
+       ],
+       [
+        "y",
+        106.74,
+        106.78
+       ],
+       [
+        "reparador,",
+        106.84,
+        107.38
+       ],
+       [
+        "y",
+        107.6,
+        107.64
+       ],
+       [
+        "en",
+        107.68,
+        107.74
+       ],
+       [
+        "unos",
+        107.8,
+        108.0
+       ],
+       [
+        "días",
+        108.04,
+        108.34
+       ],
+       [
+        "volvió",
+        108.54,
+        108.94
+       ],
+       [
+        "a",
+        108.96,
+        109.0
+       ],
+       [
+        "la",
+        109.04,
+        109.1
+       ],
+       [
+        "normalidad.",
+        109.14,
+        109.72
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 109.96,
-    "end": 122.02,
+    "start": 109.98,
+    "end": 122.12,
     "text": "Pero ojo: Randy tuvo suerte. Años después contó que tuvo problemas de insomnio. Y hoy el libro Guinness ya ni siquiera acepta récords de tiempo sin dormir... porque se considera demasiado peligroso.",
     "sentences": [
      {
-      "p": 12,
       "text": "Pero ojo: Randy tuvo suerte.",
-      "start": 109.96,
-      "end": 112.1
+      "start": 109.98,
+      "end": 112.14,
+      "words": [
+       [
+        "Pero",
+        109.98,
+        110.18
+       ],
+       [
+        "ojo:",
+        110.26,
+        110.5
+       ],
+       [
+        "Randy",
+        110.86,
+        111.18
+       ],
+       [
+        "tuvo",
+        111.34,
+        111.56
+       ],
+       [
+        "suerte.",
+        111.68,
+        112.14
+       ]
+      ]
      },
      {
-      "p": 12,
       "text": "Años después contó que tuvo problemas de insomnio.",
-      "start": 112.34,
-      "end": 114.96
+      "start": 112.44,
+      "end": 115.02,
+      "words": [
+       [
+        "Años",
+        112.44,
+        112.64
+       ],
+       [
+        "después",
+        112.68,
+        113.16
+       ],
+       [
+        "contó",
+        113.2,
+        113.46
+       ],
+       [
+        "que",
+        113.48,
+        113.6
+       ],
+       [
+        "tuvo",
+        113.64,
+        113.86
+       ],
+       [
+        "problemas",
+        113.9,
+        114.36
+       ],
+       [
+        "de",
+        114.4,
+        114.44
+       ],
+       [
+        "insomnio.",
+        114.48,
+        115.02
+       ]
+      ]
      },
      {
-      "p": 12,
       "text": "Y hoy el libro Guinness ya ni siquiera acepta récords de tiempo sin dormir...",
-      "start": 115.22,
-      "end": 119.46
+      "start": 115.3,
+      "end": 119.46,
+      "words": [
+       [
+        "Y",
+        115.3,
+        115.36
+       ],
+       [
+        "hoy",
+        115.42,
+        115.64
+       ],
+       [
+        "el",
+        115.84,
+        115.92
+       ],
+       [
+        "libro",
+        115.96,
+        116.18
+       ],
+       [
+        "Guinness",
+        116.24,
+        116.58
+       ],
+       [
+        "ya",
+        116.64,
+        116.72
+       ],
+       [
+        "ni",
+        116.76,
+        116.82
+       ],
+       [
+        "siquiera",
+        116.94,
+        117.4
+       ],
+       [
+        "acepta",
+        117.44,
+        117.86
+       ],
+       [
+        "récords",
+        117.96,
+        118.36
+       ],
+       [
+        "de",
+        118.4,
+        118.46
+       ],
+       [
+        "tiempo",
+        118.56,
+        118.84
+       ],
+       [
+        "sin",
+        118.94,
+        119.06
+       ],
+       [
+        "dormir...",
+        119.1,
+        119.46
+       ]
+      ]
      },
      {
-      "p": 12,
       "text": "porque se considera demasiado peligroso.",
-      "start": 119.72,
-      "end": 122.02
+      "start": 119.74,
+      "end": 122.12,
+      "words": [
+       [
+        "porque",
+        119.74,
+        119.98
+       ],
+       [
+        "se",
+        120.02,
+        120.12
+       ],
+       [
+        "considera",
+        120.16,
+        120.66
+       ],
+       [
+        "demasiado",
+        120.72,
+        121.38
+       ],
+       [
+        "peligroso.",
+        121.48,
+        122.12
+       ]
+      ]
      }
     ]
    }
   ]
  },
  {
-  "audio": "audio/001-parte4.mp3",
-  "duration": 118.75,
+  "audio": "guiones/001-sin-dormir/alineacion/parte4.json",
+  "duration": 118.72,
   "paragraphs": [
    {
-    "start": 0.16,
+    "start": 0.18,
     "end": 3.6,
     "text": "Entonces... ¿se puede MORIR por no dormir?",
     "sentences": [
      {
-      "p": 0,
       "text": "Entonces...",
-      "start": 0.16,
-      "end": 1.04
+      "start": 0.18,
+      "end": 1.0,
+      "words": [
+       [
+        "Entonces...",
+        0.18,
+        1.0
+       ]
+      ]
      },
      {
-      "p": 0,
       "text": "¿se puede MORIR por no dormir?",
-      "start": 1.48,
-      "end": 3.6
+      "start": 1.52,
+      "end": 3.6,
+      "words": [
+       [
+        "¿se",
+        1.52,
+        1.62
+       ],
+       [
+        "puede",
+        1.74,
+        1.94
+       ],
+       [
+        "MORIR",
+        2.04,
+        2.42
+       ],
+       [
+        "por",
+        2.7,
+        2.86
+       ],
+       [
+        "no",
+        2.98,
+        3.08
+       ],
+       [
+        "dormir?",
+        3.14,
+        3.6
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 3.96,
+    "start": 4.04,
     "end": 23.06,
     "text": "En humanos no hay experimentos, por razones obvias. Pero en los años ochenta, investigadores mantuvieron despiertas a ratas de laboratorio sin parar. Después de unas dos o tres semanas... las ratas murieron. Su cuerpo perdió la capacidad de controlar la temperatura, y aunque comían más que nunca, ¡bajaban de peso!",
     "sentences": [
      {
-      "p": 1,
       "text": "En humanos no hay experimentos, por razones obvias.",
-      "start": 3.96,
-      "end": 5.9
+      "start": 4.04,
+      "end": 7.06,
+      "words": [
+       [
+        "En",
+        4.04,
+        4.1
+       ],
+       [
+        "humanos",
+        4.12,
+        4.58
+       ],
+       [
+        "no",
+        4.74,
+        4.86
+       ],
+       [
+        "hay",
+        4.9,
+        5.02
+       ],
+       [
+        "experimentos,",
+        5.08,
+        5.86
+       ],
+       [
+        "por",
+        6.08,
+        6.18
+       ],
+       [
+        "razones",
+        6.22,
+        6.6
+       ],
+       [
+        "obvias.",
+        6.68,
+        7.06
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "Pero en los años ochenta, investigadores mantuvieron despiertas a ratas de laboratorio sin parar.",
-      "start": 6.08,
-      "end": 12.58
+      "start": 7.34,
+      "end": 12.6,
+      "words": [
+       [
+        "Pero",
+        7.34,
+        7.46
+       ],
+       [
+        "en",
+        7.48,
+        7.52
+       ],
+       [
+        "los",
+        7.54,
+        7.66
+       ],
+       [
+        "años",
+        7.72,
+        7.94
+       ],
+       [
+        "ochenta,",
+        8.0,
+        8.46
+       ],
+       [
+        "investigadores",
+        8.64,
+        9.28
+       ],
+       [
+        "mantuvieron",
+        9.34,
+        9.8
+       ],
+       [
+        "despiertas",
+        9.84,
+        10.4
+       ],
+       [
+        "a",
+        10.46,
+        10.5
+       ],
+       [
+        "ratas",
+        10.62,
+        10.96
+       ],
+       [
+        "de",
+        10.98,
+        11.04
+       ],
+       [
+        "laboratorio",
+        11.08,
+        11.72
+       ],
+       [
+        "sin",
+        11.92,
+        12.12
+       ],
+       [
+        "parar.",
+        12.24,
+        12.6
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "Después de unas dos o tres semanas...",
-      "start": 12.82,
-      "end": 15.04
+      "start": 12.86,
+      "end": 15.02,
+      "words": [
+       [
+        "Después",
+        12.86,
+        13.18
+       ],
+       [
+        "de",
+        13.22,
+        13.3
+       ],
+       [
+        "unas",
+        13.36,
+        13.58
+       ],
+       [
+        "dos",
+        13.72,
+        13.96
+       ],
+       [
+        "o",
+        14.02,
+        14.06
+       ],
+       [
+        "tres",
+        14.18,
+        14.34
+       ],
+       [
+        "semanas...",
+        14.38,
+        15.02
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "las ratas murieron.",
-      "start": 15.4,
-      "end": 16.56
+      "start": 15.42,
+      "end": 16.6,
+      "words": [
+       [
+        "las",
+        15.42,
+        15.54
+       ],
+       [
+        "ratas",
+        15.66,
+        16.0
+       ],
+       [
+        "murieron.",
+        16.12,
+        16.6
+       ]
+      ]
      },
      {
-      "p": 1,
       "text": "Su cuerpo perdió la capacidad de controlar la temperatura, y aunque comían más que nunca, ¡bajaban de peso!",
-      "start": 16.86,
-      "end": 23.06
+      "start": 16.94,
+      "end": 23.06,
+      "words": [
+       [
+        "Su",
+        16.94,
+        17.0
+       ],
+       [
+        "cuerpo",
+        17.1,
+        17.42
+       ],
+       [
+        "perdió",
+        17.46,
+        17.72
+       ],
+       [
+        "la",
+        17.74,
+        17.8
+       ],
+       [
+        "capacidad",
+        17.86,
+        18.36
+       ],
+       [
+        "de",
+        18.4,
+        18.48
+       ],
+       [
+        "controlar",
+        18.52,
+        18.98
+       ],
+       [
+        "la",
+        19.04,
+        19.08
+       ],
+       [
+        "temperatura,",
+        19.14,
+        19.8
+       ],
+       [
+        "y",
+        20.04,
+        20.06
+       ],
+       [
+        "aunque",
+        20.1,
+        20.32
+       ],
+       [
+        "comían",
+        20.36,
+        20.78
+       ],
+       [
+        "más",
+        20.86,
+        21.04
+       ],
+       [
+        "que",
+        21.12,
+        21.24
+       ],
+       [
+        "nunca,",
+        21.3,
+        21.7
+       ],
+       [
+        "¡bajaban",
+        21.96,
+        22.52
+       ],
+       [
+        "de",
+        22.56,
+        22.62
+       ],
+       [
+        "peso!",
+        22.74,
+        23.06
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 23.32,
-    "end": 38.78,
+    "start": 23.38,
+    "end": 38.94,
     "text": "Y en humanos existe una enfermedad extremadamente rara llamada insomnio familiar fatal. Es genética, y solo se conoce en unas pocas decenas de familias en el mundo. Las personas que la tienen pierden poco a poco la capacidad de dormir... y es mortal.",
     "sentences": [
      {
-      "p": 2,
       "text": "Y en humanos existe una enfermedad extremadamente rara llamada insomnio familiar fatal.",
-      "start": 23.32,
-      "end": 29.06
+      "start": 23.38,
+      "end": 29.1,
+      "words": [
+       [
+        "Y",
+        23.38,
+        23.4
+       ],
+       [
+        "en",
+        23.44,
+        23.5
+       ],
+       [
+        "humanos",
+        23.52,
+        24.02
+       ],
+       [
+        "existe",
+        24.22,
+        24.52
+       ],
+       [
+        "una",
+        24.56,
+        24.62
+       ],
+       [
+        "enfermedad",
+        24.64,
+        25.14
+       ],
+       [
+        "extremadamente",
+        25.2,
+        26.34
+       ],
+       [
+        "rara",
+        26.44,
+        26.7
+       ],
+       [
+        "llamada",
+        26.8,
+        27.34
+       ],
+       [
+        "insomnio",
+        27.42,
+        28.0
+       ],
+       [
+        "familiar",
+        28.1,
+        28.56
+       ],
+       [
+        "fatal.",
+        28.68,
+        29.1
+       ]
+      ]
      },
      {
-      "p": 2,
       "text": "Es genética, y solo se conoce en unas pocas decenas de familias en el mundo.",
-      "start": 29.3,
-      "end": 33.46
+      "start": 29.36,
+      "end": 33.5,
+      "words": [
+       [
+        "Es",
+        29.36,
+        29.46
+       ],
+       [
+        "genética,",
+        29.5,
+        30.02
+       ],
+       [
+        "y",
+        30.24,
+        30.28
+       ],
+       [
+        "solo",
+        30.36,
+        30.54
+       ],
+       [
+        "se",
+        30.58,
+        30.66
+       ],
+       [
+        "conoce",
+        30.7,
+        31.06
+       ],
+       [
+        "en",
+        31.1,
+        31.18
+       ],
+       [
+        "unas",
+        31.22,
+        31.5
+       ],
+       [
+        "pocas",
+        31.54,
+        31.84
+       ],
+       [
+        "decenas",
+        31.86,
+        32.26
+       ],
+       [
+        "de",
+        32.3,
+        32.36
+       ],
+       [
+        "familias",
+        32.44,
+        32.88
+       ],
+       [
+        "en",
+        32.94,
+        33.0
+       ],
+       [
+        "el",
+        33.04,
+        33.1
+       ],
+       [
+        "mundo.",
+        33.18,
+        33.5
+       ]
+      ]
      },
      {
-      "p": 2,
       "text": "Las personas que la tienen pierden poco a poco la capacidad de dormir...",
-      "start": 33.7,
-      "end": 37.46
+      "start": 33.72,
+      "end": 37.48,
+      "words": [
+       [
+        "Las",
+        33.72,
+        33.86
+       ],
+       [
+        "personas",
+        33.9,
+        34.28
+       ],
+       [
+        "que",
+        34.3,
+        34.38
+       ],
+       [
+        "la",
+        34.4,
+        34.46
+       ],
+       [
+        "tienen",
+        34.56,
+        35.04
+       ],
+       [
+        "pierden",
+        35.08,
+        35.42
+       ],
+       [
+        "poco",
+        35.56,
+        35.8
+       ],
+       [
+        "a",
+        35.84,
+        35.86
+       ],
+       [
+        "poco",
+        35.98,
+        36.24
+       ],
+       [
+        "la",
+        36.26,
+        36.32
+       ],
+       [
+        "capacidad",
+        36.4,
+        36.92
+       ],
+       [
+        "de",
+        36.96,
+        37.02
+       ],
+       [
+        "dormir...",
+        37.06,
+        37.48
+       ]
+      ]
      },
      {
-      "p": 2,
       "text": "y es mortal.",
-      "start": 37.96,
-      "end": 38.78
+      "start": 38.0,
+      "end": 38.94,
+      "words": [
+       [
+        "y",
+        38.0,
+        38.08
+       ],
+       [
+        "es",
+        38.14,
+        38.24
+       ],
+       [
+        "mortal.",
+        38.34,
+        38.94
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 39.2,
-    "end": 43.06,
+    "start": 39.26,
+    "end": 46.6,
     "text": "Así que sí: dormir no es un lujo ni una pérdida de tiempo. Es TAN necesario para vivir como comer o respirar.",
     "sentences": [
      {
-      "p": 3,
       "text": "Así que sí: dormir no es un lujo ni una pérdida de tiempo.",
-      "start": 39.2,
-      "end": 39.92
+      "start": 39.26,
+      "end": 43.08,
+      "words": [
+       [
+        "Así",
+        39.26,
+        39.42
+       ],
+       [
+        "que",
+        39.5,
+        39.62
+       ],
+       [
+        "sí:",
+        39.68,
+        39.8
+       ],
+       [
+        "dormir",
+        40.22,
+        40.56
+       ],
+       [
+        "no",
+        40.76,
+        40.9
+       ],
+       [
+        "es",
+        40.96,
+        41.06
+       ],
+       [
+        "un",
+        41.1,
+        41.2
+       ],
+       [
+        "lujo",
+        41.26,
+        41.58
+       ],
+       [
+        "ni",
+        41.7,
+        41.84
+       ],
+       [
+        "una",
+        41.9,
+        42.02
+       ],
+       [
+        "pérdida",
+        42.16,
+        42.54
+       ],
+       [
+        "de",
+        42.58,
+        42.64
+       ],
+       [
+        "tiempo.",
+        42.72,
+        43.08
+       ]
+      ]
      },
      {
-      "p": 3,
       "text": "Es TAN necesario para vivir como comer o respirar.",
-      "start": 40.14,
-      "end": 43.06
+      "start": 43.36,
+      "end": 46.6,
+      "words": [
+       [
+        "Es",
+        43.36,
+        43.5
+       ],
+       [
+        "TAN",
+        43.66,
+        43.84
+       ],
+       [
+        "necesario",
+        43.88,
+        44.48
+       ],
+       [
+        "para",
+        44.5,
+        44.66
+       ],
+       [
+        "vivir",
+        44.7,
+        45.0
+       ],
+       [
+        "como",
+        45.14,
+        45.38
+       ],
+       [
+        "comer",
+        45.42,
+        45.78
+       ],
+       [
+        "o",
+        45.96,
+        46.02
+       ],
+       [
+        "respirar.",
+        46.08,
+        46.6
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 43.28,
-    "end": 54.66,
+    "start": 46.96,
+    "end": 56.58,
     "text": "Ahora, tal vez estés pensando: \"Bueno, yo nunca voy a pasar once días sin dormir\". Y es verdad. Pero hay algo mucho más común... y casi igual de peligroso.",
     "sentences": [
      {
-      "p": 4,
       "text": "Ahora, tal vez estés pensando: \"Bueno, yo nunca voy a pasar once días sin dormir\".",
-      "start": 43.28,
-      "end": 48.58
+      "start": 46.96,
+      "end": 51.7,
+      "words": [
+       [
+        "Ahora,",
+        46.96,
+        47.22
+       ],
+       [
+        "tal",
+        47.5,
+        47.62
+       ],
+       [
+        "vez",
+        47.66,
+        47.78
+       ],
+       [
+        "estés",
+        47.84,
+        48.08
+       ],
+       [
+        "pensando:",
+        48.1,
+        48.58
+       ],
+       [
+        "\"Bueno,",
+        48.84,
+        49.08
+       ],
+       [
+        "yo",
+        49.36,
+        49.44
+       ],
+       [
+        "nunca",
+        49.6,
+        49.92
+       ],
+       [
+        "voy",
+        49.94,
+        50.06
+       ],
+       [
+        "a",
+        50.08,
+        50.1
+       ],
+       [
+        "pasar",
+        50.18,
+        50.54
+       ],
+       [
+        "once",
+        50.62,
+        50.92
+       ],
+       [
+        "días",
+        50.96,
+        51.2
+       ],
+       [
+        "sin",
+        51.24,
+        51.34
+       ],
+       [
+        "dormir\".",
+        51.38,
+        51.7
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "Y es verdad.",
-      "start": 48.8,
-      "end": 49.12
+      "start": 52.02,
+      "end": 52.64,
+      "words": [
+       [
+        "Y",
+        52.02,
+        52.08
+       ],
+       [
+        "es",
+        52.12,
+        52.24
+       ],
+       [
+        "verdad.",
+        52.28,
+        52.64
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "Pero hay algo mucho más común...",
-      "start": 49.24,
-      "end": 51.7
+      "start": 52.86,
+      "end": 54.66,
+      "words": [
+       [
+        "Pero",
+        52.86,
+        52.98
+       ],
+       [
+        "hay",
+        53.0,
+        53.12
+       ],
+       [
+        "algo",
+        53.18,
+        53.44
+       ],
+       [
+        "mucho",
+        53.56,
+        53.86
+       ],
+       [
+        "más",
+        53.98,
+        54.2
+       ],
+       [
+        "común...",
+        54.24,
+        54.66
+       ]
+      ]
      },
      {
-      "p": 4,
       "text": "y casi igual de peligroso.",
-      "start": 51.94,
-      "end": 54.66
+      "start": 54.94,
+      "end": 56.58,
+      "words": [
+       [
+        "y",
+        54.94,
+        54.98
+       ],
+       [
+        "casi",
+        55.16,
+        55.5
+       ],
+       [
+        "igual",
+        55.56,
+        55.88
+       ],
+       [
+        "de",
+        55.92,
+        56.02
+       ],
+       [
+        "peligroso.",
+        56.04,
+        56.58
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 54.88,
-    "end": 66.96,
+    "start": 56.9,
+    "end": 69.52,
     "text": "En un experimento, un grupo de personas durmió solo seis horas por noche durante dos semanas. ¡Al final, su concentración y sus reflejos estaban tan mal como los de alguien que pasó una o dos noches COMPLETAS sin dormir!",
     "sentences": [
      {
-      "p": 5,
       "text": "En un experimento, un grupo de personas durmió solo seis horas por noche durante dos semanas.",
-      "start": 54.88,
-      "end": 56.58
+      "start": 56.9,
+      "end": 62.22,
+      "words": [
+       [
+        "En",
+        56.9,
+        56.96
+       ],
+       [
+        "un",
+        57.02,
+        57.08
+       ],
+       [
+        "experimento,",
+        57.12,
+        57.8
+       ],
+       [
+        "un",
+        58.02,
+        58.1
+       ],
+       [
+        "grupo",
+        58.12,
+        58.36
+       ],
+       [
+        "de",
+        58.38,
+        58.44
+       ],
+       [
+        "personas",
+        58.52,
+        58.94
+       ],
+       [
+        "durmió",
+        58.96,
+        59.26
+       ],
+       [
+        "solo",
+        59.38,
+        59.6
+       ],
+       [
+        "seis",
+        59.76,
+        60.04
+       ],
+       [
+        "horas",
+        60.06,
+        60.36
+       ],
+       [
+        "por",
+        60.38,
+        60.52
+       ],
+       [
+        "noche",
+        60.58,
+        60.88
+       ],
+       [
+        "durante",
+        60.92,
+        61.32
+       ],
+       [
+        "dos",
+        61.46,
+        61.64
+       ],
+       [
+        "semanas.",
+        61.68,
+        62.22
+       ]
+      ]
      },
      {
-      "p": 5,
       "text": "¡Al final, su concentración y sus reflejos estaban tan mal como los de alguien que pasó una o dos noches COMPLETAS sin dormir!",
-      "start": 56.86,
-      "end": 66.96
+      "start": 62.42,
+      "end": 69.52,
+      "words": [
+       [
+        "¡Al",
+        62.42,
+        62.54
+       ],
+       [
+        "final,",
+        62.62,
+        62.92
+       ],
+       [
+        "su",
+        63.1,
+        63.16
+       ],
+       [
+        "concentración",
+        63.24,
+        63.86
+       ],
+       [
+        "y",
+        63.88,
+        63.92
+       ],
+       [
+        "sus",
+        63.98,
+        64.12
+       ],
+       [
+        "reflejos",
+        64.16,
+        64.6
+       ],
+       [
+        "estaban",
+        64.66,
+        65.04
+       ],
+       [
+        "tan",
+        65.18,
+        65.38
+       ],
+       [
+        "mal",
+        65.5,
+        65.7
+       ],
+       [
+        "como",
+        65.8,
+        65.94
+       ],
+       [
+        "los",
+        65.98,
+        66.1
+       ],
+       [
+        "de",
+        66.12,
+        66.2
+       ],
+       [
+        "alguien",
+        66.26,
+        66.48
+       ],
+       [
+        "que",
+        66.52,
+        66.64
+       ],
+       [
+        "pasó",
+        66.66,
+        67.06
+       ],
+       [
+        "una",
+        67.2,
+        67.4
+       ],
+       [
+        "o",
+        67.44,
+        67.5
+       ],
+       [
+        "dos",
+        67.6,
+        67.78
+       ],
+       [
+        "noches",
+        67.86,
+        68.24
+       ],
+       [
+        "COMPLETAS",
+        68.28,
+        68.98
+       ],
+       [
+        "sin",
+        69.0,
+        69.12
+       ],
+       [
+        "dormir!",
+        69.16,
+        69.52
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 67.08,
-    "end": 79.14,
+    "start": 69.8,
+    "end": 82.32,
     "text": "Pero aquí está lo inquietante: ellos no lo notaban. Cuando les preguntaban, decían que se sentían solo un poquito cansados. Su rendimiento se desplomaba, pero su cerebro ya se había acostumbrado a sentirse así.",
     "sentences": [
      {
-      "p": 6,
       "text": "Pero aquí está lo inquietante: ellos no lo notaban.",
-      "start": 67.08,
-      "end": 69.56
-     },
-     {
-      "p": 6,
-      "text": "Cuando les preguntaban, decían que se sentían solo un poquito cansados.",
       "start": 69.8,
-      "end": 73.18
+      "end": 73.24,
+      "words": [
+       [
+        "Pero",
+        69.8,
+        69.96
+       ],
+       [
+        "aquí",
+        70.0,
+        70.2
+       ],
+       [
+        "está",
+        70.24,
+        70.48
+       ],
+       [
+        "lo",
+        70.52,
+        70.58
+       ],
+       [
+        "inquietante:",
+        70.62,
+        71.26
+       ],
+       [
+        "ellos",
+        71.82,
+        72.12
+       ],
+       [
+        "no",
+        72.36,
+        72.5
+       ],
+       [
+        "lo",
+        72.54,
+        72.62
+       ],
+       [
+        "notaban.",
+        72.68,
+        73.24
+       ]
+      ]
      },
      {
-      "p": 6,
-      "text": "Su rendimiento se desplomaba, pero su cerebro ya se había acostumbrado a sentirse así.",
+      "text": "Cuando les preguntaban, decían que se sentían solo un poquito cansados.",
       "start": 73.48,
-      "end": 79.14
+      "end": 77.32,
+      "words": [
+       [
+        "Cuando",
+        73.48,
+        73.66
+       ],
+       [
+        "les",
+        73.7,
+        73.82
+       ],
+       [
+        "preguntaban,",
+        73.84,
+        74.44
+       ],
+       [
+        "decían",
+        74.6,
+        74.92
+       ],
+       [
+        "que",
+        74.98,
+        75.04
+       ],
+       [
+        "se",
+        75.08,
+        75.14
+       ],
+       [
+        "sentían",
+        75.2,
+        75.64
+       ],
+       [
+        "solo",
+        75.8,
+        76.06
+       ],
+       [
+        "un",
+        76.12,
+        76.24
+       ],
+       [
+        "poquito",
+        76.26,
+        76.72
+       ],
+       [
+        "cansados.",
+        76.76,
+        77.32
+       ]
+      ]
+     },
+     {
+      "text": "Su rendimiento se desplomaba, pero su cerebro ya se había acostumbrado a sentirse así.",
+      "start": 77.56,
+      "end": 82.32,
+      "words": [
+       [
+        "Su",
+        77.56,
+        77.64
+       ],
+       [
+        "rendimiento",
+        77.68,
+        78.22
+       ],
+       [
+        "se",
+        78.3,
+        78.38
+       ],
+       [
+        "desplomaba,",
+        78.42,
+        79.12
+       ],
+       [
+        "pero",
+        79.34,
+        79.46
+       ],
+       [
+        "su",
+        79.52,
+        79.58
+       ],
+       [
+        "cerebro",
+        79.66,
+        80.08
+       ],
+       [
+        "ya",
+        80.22,
+        80.32
+       ],
+       [
+        "se",
+        80.42,
+        80.48
+       ],
+       [
+        "había",
+        80.52,
+        80.74
+       ],
+       [
+        "acostumbrado",
+        80.76,
+        81.44
+       ],
+       [
+        "a",
+        81.46,
+        81.48
+       ],
+       [
+        "sentirse",
+        81.56,
+        82.0
+       ],
+       [
+        "así.",
+        82.06,
+        82.32
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 79.32,
-    "end": 90.26,
+    "start": 82.54,
+    "end": 91.52,
     "text": "Por eso los especialistas recomiendan que un adulto duerma al menos siete horas, y los adolescentes, entre ocho y diez. No es flojera... ¡es mantenimiento!",
     "sentences": [
      {
-      "p": 7,
       "text": "Por eso los especialistas recomiendan que un adulto duerma al menos siete horas, y los adolescentes, entre ocho y diez.",
-      "start": 79.32,
-      "end": 86.76
+      "start": 82.54,
+      "end": 89.24,
+      "words": [
+       [
+        "Por",
+        82.54,
+        82.64
+       ],
+       [
+        "eso",
+        82.7,
+        82.94
+       ],
+       [
+        "los",
+        82.98,
+        83.08
+       ],
+       [
+        "especialistas",
+        83.14,
+        83.74
+       ],
+       [
+        "recomiendan",
+        83.78,
+        84.34
+       ],
+       [
+        "que",
+        84.42,
+        84.54
+       ],
+       [
+        "un",
+        84.6,
+        84.68
+       ],
+       [
+        "adulto",
+        84.72,
+        85.12
+       ],
+       [
+        "duerma",
+        85.18,
+        85.46
+       ],
+       [
+        "al",
+        85.5,
+        85.56
+       ],
+       [
+        "menos",
+        85.64,
+        85.94
+       ],
+       [
+        "siete",
+        86.02,
+        86.36
+       ],
+       [
+        "horas,",
+        86.38,
+        86.72
+       ],
+       [
+        "y",
+        86.9,
+        86.94
+       ],
+       [
+        "los",
+        86.98,
+        87.1
+       ],
+       [
+        "adolescentes,",
+        87.14,
+        87.84
+       ],
+       [
+        "entre",
+        87.98,
+        88.26
+       ],
+       [
+        "ocho",
+        88.36,
+        88.62
+       ],
+       [
+        "y",
+        88.8,
+        88.84
+       ],
+       [
+        "diez.",
+        88.9,
+        89.24
+       ]
+      ]
      },
      {
-      "p": 7,
       "text": "No es flojera...",
-      "start": 86.88,
-      "end": 89.26
+      "start": 89.5,
+      "end": 90.22,
+      "words": [
+       [
+        "No",
+        89.5,
+        89.6
+       ],
+       [
+        "es",
+        89.66,
+        89.76
+       ],
+       [
+        "flojera...",
+        89.78,
+        90.22
+       ]
+      ]
      },
      {
-      "p": 7,
       "text": "¡es mantenimiento!",
-      "start": 89.42,
-      "end": 90.26
+      "start": 90.48,
+      "end": 91.52,
+      "words": [
+       [
+        "¡es",
+        90.48,
+        90.7
+       ],
+       [
+        "mantenimiento!",
+        90.76,
+        91.52
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 90.46,
-    "end": 103.66,
+    "start": 91.8,
+    "end": 103.64,
     "text": "La próxima vez que pienses en desvelarte para ver un capítulo más, recuerda: después de una sola noche, tu cerebro funciona como si hubieras tomado alcohol, tus defensas bajan... y tu cerebro se queda sin limpiar.",
     "sentences": [
      {
-      "p": 8,
       "text": "La próxima vez que pienses en desvelarte para ver un capítulo más, recuerda: después de una sola noche, tu cerebro funciona como si hubieras tomado alcohol, tus defensas bajan...",
-      "start": 90.46,
-      "end": 101.48
+      "start": 91.8,
+      "end": 101.44,
+      "words": [
+       [
+        "La",
+        91.8,
+        91.86
+       ],
+       [
+        "próxima",
+        91.94,
+        92.26
+       ],
+       [
+        "vez",
+        92.32,
+        92.44
+       ],
+       [
+        "que",
+        92.48,
+        92.62
+       ],
+       [
+        "pienses",
+        92.64,
+        92.94
+       ],
+       [
+        "en",
+        92.98,
+        93.04
+       ],
+       [
+        "desvelarte",
+        93.08,
+        93.66
+       ],
+       [
+        "para",
+        93.68,
+        93.86
+       ],
+       [
+        "ver",
+        93.88,
+        94.0
+       ],
+       [
+        "un",
+        94.04,
+        94.12
+       ],
+       [
+        "capítulo",
+        94.14,
+        94.54
+       ],
+       [
+        "más,",
+        94.62,
+        94.86
+       ],
+       [
+        "recuerda:",
+        95.14,
+        95.64
+       ],
+       [
+        "después",
+        95.9,
+        96.26
+       ],
+       [
+        "de",
+        96.28,
+        96.48
+       ],
+       [
+        "una",
+        96.58,
+        96.74
+       ],
+       [
+        "sola",
+        96.86,
+        97.08
+       ],
+       [
+        "noche,",
+        97.16,
+        97.5
+       ],
+       [
+        "tu",
+        97.66,
+        97.72
+       ],
+       [
+        "cerebro",
+        97.8,
+        98.12
+       ],
+       [
+        "funciona",
+        98.16,
+        98.56
+       ],
+       [
+        "como",
+        98.64,
+        98.78
+       ],
+       [
+        "si",
+        98.88,
+        98.94
+       ],
+       [
+        "hubieras",
+        98.96,
+        99.34
+       ],
+       [
+        "tomado",
+        99.4,
+        99.72
+       ],
+       [
+        "alcohol,",
+        99.76,
+        100.16
+       ],
+       [
+        "tus",
+        100.38,
+        100.48
+       ],
+       [
+        "defensas",
+        100.52,
+        100.96
+       ],
+       [
+        "bajan...",
+        101.04,
+        101.44
+       ]
+      ]
      },
      {
-      "p": 8,
       "text": "y tu cerebro se queda sin limpiar.",
-      "start": 101.6,
-      "end": 103.66
+      "start": 101.76,
+      "end": 103.64,
+      "words": [
+       [
+        "y",
+        101.76,
+        101.8
+       ],
+       [
+        "tu",
+        101.88,
+        101.96
+       ],
+       [
+        "cerebro",
+        102.04,
+        102.44
+       ],
+       [
+        "se",
+        102.58,
+        102.66
+       ],
+       [
+        "queda",
+        102.8,
+        103.02
+       ],
+       [
+        "sin",
+        103.1,
+        103.22
+       ],
+       [
+        "limpiar.",
+        103.26,
+        103.64
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 103.92,
-    "end": 109.74,
+    "start": 103.96,
+    "end": 109.7,
     "text": "Y ahora te pregunto a ti: ¿cuál es el MÁXIMO tiempo que has aguantado sin dormir? ¡Déjamelo en los comentarios!",
     "sentences": [
      {
-      "p": 9,
       "text": "Y ahora te pregunto a ti: ¿cuál es el MÁXIMO tiempo que has aguantado sin dormir?",
-      "start": 103.92,
-      "end": 108.3
+      "start": 103.96,
+      "end": 108.26,
+      "words": [
+       [
+        "Y",
+        103.96,
+        104.0
+       ],
+       [
+        "ahora",
+        104.06,
+        104.3
+       ],
+       [
+        "te",
+        104.38,
+        104.5
+       ],
+       [
+        "pregunto",
+        104.54,
+        104.9
+       ],
+       [
+        "a",
+        104.94,
+        104.96
+       ],
+       [
+        "ti:",
+        105.06,
+        105.18
+       ],
+       [
+        "¿cuál",
+        105.4,
+        105.52
+       ],
+       [
+        "es",
+        105.56,
+        105.66
+       ],
+       [
+        "el",
+        105.7,
+        105.78
+       ],
+       [
+        "MÁXIMO",
+        105.96,
+        106.38
+       ],
+       [
+        "tiempo",
+        106.48,
+        106.8
+       ],
+       [
+        "que",
+        106.92,
+        107.02
+       ],
+       [
+        "has",
+        107.04,
+        107.2
+       ],
+       [
+        "aguantado",
+        107.26,
+        107.74
+       ],
+       [
+        "sin",
+        107.82,
+        107.92
+       ],
+       [
+        "dormir?",
+        107.96,
+        108.26
+       ]
+      ]
      },
      {
-      "p": 9,
       "text": "¡Déjamelo en los comentarios!",
-      "start": 108.48,
-      "end": 109.74
+      "start": 108.52,
+      "end": 109.7,
+      "words": [
+       [
+        "¡Déjamelo",
+        108.52,
+        108.88
+       ],
+       [
+        "en",
+        108.92,
+        108.94
+       ],
+       [
+        "los",
+        108.96,
+        109.06
+       ],
+       [
+        "comentarios!",
+        109.1,
+        109.7
+       ]
+      ]
      }
     ]
    },
    {
-    "start": 109.9,
-    "end": 118.4,
+    "start": 109.94,
+    "end": 118.42,
     "text": "Y si te preguntas cuánto tiempo puede sobrevivir una persona sin agua... la respuesta es mucho menos de lo que crees. ¡Te lo cuento en este video!",
     "sentences": [
      {
-      "p": 10,
       "text": "Y si te preguntas cuánto tiempo puede sobrevivir una persona sin agua...",
-      "start": 109.9,
-      "end": 113.88
+      "start": 109.94,
+      "end": 113.86,
+      "words": [
+       [
+        "Y",
+        109.94,
+        109.98
+       ],
+       [
+        "si",
+        110.02,
+        110.08
+       ],
+       [
+        "te",
+        110.12,
+        110.22
+       ],
+       [
+        "preguntas",
+        110.24,
+        110.7
+       ],
+       [
+        "cuánto",
+        110.86,
+        111.16
+       ],
+       [
+        "tiempo",
+        111.3,
+        111.62
+       ],
+       [
+        "puede",
+        111.78,
+        112.04
+       ],
+       [
+        "sobrevivir",
+        112.12,
+        112.6
+       ],
+       [
+        "una",
+        112.64,
+        112.8
+       ],
+       [
+        "persona",
+        112.84,
+        113.22
+       ],
+       [
+        "sin",
+        113.32,
+        113.48
+       ],
+       [
+        "agua...",
+        113.58,
+        113.86
+       ]
+      ]
      },
      {
-      "p": 10,
       "text": "la respuesta es mucho menos de lo que crees.",
-      "start": 114.06,
-      "end": 116.78
+      "start": 114.12,
+      "end": 116.76,
+      "words": [
+       [
+        "la",
+        114.12,
+        114.18
+       ],
+       [
+        "respuesta",
+        114.26,
+        114.84
+       ],
+       [
+        "es",
+        114.92,
+        115.04
+       ],
+       [
+        "mucho",
+        115.26,
+        115.58
+       ],
+       [
+        "menos",
+        115.74,
+        116.04
+       ],
+       [
+        "de",
+        116.06,
+        116.12
+       ],
+       [
+        "lo",
+        116.16,
+        116.2
+       ],
+       [
+        "que",
+        116.28,
+        116.4
+       ],
+       [
+        "crees.",
+        116.44,
+        116.76
+       ]
+      ]
      },
      {
-      "p": 10,
       "text": "¡Te lo cuento en este video!",
-      "start": 116.96,
-      "end": 118.4
+      "start": 116.94,
+      "end": 118.42,
+      "words": [
+       [
+        "¡Te",
+        116.94,
+        117.04
+       ],
+       [
+        "lo",
+        117.06,
+        117.12
+       ],
+       [
+        "cuento",
+        117.2,
+        117.56
+       ],
+       [
+        "en",
+        117.62,
+        117.74
+       ],
+       [
+        "este",
+        117.8,
+        118.02
+       ],
+       [
+        "video!",
+        118.06,
+        118.42
+       ]
+      ]
      }
     ]
    }
