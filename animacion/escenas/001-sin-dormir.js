@@ -144,7 +144,7 @@ let COUNTER_FIRST = null;
       if (age > 0 && age < 0.05) {} // (sonido en lista)
     }
     meterBar(ctx, 1420, 260, 180, 600, fill, 'CANSANCIO', FLAT.purple, t);
-    popIn(ctx, t, a + 0.5, 1510, 950, () => card(ctx, -230, -55, 460, 110, FLAT.purple, 55) || text(ctx, 'ADENOSINA', 0, 0, { size: 60, fill: '#fff', lw: 0, shadow: false }));
+    popIn(ctx, t, a + 0.5, 720, 870, () => card(ctx, -230, -55, 460, 110, FLAT.purple, 55) || text(ctx, 'ADENOSINA', 0, 0, { size: 60, fill: '#fff', lw: 0, shadow: false }));
   }, { counter: t => counterLabel(8 + 5 * L(t, PS(0, 6), PE(0, 6))) });
   for (let i = 0; i < 18; i++) fx(a + i / 2.2 + 1.3, 'blip', 0.18, 0.8 + (i % 4) * 0.1);
 }
@@ -232,14 +232,15 @@ let COUNTER_FIRST = null;
   shot(a, (ctx, lt, d, t) => {
     bgFlat(ctx, t, '#4a1d5e', '#1c1238', 9);
     const v = 0.85 * ease.out(L(t, a + 0.4, a + 1.9));
-    gauge(ctx, 700, 640, 300, v, 'ALCOHOL EN SANGRE', FLAT.coral, { value: (0.1 * v / 0.85).toFixed(2) + ' %', mark: 0.55, markLabel: 'límite' });
+    for (let i = 0; i < 16; i++) { const r = rng(i + 7), p = (t * (0.25 + r() * 0.3) + r()) % 1; ctx.globalAlpha = Math.sin(p * Math.PI) * 0.6; ctx.fillStyle = '#ff8fab'; ctx.beginPath(); ctx.arc(250 + r() * 900 + Math.sin(t * 2 + i) * 30, 1000 - p * 900, 10 + r() * 22, 0, Math.PI * 2); ctx.fill(); } ctx.globalAlpha = 1;
+    gauge(ctx, 700, 640, 300, v + (v > 0.8 ? Math.sin(t * 9) * 0.015 : 0), 'ALCOHOL EN SANGRE', FLAT.coral, { value: (0.1 * v / 0.85).toFixed(2) + ' %', mark: 0.55, markLabel: 'límite' });
     if (t > legal) {
       popIn(ctx, t, legal, 1430, 520, () => {
         drawCar(ctx, 0, 0, 0.75, t, FLAT.sky, 0.2);
         ctx.strokeStyle = '#ef233c'; ctx.lineWidth = 34; ctx.lineCap = 'round';
         ctx.beginPath(); ctx.arc(0, -20, 250, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.moveTo(-175, -195); ctx.lineTo(175, 155); ctx.stroke();
       });
-      label(ctx, 'NO PODRÍAS MANEJAR', 1430, 900, { size: 64, fill: '#fff' });
+      label(ctx, 'NO PODRÍAS MANEJAR', 1430, 830, { size: 64, fill: '#fff' });
     }
     popIn(ctx, t, a + 0.2, 700, 170, () => text(ctx, '24 HORAS SIN DORMIR', 0, 0, { size: 84, fill: FLAT.accent }));
   }, { counter: () => 'HORA 24' });
@@ -267,14 +268,16 @@ let COUNTER_FIRST = null;
       brain(ctx, 760, 520, 1.25, t, { worried: true });
       const glow = 0.6 + 0.4 * Math.sin(t * 8);
       ctx.fillStyle = `rgba(239,35,60,${glow})`; ctx.beginPath(); ctx.ellipse(800, 600, 50, 34, 0.4, 0, Math.PI * 2); ctx.fill();
+      for (let k = 0; k < 3; k++) { const p = (t * 1.1 + k / 3) % 1; ctx.strokeStyle = `rgba(239,35,60,${1 - p})`; ctx.lineWidth = 10 * (1 - p) + 2; ctx.beginPath(); ctx.ellipse(800, 600, 50 + p * 300, 34 + p * 200, 0.4, 0, Math.PI * 2); ctx.stroke(); }
+      if (t > amy) for (let k = 0; k < 4; k++) { const ang = t * 1.6 + k * 1.57; bolt(ctx, 760 + Math.cos(ang) * 420, 520 + Math.sin(ang) * 300, t + k); }
       if (t > amy) { label(ctx, 'AMÍGDALA', 800, 750, { size: 56, fill: '#ff8fab' }); bigStat(ctx, t, amy + 1, 1450, 520, 60, { prefix: '+', suffix: '%', size: 230, color: FLAT.coral, label: 'MÁS REACTIVA' }); }
       else popIn(ctx, t, irr, 1400, 500, () => text(ctx, 'IRRITABLE', 0, 0, { size: 120, fill: FLAT.coral }));
     } else {
       // explota por algo pequeñito (una gotita de café)
       const k = L(t, boom + 0.3, boom + 0.6);
       leo(ctx, 760 + Math.sin(t * 40) * 6 * k, 1000, 1.15, blinkE(t, { red: 0.7, angry: 1, mouth: t > boom + 0.3 ? 'angry' : 'flat', eyeSize: 1.1, handL: t > boom + 0.3 ? [-130, -520] : null, handR: t > boom + 0.3 ? [130, -520] : null, open: 1 }));
-      ctx.fillStyle = '#6f4518'; ctx.beginPath(); ctx.ellipse(1250, 960, 26, 10, 0, 0, Math.PI * 2); ctx.fill();
-      label(ctx, '(una gotita de café)', 1250, 1010, { size: 40, fill: '#ffd6a5' });
+      ctx.fillStyle = '#6f4518'; ctx.beginPath(); ctx.ellipse(1250, 830, 26, 10, 0, 0, Math.PI * 2); ctx.fill();
+      label(ctx, '(una gotita de café)', 1250, 880, { size: 40, fill: '#ffd6a5' });
       if (k > 0) { for (let i = 0; i < 4; i++) { const p = (t * 1.5 + i / 4) % 1; ctx.globalAlpha = 1 - p; ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(700 + (i % 2 ? 140 : -20) + Math.sin(p * 6) * 20, 380 - p * 200, 30 + p * 40, 0, Math.PI * 2); ctx.fill(); } ctx.globalAlpha = 1; }
       popIn(ctx, t, boom + 0.3, 1300, 300, () => text(ctx, '¡EL FIN DEL MUNDO!', 0, 0, { size: 96, fill: FLAT.accent }));
     }
@@ -288,7 +291,7 @@ let COUNTER_FIRST = null;
   shot(a, (ctx, lt, d, t) => {
     const e = blinkE(t, { hold: 'coffee', handR: BED.coffee, red: 0.65, bags: 0.7, mouth: 'flat', look: [0, 0], eyeSize: 1.05 });
     room(ctx, t, { hour: 12 + 0.2, cups: [a - 3, a - 2], dark: 0.35 + 0.15 * L(t, a, a + 4), cam: { zoom: 1.3 + 0.1 * L(t, a, a + 4), fx: 1150, fy: 640 } }, e);
-    popIn(ctx, t, PS(1, 0) + 1.6, W / 2, 900, () => text(ctx, 'algo inquietante...', 0, 0, { size: 80, fill: '#c9b8ff' }));
+    popIn(ctx, t, PS(1, 0) + 1.6, W / 2, 800, () => text(ctx, 'algo inquietante...', 0, 0, { size: 80, fill: '#c9b8ff' }));
   }, { counter: () => 'HORA 36', bump: [PS(1, 0)], mood: 'tense' });
 }
 // 13. Partes del cerebro se apagan
@@ -318,7 +321,7 @@ let COUNTER_FIRST = null;
     lamp(ctx, 1450, 420, t);
     const black = t > read + 1.0 && t < read + 1.6;
     const e = blinkE(t, { hold: 'book', handR: [70, -290], holdL: null, handL: [-70, -290], red: 0.6, bags: 0.7, look: [0, 0.6], mouth: 'flat' });
-    if (t > forgot) Object.assign(e, { look: [0, 0], mouth: 'o', mouthOpen: 0.3, eyeSize: 1.15 });
+    if (t > forgot) Object.assign(e, { look: [0, 0], mouth: 'o', mouthOpen: 0.3, eyeSize: 1.15, holdL: null, handL: [-40 + Math.sin(t * 14) * 18, -540], rot: Math.sin(t * 3) * 0.03 });
     leo(ctx, 900, 1060, 1.15, e);
     desk(ctx, 900, 820, 900);
     if (t < unaware) { popIn(ctx, t, a + 0.4, 420, 300, () => stopwatch(ctx, t, '0,5 s')); popIn(ctx, t, a + 1.2, 1450, 260, () => stopwatch(ctx, t, '3 s')); }
@@ -371,6 +374,7 @@ let COUNTER_FIRST = null;
       ctx.globalAlpha = p < 0.5 ? 1 : 1 - (p - 0.5) * 2; text(ctx, ch, x, y, { size: 60, fill: FLAT.accent }); ctx.globalAlpha = 1;
     }
     if (t > a + 0.5) popIn(ctx, t, a + 0.5, W / 2, 110, () => text(ctx, 'MEMORIA', 0, 0, { size: 110, fill: '#fff' }));
+    if (t > leak) { popIn(ctx, t, leak + 0.3, 1500, 330, () => { ctx.rotate(Math.sin(t * 5) * 0.06); card(ctx, -230, -75, 460, 150, '#ef233c', 40); text(ctx, '¡SE OLVIDA!', 0, 0, { size: 72, fill: '#fff', lw: 0, shadow: false }); }); questionMarks(ctx, t, 900, 300, 3, '#fff'); }
   }, { counter: () => 'HORA 44' });
 }
 // 17. ¡Dos días!
@@ -390,6 +394,7 @@ let COUNTER_FIRST = null;
   const a = PS(1, 6), s2 = SS(1, 6, 2), gre = SS(1, 6, 3), lep = SS(1, 6, 4), junk = SS(1, 6, 5), w = SS(1, 6, 6);
   fx(a + 0.3, 'dizzy', 0.4, 0.5); fx(s2 + 0.3, 'boing', 0.5, 0.8); fx(gre + 1, 'ff', 0.3, 1.4, { dur: 0.8 }); fx(lep + 0.8, 'ff', 0.3, 0.6, { dur: 0.8 });
   for (let i = 0; i < 8; i++) fx(junk + i * 0.35, 'pop', 0.4, 0.8 + (i % 4) * 0.15);
+  for (let tt = a + 0.6; tt < junk - 0.3; tt += 0.8) fx(tt, 'pop', 0.3, 1.3);
   shot(a, (ctx, lt, d, t) => {
     bgFlat(ctx, t, '#ff9f1c', '#e85d04', 18);
     if (t > junk) { const kinds = ['burger', 'fries', 'donut', 'candy', 'pizza']; for (let i = 0; i < 14; i++) { const r = rng(i + 9), st = junk + i * 0.25; if (t < st) continue; const p = (t - st) * 0.45 % 1.4; foodIcon(ctx, kinds[i % 5], 100 + r() * 1700, -120 + p * 900, 0.9, Math.sin(t * 2 + i)); } }
@@ -400,7 +405,12 @@ let COUNTER_FIRST = null;
       for (let i = 0; i < 3; i++) { ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(600, 760, 90 + i * 30 + Math.sin(t * 10) * 6, -0.5, 0.5); ctx.stroke(); }
       if (t > s2) { foodIcon(ctx, 'salad', 1000, 860, 1.1, 0); ctx.strokeStyle = '#ef233c'; ctx.lineWidth = 18; ctx.beginPath(); ctx.moveTo(920, 780); ctx.lineTo(1080, 920); ctx.moveTo(1080, 780); ctx.lineTo(920, 920); ctx.stroke(); }
     }
-    if (t > gre) gauge(ctx, 1300, 420, 190, 0.2 + 0.75 * ease.out(L(t, gre + 1, gre + 1.8)), 'GRELINA', '#ef233c', { value: '¡HAMBRE!' });
+    if (t > a + 0.6 && t < junk) {
+      const cyc = Math.floor((t - a) / 0.8), kinds = ['burger', 'pizza', 'donut', 'fries', 'candy'];
+      popIn(ctx, t, a + 0.6, 960, 360, () => { ctx.fillStyle = '#fff'; for (const [x, y, r] of [[-120, 170, 18], [-80, 120, 28]]) { ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill(); } ctx.beginPath(); ctx.ellipse(0, 0, 170, 120, 0, 0, Math.PI * 2); ctx.fill();
+        const sp = pop(t, a + 0.6 + cyc * 0.8, 0.4); foodIcon(ctx, kinds[cyc % 5], 0, 10, 1.1 * sp, Math.sin(t * 4) * 0.15); });
+    }
+    if (t > gre) gauge(ctx, 1300, 420, 190, 0.2 + 0.75 * ease.out(L(t, gre + 1, gre + 1.8)), 'GRELINA', '#ef233c', { value: '¡HAMBRE!' }); if (t > gre + 1.8) ctx.translate(Math.sin(t * 40) * 2, 0);
     if (t > lep) gauge(ctx, 1680, 820, 170, 0.8 - 0.65 * ease.out(L(t, lep + 0.8, lep + 1.6)), 'LEPTINA', FLAT.mint, { value: 'LLENO' });
     if (t > w) subtitleBar(ctx, t, w, 'más antojos = subir de peso');
     if (t < gre) popIn(ctx, t, a + 0.2, 1300, 300, () => text(ctx, '¡HAMBRE!', 0, 0, { size: 150, fill: '#fff' }));
@@ -416,14 +426,15 @@ let COUNTER_FIRST = null;
       for (let i = 0; i < 4; i++) defender(ctx, 260 + i * 240, 700, 70, t + i, 1);
       for (let i = 0; i < 6; i++) virus(ctx, 1100 + (i % 3) * 230 + Math.sin(t + i) * 30 - L(t, a, res) * 300, 330 + Math.floor(i / 3) * 280 + Math.cos(t * 1.3 + i) * 30, 55, t + i);
       popIn(ctx, t, a + 0.4, 600, 200, () => text(ctx, 'DEFENSAS DORMIDAS', 0, 0, { size: 84, fill: '#fff' }));
-      if (t > exp) popIn(ctx, t, exp + 0.5, 1400, 960, () => card(ctx, -330, -60, 660, 120, FLAT.ink, 60) || text(ctx, 'virus del resfriado', 0, 0, { size: 52, fill: '#80ed99', lw: 0, shadow: false }));
+      if (t > exp) popIn(ctx, t, exp + 0.5, 1400, 850, () => card(ctx, -330, -60, 660, 120, FLAT.ink, 60) || text(ctx, 'virus del resfriado', 0, 0, { size: 52, fill: '#80ed99', lw: 0, shadow: false }));
     } else {
       const h1 = 120, h2 = 480, k = ease.out(L(t, res + 0.3, res + 1.3));
-      card(ctx, 360, 900 - h1 * k, 300, h1 * k, FLAT.mint, 20, false); card(ctx, 1260, 900 - h2 * k, 300, h2 * k, FLAT.coral, 20, false);
-      label(ctx, '7+ horas', 510, 960, { size: 60 }); label(ctx, 'menos de 6 h', 1410, 960, { size: 60 });
-      if (k > 0.9) { bigStat(ctx, t, res + 1.3, 1410, 300, '×4', { size: 180, color: FLAT.accent }); }
-      for (let i = 0; i < 4; i++) virus(ctx, 1300 + i * 70, 860 - h2 * k + 40 + (i % 2) * 70, 24, t + i);
-      virus(ctx, 510, 900 - h1 * k + 50, 24, t);
+      card(ctx, 360, 790 - h1 * k, 300, h1 * k, FLAT.mint, 20, false); card(ctx, 1260, 790 - h2 * k, 300, h2 * k, FLAT.coral, 20, false);
+      label(ctx, '7+ horas', 510, 850, { size: 60 }); label(ctx, 'menos de 6 h', 1410, 850, { size: 60 });
+      if (k > 0.9) { bigStat(ctx, t, res + 1.3, 1410, 190, '×4', { size: 180, color: FLAT.accent }); }
+      for (let i = 0; i < 4; i++) virus(ctx, 1300 + i * 70, 750 - h2 * k + 40 + (i % 2) * 70, 24, t + i);
+      virus(ctx, 510, 790 - h1 * k + 50, 24, t);
+      if (k > 0.9) for (let j = 0; j < 2; j++) { const p = (t * 0.8 + j * 0.5) % 1; ctx.globalAlpha = 1 - p; text(ctx, '¡ACHÚ!', 1680 + p * 100, 520 - p * 160 + j * 160, { size: 64, fill: '#80ed99' }); virus(ctx, 1600 + p * 300, 560 + j * 120 - p * 60, 18, t + j, '#80ed99'); ctx.globalAlpha = 1; }
     }
   }, { counter: () => 'DÍA 2' });
 }
@@ -494,12 +505,14 @@ let COUNTER_FIRST = null;
     if (t < study) {
       for (let i = 0; i < 26; i++) { const r = rng(i + 3), ang = r() * 6.28 + t * 0.2, rad = 120 + r() * 260 * (1 - 0.4 * L(t, a, study)); ctx.fillStyle = '#c08552'; ctx.beginPath(); ctx.arc(960 + Math.cos(ang) * rad, 540 + Math.sin(ang) * rad * 0.7, 18 + r() * 12, 0, Math.PI * 2); ctx.fill(); }
       popIn(ctx, t, a + 0.6, 960, 540, () => { card(ctx, -300, -80, 600, 160, '#c08552', 80); text(ctx, 'β-AMILOIDE', 0, 0, { size: 90, fill: '#fff', lw: 0, shadow: false }); });
-      label(ctx, 'relacionada con el Alzheimer', 960, 900, { size: 60, fill: '#ffd6a5' });
+      label(ctx, 'relacionada con el Alzheimer', 960, 830, { size: 60, fill: '#ffd6a5' });
     } else {
       const k = ease.out(L(t, study + 1.5, study + 2.5));
-      card(ctx, 420, 880 - 300, 280, 300, FLAT.mint, 20, false); card(ctx, 1220, 880 - 300 - 160 * k, 280, 300 + 160 * k, FLAT.coral, 20, false);
-      label(ctx, 'durmiendo', 560, 950, { size: 56 }); label(ctx, '1 noche sin dormir', 1360, 950, { size: 56 });
-      if (k > 0.5) { const top = 580 - 160 * k - 30; ctx.fillStyle = FLAT.accent; ctx.beginPath(); ctx.moveTo(1360, top - 90); ctx.lineTo(1430, top); ctx.lineTo(1290, top); ctx.fill(); }
+      card(ctx, 420, 780 - 300, 280, 300, FLAT.mint, 20, false); card(ctx, 1220, 780 - 300 - 160 * k, 280, 300 + 160 * k, FLAT.coral, 20, false);
+      label(ctx, 'durmiendo', 560, 840, { size: 56 }); label(ctx, '1 noche sin dormir', 1360, 840, { size: 56 });
+      zzz(ctx, t, 600, 420, '#b9a8ff');
+      for (let i = 0; i < 10; i++) { const r = rng(i + 70), ang = t * (0.5 + r()) + i; ctx.fillStyle = '#c08552'; ctx.beginPath(); ctx.arc(1360 + Math.cos(ang) * (150 + r() * 80), 600 - 160 * k + Math.sin(ang) * 120, 10 + r() * 8, 0, Math.PI * 2); ctx.fill(); }
+      if (k > 0.5) { const top = 480 - 160 * k - 30 + Math.sin(t * 6) * 12; ctx.fillStyle = FLAT.accent; ctx.beginPath(); ctx.moveTo(1360, top - 90); ctx.lineTo(1430, top); ctx.lineTo(1290, top); ctx.fill(); }
       label(ctx, 'β-amiloide en el cerebro', 960, 120, { size: 72, fill: '#fff' });
     }
   });
@@ -537,7 +550,7 @@ let COUNTER_FIRST = null;
     if (t > friends) {
       drawPerson(ctx, 380, 1010, 1.05, blinkE(t + 1, { look: [1, 0], hold: 'phone', handR: [100, -330], mouth: 'flat' }), PEOPLE.amigo1);
       drawPerson(ctx, 1540, 1010, 1.05, blinkE(t + 2, { look: [-1, 0], mouth: 'smile', talk: talking(t) }), PEOPLE.amigo2);
-      popIn(ctx, t, friends + 0.3, 960, 950, () => text(ctx, '¡NO TE DUERMAS!', 0, 0, { size: 70, fill: FLAT.accent }));
+      popIn(ctx, t, friends + 0.3, 960, 300, () => text(ctx, '¡NO TE DUERMAS!', 0, 0, { size: 70, fill: FLAT.accent }));
     }
     retroOverlay(ctx, t);
   }, { trans: 'wipe', mood: 'mystery', counter: () => 'DÍA 1' });
@@ -600,14 +613,14 @@ let COUNTER_FIRST = null;
   shot(a, (ctx, lt, d, t) => {
     bgFlat(ctx, t, '#bc6c25', '#6f4518', 31); rays(ctx, t, W / 2, H / 2, 'rgba(255,255,255,0.08)');
     bigStat(ctx, t, a + 0.3, W / 2, 420, 264, { size: 300, color: FLAT.accent, label: 'HORAS', count: 1 });
-    if (t > eleven) popIn(ctx, t, eleven, W / 2, 870, () => { card(ctx, -380, -80, 760, 160, FLAT.coral, 80); text(ctx, '¡11 DÍAS!', 0, 0, { size: 110, fill: '#fff', lw: 0, shadow: false }); });
+    if (t > eleven) popIn(ctx, t, eleven, W / 2, 800, () => { card(ctx, -380, -80, 760, 160, FLAT.coral, 80); text(ctx, '¡11 DÍAS!', 0, 0, { size: 110, fill: '#fff', lw: 0, shadow: false }); });
     retroOverlay(ctx, t);
   }, { mood: 'mystery', counter: () => 'DÍA 11', bump: [SS(2, 10, 1)] });
 }
 // 32. Durmió 14 horas
 {
   const a = PS(2, 11), slept = SS(2, 11, 1), deep = SS(2, 11, 2);
-  fx(slept, 'yawn', 0.5); fx(slept + 1, 'ff', 0.3, 0.8, { dur: 1.8 }); fx(deep + 0.5, 'pop', 0.6); fx(deep + 1, 'pop', 0.6, 1.3);
+  fx(slept, 'yawn', 0.5); for (let tt = slept + 0.5; tt < PS(2, 12) - 0.3; tt += 1 / 0.7) fx(tt + 0.5 / 0.7, 'blip', 0.25, 0.9); fx(slept + 1, 'ff', 0.3, 0.8, { dur: 1.8 }); fx(deep + 0.5, 'pop', 0.6); fx(deep + 1, 'pop', 0.6, 1.3);
   shot(a, (ctx, lt, d, t) => {
     bgFlat(ctx, t, '#1d3557', '#0b1a2e', 32);
     if (t < slept) { questionMarks(ctx, t, W / 2, 500, 3, FLAT.accent); popIn(ctx, t, a + 0.2, W / 2, 200, () => text(ctx, '¿Y DESPUÉS?', 0, 0, { size: 120, fill: '#fff' })); retroOverlay(ctx, t); return; }
@@ -616,6 +629,14 @@ let COUNTER_FIRST = null;
     drawPerson(ctx, 560, 980, 0.8, E(t, { open: 0, mouth: 'smile', noShadow: true }), PEOPLE.randy);
     ctx.fillStyle = '#e63946'; rrect(ctx, 380, 720, 940, 320, 40); ctx.fill();
     zzz(ctx, t, 640, 480, '#fff');
+    popIn(ctx, t, slept + 0.5, 980, 300, () => {
+      ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.ellipse(0, 0, 230, 140, 0, 0, Math.PI * 2); ctx.fill(); for (const [x, y, r] of [[-200, 160, 16], [-240, 210, 10]]) { ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill(); }
+      ctx.fillStyle = '#8d6e63'; ctx.fillRect(-20, 30, 12, 60); ctx.fillRect(20, 30, 12, 60); ctx.fillRect(-40, 50, 100, 10);
+      const p = (t * 0.7) % 1, sx = lerp(-170, 170, p), sy = 40 - Math.sin(p * Math.PI) * 110;
+      ctx.fillStyle = '#f1f3f5'; for (const [dx, dy] of [[-18, 0], [0, -12], [18, 0], [0, 8]]) { ctx.beginPath(); ctx.arc(sx + dx, sy + dy, 22, 0, Math.PI * 2); ctx.fill(); }
+      ctx.fillStyle = '#495057'; ctx.beginPath(); ctx.arc(sx + 34, sy - 6, 13, 0, Math.PI * 2); ctx.fill(); ctx.fillRect(sx - 18, sy + 18, 6, 18); ctx.fillRect(sx + 12, sy + 18, 6, 18);
+      text(ctx, String(1 + Math.floor(t * 0.7) % 99), 150, -90, { size: 44, fill: '#8d6e63', lw: 0, shadow: false });
+    });
     const hrs = 14 * ease.inOut(L(t, slept + 1, slept + 2.8));
     roomClockMini(ctx, 1550, 320, t, hrs);
     text(ctx, `${hrs.toFixed(0)} HORAS`, 1550, 520, { size: 80, fill: FLAT.accent });
@@ -672,8 +693,9 @@ let COUNTER_FIRST = null;
     rat(ctx, 700, 900, 0.8, t, { run: t < died, sleepy: t > died });
     drawPerson(ctx, 1450, 1010, 1.05, blinkE(t, { hold: 'book', handR: [70, -300], look: [-1, 0.3], mouth: t > died ? 'sad' : 'flat' }), PEOPLE.cientifica);
     if (t > weeks && t < died) calendar(ctx, 1600, 300, 0.6, 'SEMANAS', '2-3', FLAT.coral);
-    if (lightsOff > 0) { ctx.fillStyle = `rgba(0,0,0,${0.6 * lightsOff})`; ctx.fillRect(0, 0, W, H); }
-    if (t > temp) { thermometer(ctx, 1150, 560, 0.3 + 0.2 * Math.sin(t * 3), t); popIn(ctx, t, weight, 1600, 360, () => { text(ctx, 'COMÍAN MÁS', 0, -50, { size: 60, fill: '#fff' }); text(ctx, 'PESABAN MENOS', 0, 40, { size: 60, fill: FLAT.coral }); }); }
+    if (lightsOff > 0) { ctx.fillStyle = `rgba(0,0,0,${0.6 * lightsOff * (0.85 + 0.15 * Math.sin(t * 23))})`; ctx.fillRect(0, 0, W, H); }
+    if (t > temp) { ctx.fillStyle = '#adb5bd'; ctx.beginPath(); ctx.ellipse(1000, 980, 90, 26, 0, 0, Math.PI); ctx.fill(); for (let i = 0; i < 9; i++) { const pp = pop(t, temp + i * 0.25, 0.4); if (pp > 0) { ctx.fillStyle = '#e9c46a'; ctx.beginPath(); ctx.arc(950 + (i % 4) * 30, 965 - Math.floor(i / 4) * 22, 14 * pp, 0, Math.PI * 2); ctx.fill(); } }
+      thermometer(ctx, 1150, 560, 0.3 + 0.2 * Math.sin(t * 3), t); popIn(ctx, t, weight, 1600, 360, () => { text(ctx, 'COMÍAN MÁS', 0, -50, { size: 60, fill: '#fff' }); text(ctx, 'PESABAN MENOS', 0, 40, { size: 60, fill: FLAT.coral }); }); }
     popIn(ctx, t, rats, 400, 120, () => text(ctx, 'AÑOS 80', 0, 0, { size: 100, fill: FLAT.accent }));
   }, { mood: 'tense' });
 }
@@ -692,7 +714,7 @@ let COUNTER_FIRST = null;
       const hl = [2, 7, 9, 14].includes(idx);
       iconPerson(ctx, 760 + i * 150, 480 + row * 190, 1.2, hl ? FLAT.coral : 'rgba(255,255,255,0.5)');
     }
-    if (t > fam) label(ctx, 'solo unas pocas decenas de familias', 1150, 1010, { size: 54, fill: '#e0aaff' });
+    if (t > fam) label(ctx, 'solo unas pocas decenas de familias', 1150, 900, { size: 54, fill: '#e0aaff' });
     if (t > mortal) { ctx.fillStyle = `rgba(0,0,0,${0.4 * L(t, mortal, mortal + 1)})`; ctx.fillRect(0, 0, W, H); }
   }, { mood: 'tense' });
 }
@@ -715,7 +737,8 @@ let COUNTER_FIRST = null;
   shot(a, (ctx, lt, d, t) => {
     bgFlat(ctx, t, '#4361ee', '#3a0ca3', 38);
     const shrug = t > quote && t < common;
-    leo(ctx, 640, 1000, 1.2, blinkE(t, { mouth: t > danger ? 'o' : 'smile', talk: shrug ? talking(t) : 0, handL: shrug ? [-150, -330] : null, handR: shrug ? [150, -330] : null, shock: t > danger ? 0.5 : 0 }));
+    leo(ctx, 640, 1000, 1.2, blinkE(t, { mouth: t > danger ? 'o' : 'smile', talk: shrug ? talking(t) : 0, handL: shrug ? [-150, -330] : null, handR: shrug ? [150, -330] : null, shock: t > danger ? 0.5 : 0, rot: shrug ? Math.sin(t * 9) * 0.04 : 0, look: shrug ? [Math.sin(t * 9), 0] : [0, 0] }));
+    if (shrug) for (let i = 0; i < 3; i++) { const p = (t * 1.2 + i / 3) % 1; ctx.globalAlpha = 1 - p; text(ctx, 'ja', 760 + p * 120 + i * 30, 380 - p * 150, { size: 50 + i * 8, fill: '#fff' }); ctx.globalAlpha = 1; }
     if (shrug) popIn(ctx, t, quote, 1300, 380, () => { card(ctx, -380, -140, 760, 280, '#fff', 60); ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.moveTo(-250, 130); ctx.lineTo(-320, 220); ctx.lineTo(-180, 130); ctx.fill(); text(ctx, '¿11 días? ¡Nunca!', 0, 0, { size: 72, fill: FLAT.ink, lw: 0, shadow: false }); });
     if (t > common) popIn(ctx, t, common + 0.5, 1350, 500, () => { alarmClock(ctx, 0, 0, 1.6, t); text(ctx, '6 HORAS', 0, 260, { size: 110, fill: FLAT.accent }); });
   });
@@ -727,7 +750,9 @@ let COUNTER_FIRST = null;
     bgFlat(ctx, t, '#3d348b', '#1c1a4a', 39);
     const day = Math.min(14, 1 + Math.floor(13 * L(t, a + 0.5, a + 3.5))), k = day / 14;
     calendar(ctx, 380, 470, 1, 'DÍA', String(day), FLAT.coral, t < a + 3.5 ? (t * 4.3) % 1 : 0);
-    leo(ctx, 960, 1000, 1.15, blinkE(t, { red: k * 0.5, bags: k * 0.8, mouth: 'flat', open: 1 - k * 0.3 }));
+    const yk = Math.max(0, Math.sin(t * 1.4)) ** 3;
+    leo(ctx, 960, 1000, 1.15, blinkE(t, { red: k * 0.5, bags: k * 0.8, mouth: yk > 0.2 ? 'yawn' : 'flat', mouthOpen: yk, open: 1 - k * 0.3 - yk * 0.5, rot: Math.sin(t * 2) * 0.03 * k }));
+    zzz(ctx, t, 1060, 480, '#b9a8ff');
     popIn(ctx, t, a + 0.3, 960, 120, () => text(ctx, 'SOLO 6 HORAS POR NOCHE', 0, 0, { size: 84, fill: '#fff' }));
     if (t > a + 3.6) popIn(ctx, t, a + 3.6, 1500, 520, () => { card(ctx, -300, -200, 600, 400, FLAT.coral, 40); text(ctx, '=', 0, -110, { size: 100, fill: '#fff', lw: 0, shadow: false }); text(ctx, '1-2 NOCHES', 0, 0, { size: 80, fill: '#fff', lw: 0, shadow: false }); text(ctx, 'SIN DORMIR', 0, 100, { size: 80, fill: FLAT.accent, lw: 0, shadow: false }); });
   });
@@ -739,11 +764,15 @@ let COUNTER_FIRST = null;
   shot(a, (ctx, lt, d, t) => {
     bgFlat(ctx, t, '#2b2d42', '#14152a', 40);
     if (t < chart) { popIn(ctx, t, a + 0.3, W / 2, H / 2, () => { text(ctx, 'NO LO', 0, -80, { size: 140, fill: '#fff' }); text(ctx, 'NOTABAN', 0, 80, { size: 180, fill: FLAT.coral }); }); return; }
-    lineChart(ctx, 260, 180, 1400, 760, t, chart + 0.3, [
+    lineChart(ctx, 260, 180, 1400, 760, t, chart + 0.3, 5.5, [
       { f: u => 0.75 - 0.08 * u, color: FLAT.mint, name: 'cómo se sentían' },
       { f: u => 0.8 - 0.62 * u * u * (3 - 2 * u), color: FLAT.coral, name: 'cómo rendían' },
     ]);
-    text(ctx, '14 días →', 1550, 990, { size: 50, fill: '#fff' });
+    text(ctx, '14 días →', 1550, 140, { size: 50, fill: '#fff' });
+    const gp = ease.back(L(t, chart + 5.8, chart + 6.4));
+    if (gp > 0) { const x = 260 + 60 + 0.85 * 1280, y1 = 180 + 760 - 50 - (0.75 - 0.068) * 640, y2 = 180 + 760 - 50 - (0.8 - 0.62 * 0.85 * 0.85 * (3 - 1.7)) * 640;
+      ctx.strokeStyle = FLAT.accent; ctx.lineWidth = 10; ctx.setLineDash([18, 12]); ctx.lineDashOffset = -t * 40; ctx.beginPath(); ctx.moveTo(x, y1 + 20); ctx.lineTo(x, y2 - 20); ctx.stroke(); ctx.setLineDash([]);
+      popIn(ctx, t, chart + 5.8, x - 330, (y1 + y2) / 2, () => { ctx.rotate(Math.sin(t * 4) * 0.04); card(ctx, -240, -60, 480, 120, FLAT.accent, 60); text(ctx, '¡NO LO NOTAN!', 0, 0, { size: 60, fill: FLAT.ink, lw: 0, shadow: false }); }); }
   });
 }
 // 41. Recomendaciones: 7+ h adultos, 8-10 h adolescentes
@@ -753,12 +782,12 @@ let COUNTER_FIRST = null;
   shot(a, (ctx, lt, d, t) => {
     bgFlat(ctx, t, '#06d6a0', '#028090', 41); rays(ctx, t, W / 2, 500);
     if (t < maint) {
-      popIn(ctx, t, a + 0.4, 560, 520, () => { card(ctx, -320, -300, 640, 600, '#fff', 40); drawPerson(ctx, 0, 150, 0.6, E(t, { mouth: 'smile' }), PEOPLE.adulto); text(ctx, 'ADULTOS', 0, 200, { size: 60, fill: FLAT.ink, lw: 0, shadow: false }); text(ctx, '7+ HORAS', 0, 260, { size: 70, fill: '#ef476f', lw: 0, shadow: false }); });
-      popIn(ctx, t, a + 1.6, 1360, 520, () => { card(ctx, -320, -300, 640, 600, '#fff', 40); drawPerson(ctx, 0, 150, 0.55, E(t + 1, { mouth: 'grin' }), PEOPLE.amigo1); text(ctx, 'ADOLESCENTES', 0, 200, { size: 60, fill: FLAT.ink, lw: 0, shadow: false }); text(ctx, '8-10 HORAS', 0, 260, { size: 70, fill: '#118ab2', lw: 0, shadow: false }); });
+      popIn(ctx, t, a + 0.4, 560, 520, () => { card(ctx, -320, -300, 640, 600, '#fff', 40); drawPerson(ctx, 0, 150, 0.6, E(t, { talk: talking(t) }), PEOPLE.adulto); ctx.save(); ctx.translate(230, -230); ctx.scale(0.45, 0.45); roomClockMini(ctx, 0, 0, t, t * 3); ctx.restore(); text(ctx, 'ADULTOS', 0, 200, { size: 60, fill: FLAT.ink, lw: 0, shadow: false }); text(ctx, '7+ HORAS', 0, 260, { size: 70, fill: '#ef476f', lw: 0, shadow: false }); });
+      popIn(ctx, t, a + 1.6, 1360, 520, () => { card(ctx, -320, -300, 640, 600, '#fff', 40); drawPerson(ctx, 0, 150, 0.55, E(t + 1, { talk: talking(t + 1), handR: [90, -440 + Math.sin(t * 6) * 30] }), PEOPLE.amigo1); ctx.save(); ctx.translate(230, -230); ctx.scale(0.45, 0.45); roomClockMini(ctx, 0, 0, t, t * 3 + 4); ctx.restore(); text(ctx, 'ADOLESCENTES', 0, 200, { size: 60, fill: FLAT.ink, lw: 0, shadow: false }); text(ctx, '8-10 HORAS', 0, 260, { size: 70, fill: '#118ab2', lw: 0, shadow: false }); });
     } else {
       brain(ctx, 1250, 520, 1.2, t, { happy: true });
       leo(ctx, 600, 1000, 1.15, blinkE(t, { hold: 'wrench', handR: [150, -420], mouth: 'grin' }));
-      popIn(ctx, t, maint + 0.6, 1250, 950, () => text(ctx, '¡ES MANTENIMIENTO!', 0, 0, { size: 100, fill: FLAT.accent }));
+      popIn(ctx, t, maint + 0.6, 1250, 830, () => text(ctx, '¡ES MANTENIMIENTO!', 0, 0, { size: 100, fill: FLAT.accent }));
       for (let i = 0; i < 8; i++) { const a2 = t * 2 + i * 0.8; text(ctx, '✦', 1250 + Math.cos(a2) * 330, 520 + Math.sin(a2) * 250, { size: 40, fill: '#fff', shadow: false }); }
     }
   }, { mood: 'happy' });
@@ -802,7 +831,10 @@ let COUNTER_FIRST = null;
     leo(ctx, 600, 1000, 1.15, blinkE(t, { mouth: 'o', mouthOpen: 0.6, red: 0.3, handL: [-60, -380], look: [0.8, -0.5] }));
     for (let i = 0; i < 3; i++) { ctx.fillStyle = 'rgba(255,255,255,0.4)'; ctx.beginPath(); ctx.arc(600 + Math.sin(t * 3 + i) * 120, 420 - ((t * 60 + i * 80) % 240), 8, 0, Math.PI * 2); ctx.fill(); }
     waterDrop(ctx, 1300, 520 + Math.sin(t * 2) * 20, 1.4, t);
-    popIn(ctx, t, SS(3, 10, 2), 1300, 880, () => { card(ctx, -460, -80, 920, 160, '#fff', 80); text(ctx, '¿CUÁNTO SIN AGUA?', 0, 0, { size: 80, fill: '#0077b6', lw: 0, shadow: false }); });
+    for (let i = 0; i < 5; i++) { ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.lineWidth = 6; ctx.beginPath(); for (let y = 0; y < 300; y += 10) { const x = 200 + i * 360 + Math.sin(y * 0.05 + t * 5 + i) * 14; y ? ctx.lineTo(x, 760 - y) : ctx.moveTo(x, 760 - y); } ctx.stroke(); }
+    { const x = ((t * 260) % (W + 400)) - 200; ctx.save(); ctx.translate(x, 900); ctx.rotate(t * 5); ctx.strokeStyle = '#a0522d'; ctx.lineWidth = 6; for (let k = 0; k < 8; k++) { ctx.beginPath(); ctx.arc(0, 0, 30 + k * 6, k, k + 4); ctx.stroke(); } ctx.restore(); }
+    for (let i = 0; i < 2; i++) { const p = (t * 1.3 + i * 0.5) % 1; ctx.fillStyle = '#7fd4ff'; ctx.globalAlpha = 1 - p; ctx.beginPath(); ctx.arc(660 + i * 40, 520 + p * 120, 12, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }
+    popIn(ctx, t, SS(3, 10, 2), 1300, 800, () => { card(ctx, -460, -80, 920, 160, '#fff', 80); text(ctx, '¿CUÁNTO SIN AGUA?', 0, 0, { size: 80, fill: '#0077b6', lw: 0, shadow: false }); });
   });
 }
 // 45. Pantalla final (15 s): Leo por fin duerme
@@ -916,10 +948,17 @@ SCENE.moods = []; let lastMood = 'happy';
 SHOTS.forEach(s => { const m = s.mood || lastMood; if (m !== lastMood || !SCENE.moods.length) SCENE.moods.push([s.a, m]); lastMood = m; });
 SCENE.music = [[0, 0.14], [TITLE_AT - 0.2, 0.14], [TITLE_AT, 0.3], [TITLE_AT + TITLE_LEN - 0.2, 0.3], [TITLE_AT + TITLE_LEN, 0.14], [VOICE_END, 0.14], [VOICE_END + 0.6, 0.3], [SCENE.duration - 1, 0.3], [SCENE.duration, 0]];
 
+// Subtítulos y golpes de cámara a partir de las frases de la narración
+const SENTS = [];
+TIEMPOS.forEach((p, pt) => p.paragraphs.forEach(par => par.sentences.forEach(s => SENTS.push({ a: G(pt, s.start), b: G(pt, s.end), text: s.text }))));
+const CAPS = buildCaptions(SENTS), SENT_STARTS = SENTS.map(s => s.a);
+
 SCENE.render = function (ctx, t) {
   let i = 0; while (i < SHOTS.length - 1 && SHOTS[i + 1].a <= t) i++;
   const sh = SHOTS[i], lt = t - sh.a, d = sh.b - sh.a;
   ctx.save();
+  const cam = cameraFor(t, SENT_STARTS);
+  ctx.translate(W / 2 + cam.dx, H / 2 + cam.dy); ctx.rotate(cam.rot); ctx.scale(cam.zoom, cam.zoom); ctx.translate(-W / 2, -H / 2);
   if (sh.trans !== 'cut' && sh.trans !== 'wipe') { const z = 1 + 0.05 * (1 - ease.out(prog(lt, 0, 0.35))); ctx.translate(W / 2, H / 2); ctx.scale(z, z); ctx.translate(-W / 2, -H / 2); }
   sh.draw(ctx, lt, d, t);
   ctx.restore();
@@ -928,5 +967,6 @@ SCENE.render = function (ctx, t) {
     const bumps = (sh.bump || []).concat([sh.a + 0.05]);
     drawCounter(ctx, t, sh.counter(t), COUNTER_FIRST, bumps);
   }
+  drawCaptions(ctx, t, CAPS);
   for (const s of SHOTS) if (s.trans === 'wipe' && Math.abs(t - s.a) < 0.6) wipe(ctx, t, s.a - 0.42);
 };

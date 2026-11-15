@@ -49,7 +49,7 @@ function bigStat(ctx, t, st, x, y, value, o = {}) {
 function label(ctx, str, x, y, o = {}) { text(ctx, str, x, y, Object.assign({ size: 64, fill: '#fff' }, o)); }
 function subtitleBar(ctx, t, st, str, color = FLAT.accent) {
   const s = ease.back(prog(t, st, st + 0.5)); if (s <= 0) return;
-  ctx.save(); ctx.translate(W / 2, H - 110); ctx.scale(s, s);
+  ctx.save(); ctx.translate(W / 2, H - 250); ctx.scale(s, s);
   ctx.font = '62px Lilita'; const w = ctx.measureText(str).width + 90;
   card(ctx, -w / 2, -55, w, 110, color, 55);
   text(ctx, str, 0, 2, { size: 62, fill: FLAT.ink, stroke: color, lw: 0, shadow: false });
@@ -454,10 +454,11 @@ function dna(ctx, x, y, h, t, c1 = FLAT.coral, c2 = FLAT.sky) {
     ctx.fillStyle = Math.cos(a) > 0 ? c2 : c1; ctx.beginPath(); ctx.arc(x + w, yy, 14, 0, Math.PI * 2); ctx.fill();
   }
 }
-function lineChart(ctx, x, y, w, h, t, st, series) {
+function lineChart(ctx, x, y, w, h, t, st, dur, series) {
+  if (Array.isArray(dur)) { series = dur; dur = 3; }
   card(ctx, x, y, w, h, 'rgba(255,255,255,0.1)', 30, false);
   ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(x + 60, y + 40); ctx.lineTo(x + 60, y + h - 50); ctx.lineTo(x + w - 40, y + h - 50); ctx.stroke();
-  const p = ease.inOut(prog(t, st, st + 3));
+  const p = ease.inOut(prog(t, st, st + dur));
   series.forEach(({ f, color, name }, k) => {
     ctx.strokeStyle = color; ctx.lineWidth = 12; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.beginPath();
     const n = 40; let lx = 0, ly = 0;
@@ -495,4 +496,59 @@ function retroOverlay(ctx, t) {
 function vignette(ctx, a = 0.5) {
   const v = ctx.createRadialGradient(W / 2, H / 2, H * 0.45, W / 2, H / 2, H * 1.05);
   v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, `rgba(10,5,30,${a})`); ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+}
+
+// ================= SUBTÍTULOS DINÁMICOS (karaoke) =================
+// sents: [{a, b, text}] en tiempo global. Divide cada frase en grupos de 2-4 palabras
+// y reparte el tiempo según el largo de cada palabra.
+function buildCaptions(sents) {
+  const caps = [];
+  for (const s of sents) {
+    const words = s.text.replace(/\s+/g, ' ').trim().split(' ').filter(Boolean);
+    const weights = words.map(w => w.replace(/[^\wáéíóúñü]/gi, '').length + 2);
+    const total = weights.reduce((x, y) => x + y, 0), dur = Math.max(0.3, s.b - s.a);
+    let acc = 0; const times = weights.map(wt => { const st = s.a + dur * acc / total; acc += wt; return [st, s.a + dur * acc / total]; });
+    let cur = [], len = 0;
+    const flush = () => { if (cur.length) { caps.push({ a: times[cur[0]][0], b: times[cur[cur.length - 1]][1], words: cur.map(i => ({ w: words[i], a: times[i][0] })) }); cur = []; len = 0; } };
+    words.forEach((w, i) => {
+      if (cur.length && (len + w.length > 17 || cur.length >= 4)) flush();
+      cur.push(i); len += w.length + 1;
+      if (/[,.;:!?…]$/.test(w) && len > 6) flush();
+    });
+    flush();
+  }
+  // cada grupo se queda en pantalla hasta que empieza el siguiente (máx. 0.6 s extra)
+  caps.forEach((c, i) => { const next = caps[i + 1]; c.end = next ? Math.min(next.a, c.b + 0.6) : c.b + 0.6; });
+  return caps;
+}
+function drawCaptions(ctx, t, caps, y = H - 92) {
+  let lo = 0, hi = caps.length - 1, idx = -1;
+  while (lo <= hi) { const m = (lo + hi) >> 1; if (caps[m].a <= t) { idx = m; lo = m + 1; } else hi = m - 1; }
+  if (idx < 0) return; const c = caps[idx]; if (t > c.end) return;
+  const size = 74; ctx.font = `${size}px Lilita`;
+  const parts = c.words.map(o => ({ ...o, w: o.w.toUpperCase(), width: 0 }));
+  const space = size * 0.28; parts.forEach(p => p.width = ctx.measureText(p.w).width);
+  const total = parts.reduce((x, p) => x + p.width, 0) + space * (parts.length - 1);
+  const s = 0.6 + 0.4 * ease.back(prog(t, c.a, c.a + 0.22));
+  ctx.save(); ctx.translate(W / 2, y); ctx.scale(s, s); ctx.rotate(Math.sin(c.a * 7) * 0.015);
+  ctx.fillStyle = 'rgba(18,12,40,0.62)'; rrect(ctx, -total / 2 - 34, -size * 0.72, total + 68, size * 1.45, 26); ctx.fill();
+  let x = -total / 2;
+  parts.forEach((p, i) => {
+    const active = t >= p.a && (i === parts.length - 1 || t < parts[i + 1].a);
+    const loud = p.w.length > 2 && p.w === c.words[i].w; // palabra que ya venía en MAYÚSCULAS (énfasis)
+    const fill = active ? FLAT.accent : loud ? '#ff8fab' : '#ffffff';
+    const bump = active ? 1 + 0.12 * Math.sin(clamp((t - p.a) / 0.18) * Math.PI) : 1;
+    ctx.save(); ctx.translate(x + p.width / 2, 0); ctx.scale(bump, bump);
+    text(ctx, p.w, 0, 2, { size, fill, lw: size * 0.14 });
+    ctx.restore(); x += p.width + space;
+  });
+  ctx.restore();
+}
+// Golpe de cámara al inicio de cada frase + movimiento lento constante
+function cameraFor(t, sentStarts) {
+  let k = 0, lo = 0, hi = sentStarts.length - 1, idx = -1;
+  while (lo <= hi) { const m = (lo + hi) >> 1; if (sentStarts[m] <= t) { idx = m; lo = m + 1; } else hi = m - 1; }
+  if (idx >= 0) { const p = (t - sentStarts[idx]) / 0.45; if (p < 1) k = Math.sin(p * Math.PI) * (1 - p * 0.5); }
+  const dir = idx % 2 ? 1 : -1;
+  return { zoom: 1.03 + 0.02 * Math.sin(t * 0.21) + 0.035 * k, rot: dir * 0.006 * k + 0.004 * Math.sin(t * 0.17), dx: 14 * Math.sin(t * 0.13), dy: 9 * Math.cos(t * 0.11) };
 }

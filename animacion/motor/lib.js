@@ -19,7 +19,7 @@ const ease = {
 const pop = (t, start, dur = 0.6) => ease.elastic(prog(t, start, start + dur));
 // Oscilación orgánica (suma de senos)
 const wob = (t, f = 1, seed = 0) => 0.6 * Math.sin(t * f + seed) + 0.4 * Math.sin(t * f * 1.73 + seed * 2.1);
-function rng(seed) { let s = seed % 2147483647 || 1; return () => (s = (s * 16807) % 2147483647) / 2147483647; }
+function rng(seed) { let s = (Math.abs(Math.floor(seed)) * 2654435761 + 12345) % 2147483647 || 1; for (let i = 0; i < 3; i++) s = (s * 16807) % 2147483647; return () => (s = (s * 16807) % 2147483647) / 2147483647; }
 
 function hex(c) { const n = parseInt(c.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
 function mix(c1, c2, t) {
@@ -58,8 +58,8 @@ function text(ctx, str, x, y, o = {}) {
   const { size = 80, font = 'Lilita', fill = '#fff', stroke = OUT, lw = size * 0.16, align = 'center', shadow = true } = o;
   ctx.font = `${size}px ${font}`; ctx.textAlign = align; ctx.textBaseline = 'middle';
   ctx.lineJoin = 'round';
-  if (shadow) { ctx.fillStyle = OUT; ctx.fillText(str, x + size * 0.06, y + size * 0.09); ctx.lineWidth = lw; ctx.strokeStyle = OUT; ctx.strokeText(str, x + size * 0.06, y + size * 0.09); }
-  ctx.lineWidth = lw; ctx.strokeStyle = stroke; ctx.strokeText(str, x, y);
+  if (shadow) { ctx.fillStyle = OUT; ctx.fillText(str, x + size * 0.06, y + size * 0.09); if (lw > 0) { ctx.lineWidth = lw; ctx.strokeStyle = OUT; ctx.strokeText(str, x + size * 0.06, y + size * 0.09); } }
+  if (lw > 0) { ctx.lineWidth = lw; ctx.strokeStyle = stroke; ctx.strokeText(str, x, y); }
   ctx.fillStyle = fill; ctx.fillText(str, x, y);
 }
 

@@ -4,14 +4,19 @@
 1. **Nada se queda quieto.** Fondos, objetos y cámara siempre tienen movimiento (nubes, estrellas, plantas, polvo, cortinas, deriva de cámara).
 2. **Reacciones de caricatura exageradas:** ojos gigantes, espirales, "¡!" que rebotan, gotas de sudor, temblores, estiramientos (squash & stretch).
 3. **Cada acción importante lleva efecto de sonido** (pop, boing, ding, whoosh, impacto…) y hay música de fondo alegre que baja cuando habla el narrador.
-4. Colores saturados con contorno oscuro grueso, tipografía gruesa redondeada (Lilita One).
+4. **Estilo plano** (sin contornos, formas geométricas, sombras planas) con tipografía gruesa redondeada (Lilita One). Amigable para niños y adultos; nada de terror.
+5. **Nunca "solo voz".** Máximo 3 segundos sin algo nuevo en pantalla. Cada frase de la narración trae un cambio visual (un objeto que aparece, una reacción, un dato, un cambio de toma).
+6. **Subtítulos dinámicos** tipo karaoke siempre activos (grupos de 2-4 palabras, palabra actual en amarillo, énfasis en rosa).
+7. **Cámara viva:** golpe de zoom al iniciar cada frase + movimiento lento constante.
+8. **Control de calidad:** antes de publicar, correr `animacion/motor/actividad.py` y rellenar cualquier tramo quieto de 3 s o más.
 
 Inspiración: animación 2D cinematográfica con personajes simples. **No copiamos personajes ni escenas de otros canales**: creamos los nuestros.
 
-## Personaje principal (nombre provisional: "Frijol")
-- Cuerpo en forma de frijol color menta (#5ee0c0), panza clara, mejillas rosas, ojos enormes y un mechón que se mueve.
-- Muy expresivo: ojos rojos/ojeras/espirales para cansancio, mechón que se encrespa cuando está alterado.
+## Personaje principal: Leo
+- Joven en estilo plano: piel morena, pelo rizado, sudadera azul, piernas y brazos largos con manos grandes.
+- Muy expresivo: ojos rojos/ojeras/espirales, pelo que se alborota, sustos con las manos en la cabeza.
 - Es "el espectador": a él le pasa todo lo que cuenta el video.
+- Personajes secundarios humanos según la historia (Randy, científica, médicos...). Animales solo cuando el tema lo pide.
 
 ## Color
 - Fondos con degradados y luz ambiental (atardecer, noche azul, laboratorio frío) para dar ambiente cinematográfico.
