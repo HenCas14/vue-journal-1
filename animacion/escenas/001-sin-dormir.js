@@ -406,12 +406,12 @@ let COUNTER_FIRST = null;
       if (t > s2) { foodIcon(ctx, 'salad', 1000, 860, 1.1, 0); ctx.strokeStyle = '#ef233c'; ctx.lineWidth = 18; ctx.beginPath(); ctx.moveTo(920, 780); ctx.lineTo(1080, 920); ctx.moveTo(1080, 780); ctx.lineTo(920, 920); ctx.stroke(); }
     }
     if (t > a + 0.6 && t < junk) {
-      const cyc = Math.floor((t - a) / 0.8), kinds = ['burger', 'pizza', 'donut', 'fries', 'candy'];
+      const cyc = Math.max(0, Math.floor((t - a - 0.6) / 0.8)), kinds = ['burger', 'pizza', 'donut', 'fries', 'candy'];
       popIn(ctx, t, a + 0.6, 960, 360, () => { ctx.fillStyle = '#fff'; for (const [x, y, r] of [[-120, 170, 18], [-80, 120, 28]]) { ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill(); } ctx.beginPath(); ctx.ellipse(0, 0, 170, 120, 0, 0, Math.PI * 2); ctx.fill();
         const sp = pop(t, a + 0.6 + cyc * 0.8, 0.4); foodIcon(ctx, kinds[cyc % 5], 0, 10, 1.1 * sp, Math.sin(t * 4) * 0.15); });
     }
     if (t > gre) gauge(ctx, 1300, 420, 190, 0.2 + 0.75 * ease.out(L(t, gre + 1, gre + 1.8)), 'GRELINA', '#ef233c', { value: '¡HAMBRE!' }); if (t > gre + 1.8) ctx.translate(Math.sin(t * 40) * 2, 0);
-    if (t > lep) gauge(ctx, 1680, 820, 170, 0.8 - 0.65 * ease.out(L(t, lep + 0.8, lep + 1.6)), 'LEPTINA', FLAT.mint, { value: 'LLENO' });
+    if (t > lep) gauge(ctx, 1580, 800, 160, 0.8 - 0.65 * ease.out(L(t, lep + 0.8, lep + 1.6)), 'LEPTINA', FLAT.mint, { value: 'LLENO' });
     if (t > w) subtitleBar(ctx, t, w, 'más antojos = subir de peso');
     if (t < gre) popIn(ctx, t, a + 0.2, 1300, 300, () => text(ctx, '¡HAMBRE!', 0, 0, { size: 150, fill: '#fff' }));
   }, { counter: () => 'DÍA 2' });
