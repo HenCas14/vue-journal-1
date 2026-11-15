@@ -1,0 +1,7 @@
+# Archivos pesados: no se suben al repo
+audio/*
+renders/*
+!audio/.gitkeep
+!renders/.gitkeep
+node_modules/
+.DS_Store
