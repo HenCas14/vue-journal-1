@@ -71,18 +71,21 @@ function _hand(ctx, hx, hy, dx, dy, sx, skin, skinD) {
   ctx.fillStyle = skinD; ctx.globalAlpha = 0.35; ctx.beginPath(); ctx.arc(hx + 5, hy + 6, 14, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1;
 }
 function _arm(ctx, S, Hd, sx, sleeve, cuff, skin, skinD) {
-  const L1 = 112, L2 = 112; let dx = Hd[0] - S[0], dy = Hd[1] - S[1]; let d = Math.hypot(dx, dy) || 1; d = Math.min(d, L1 + L2 - 2);
+  const L1 = 76, L2 = 76, REACH = L1 + L2 - 2;                      // brazo corto y natural: la mano en reposo llega a la cadera
+  let dx = Hd[0] - S[0], dy = Hd[1] - S[1]; let d = Math.hypot(dx, dy) || 1;
+  if (d > REACH) { Hd = [S[0] + dx / d * REACH, S[1] + dy / d * REACH]; dx = Hd[0] - S[0]; dy = Hd[1] - S[1]; d = REACH; } // ninguna pose estira el brazo
   const a = d / 2, h = Math.sqrt(Math.max(0, L1 * L1 - a * a)), mx = S[0] + dx / 2, my = S[1] + dy / 2; let px = -dy / d, py = dx / d;
   const score = (qx, qy) => qx * sx * 0.75 + qy * 0.55;             // el codo prefiere abrirse hacia afuera y hacia abajo
   if (score(px, py) < score(-px, -py)) { px = -px; py = -py; }
   const E = [mx + px * h, my + py * h];
   const fx = Hd[0] - E[0], fy = Hd[1] - E[1], C = [E[0] + fx * 0.8, E[1] + fy * 0.8];
   ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-  ctx.strokeStyle = sleeve; ctx.lineWidth = 32; ctx.beginPath(); ctx.moveTo(S[0], S[1]); ctx.lineTo(E[0], E[1]); ctx.lineTo(C[0], C[1]); ctx.stroke();
+  ctx.strokeStyle = sleeve; ctx.lineWidth = 34; ctx.beginPath(); ctx.moveTo(S[0], S[1]); ctx.lineTo(E[0], E[1]); ctx.lineTo(C[0], C[1]); ctx.stroke();
   ctx.strokeStyle = 'rgba(0,0,0,0.14)'; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(S[0] + 4, S[1] + 10); ctx.lineTo(E[0] + 4, E[1] + 8); ctx.stroke(); // pliegue de sombra
   ctx.strokeStyle = cuff; ctx.lineWidth = 34; ctx.lineCap = 'butt'; ctx.beginPath(); ctx.moveTo(E[0] + fx * 0.72, E[1] + fy * 0.72); ctx.lineTo(C[0], C[1]); ctx.stroke(); // puño
   ctx.strokeStyle = skin; ctx.lineWidth = 20; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(C[0], C[1]); ctx.lineTo(Hd[0], Hd[1]); ctx.stroke();
   _hand(ctx, Hd[0], Hd[1], fx, fy, sx, skin, skinD);
+  return Hd;                                                       // posición real de la mano (para objetos que sostiene)
 }
 function drawPerson(ctx, x, y, s, e, P) {
   const t = e.t, sh = clamp(e.shock || 0), talk = e.talk || 0, red = e.red || 0, bags = e.bags || 0, fr = e.frazzle || 0;
@@ -180,10 +183,10 @@ function drawPerson(ctx, x, y, s, e, P) {
   // --- brazos con codo y manos con dedos ---
   for (const sx of [-1, 1]) {
     const gest = sx > 0 ? (talk ? Math.sin(t * 6) * 30 : Math.sin(t * 2) * 8) : (e.walk ? -walk * 20 : Math.sin(t * 2 + 2) * 5);
-    let Hd = [sx * lerp(74, 62, sh), lerp(-118 - gest, -420, sh)];             // reposo: brazo colgando natural
+    let Hd = [sx * lerp(76, 62, sh), lerp(-178 - gest * 0.6, -420, sh)];       // reposo: la mano queda a la altura de la cadera
     const ov = sx < 0 ? e.handL : e.handR; if (ov) Hd = ov;
     const sleeve = coat ? (sx > 0 ? '#dfe6ef' : '#f4f7fb') : (sx > 0 ? shirtD : shirt);
-    _arm(ctx, [sx * 54, -322], Hd, sx, sleeve, coat ? '#ced4da' : shadeHex(sx > 0 ? shirtD : shirt, -0.12), sx > 0 ? skinD : skin, skinD);
+    Hd = _arm(ctx, [sx * 54, -322], Hd, sx, sleeve, coat ? '#ced4da' : shadeHex(sx > 0 ? shirtD : shirt, -0.12), sx > 0 ? skinD : skin, skinD);
     if (sx > 0 && e.hold) heldObject2(ctx, e, Hd[0], Hd[1]);
     if (sx < 0 && e.holdL) heldObject2(ctx, Object.assign({}, e, { hold: e.holdL }), Hd[0], Hd[1]);
   }

@@ -37,7 +37,7 @@ Para regenerar las hojas después de cambiar el estándar: abrir `animacion/moto
 
 **Función:** `drawPerson(ctx, x, y, escala, e, P)` — atajo para Leo: `leo(ctx, x, y, escala, e)`.
 
-**Anclas (a escala 1):** pies en `(0,0)`, cadera `y=-178`, hombros `(±54,-322)`, centro de la cabeza `(0,-425)`, alto total ≈ 500 px. Brazo y antebrazo miden 112 px cada uno (alcance máximo ≈ 224 px desde el hombro).
+**Anclas (a escala 1):** pies en `(0,0)`, cadera `y=-178`, hombros `(±54,-322)`, centro de la cabeza `(0,-425)`, alto total ≈ 500 px. **Brazos cortos:** brazo y antebrazo miden 76 px cada uno (alcance máximo ≈ 150 px desde el hombro); en reposo la mano queda a la altura de la cadera. Si una pose pide la mano más lejos, el brazo NO se estira: la mano se queda en su alcance máximo. Nunca alargar los brazos (se ven inquietantes).
 
 **Cómo se construye (orden de capas):**
 1. Sombra de contacto → piernas (trapecios con franja de sombra interior) → tenis (suela gris, franja del color de la sudadera).
@@ -50,7 +50,7 @@ Para regenerar las hojas después de cambiar el estándar: abrir `animacion/moto
 
 **Parámetros de expresión `e`:** `open` (párpado 0–1), `look [x,y]`, `mouth` (`smile|grin|o|yawn|wobbly|flat|sad|angry|chew`), `mouthOpen`, `talk`, `shock`, `eyeSize`, `pupil`, `red`, `bags`, `spiral`, `frazzle`, `angry`, `blush`, `handL/handR [x,y]`, `hold/holdL`, `walk`, `sit`, `inBed`, `flip`, `rot`, `noShadow`.
 
-**Poses de mano útiles (coordenadas locales):** reposo `(±74,-118)` · saludar `(140,-470)` · señalar `(190,-330)` · pensar `(40,-385)` · manos a la cabeza (susto) `(±62,-420)` · brazos arriba `(±130,-520)` · sostener algo `(110,-300)`.
+**Poses de mano útiles (coordenadas locales; se recortan al alcance del brazo):** reposo `(±76,-178)` · saludar `(140,-470)` · señalar `(190,-330)` · pensar `(40,-385)` · manos a la cabeza (susto) `(±62,-420)` · brazos arriba `(±130,-520)` · sostener algo `(110,-300)`.
 
 **Vida propia (ya incluida, no quitar):** respiración del torso, inclinación de la cabeza hacia donde mira, cordones y pelo que rebotan, estirón vertical con `shock`, parpadeo con `E(t, {...})`.
 
