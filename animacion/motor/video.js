@@ -45,6 +45,7 @@ function crearVideo(cfg) {
       if (sh.trans !== 'cut' && sh.trans !== 'wipe') { const z = 1 + 0.05 * (1 - ease.out(prog(lt, 0, 0.35))); ctx.translate(W / 2, H / 2); ctx.scale(z, z); ctx.translate(-W / 2, -H / 2); }
       sh.draw(ctx, lt, d, t);
       ctx.restore();
+      if (typeof postFX === 'function' && !sh.noFX) postFX(ctx, t, sh.fx || {}); // acabado: resplandor + viñeta
       if (sh.trans === 'flash' && lt < 0.25) { ctx.fillStyle = `rgba(255,255,255,${0.6 * (1 - lt / 0.25)})`; ctx.fillRect(0, 0, W, H); }
       if (sh.counter && V.counterFirst != null) drawCounter(ctx, t, sh.counter(t), V.counterFirst, (sh.bump || []).concat([sh.a + 0.05]));
       if (t < VOICE_END + 0.5) drawCaptions(ctx, t, CAPS, VERTICAL ? H * 0.7 : H - 92);

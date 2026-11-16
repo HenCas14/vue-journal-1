@@ -76,7 +76,7 @@ const H_ = (h) => () => `HORA ${h}`;
   const a = PS(0, 5), hora = SS(0, 5, 1);
   V.counterFirst = hora + 0.2; fx(hora + 0.2, 'pop', 0.9); fx(a + 0.4, 'ff', 0.3, 0.6, { dur: 2.5 });
   shot(a, (ctx, lt, d, t) => {
-    bgFlat(ctx, t, '#000814', '#001d3d', 6);
+    ctx.fillStyle = '#02030f'; ctx.fillRect(0, 0, W, H); starfield(ctx, t, 220, 6);
     globeGrids(ctx, W / 2, 560, 360, t, {});
     const off = L(t, a + 0.4, a + 3); ctx.fillStyle = `rgba(0,0,10,${0.7 * off})`; ctx.beginPath(); ctx.arc(W / 2, 560, 362, 0, Math.PI * 2); ctx.fill();
     popIn(ctx, t, a + 0.3, W / 2, 120, () => text(ctx, '¿72 HORAS SIN LUZ?', 0, 0, { size: 110, fill: '#fff' }));
@@ -394,11 +394,11 @@ const TITLE_AT = PE(0, 5) + 0.1, TITLE_LEN = 3.4;
   const a = PS(3, 5), quebec = SS(3, 5, 1);
   fx(a + 0.3, 'whoosh', 0.6, 0.5); fx(quebec, 'impact', 0.6, 0.7);
   shot(a, (ctx, lt, d, t) => {
-    ctx.fillStyle = '#03045e'; ctx.fillRect(0, 0, W, H); for (let i = 0; i < 80; i++) { const r = rng(i + 7); ctx.fillStyle = `rgba(255,255,255,${0.3 + 0.7 * Math.abs(Math.sin(t + i))})`; ctx.fillRect(r() * W, r() * H, 2, 2); }
+    { const sg = ctx.createLinearGradient(0, 0, W, H); sg.addColorStop(0, '#0a0624'); sg.addColorStop(1, '#03045e'); ctx.fillStyle = sg; ctx.fillRect(0, 0, W, H); starfield(ctx, t, 220, 7); }
     sunFlare(ctx, 300, 540, 220, t);
     const p = L(t, a + 0.5, quebec); for (let k = 0; k < 4; k++) { ctx.strokeStyle = `rgba(255,183,3,${0.6 - k * 0.12})`; ctx.lineWidth = 14; ctx.beginPath(); ctx.arc(300, 540, 260 + p * 900 + k * 60, -0.4, 0.4); ctx.stroke(); }
-    ctx.fillStyle = '#1d3557'; ctx.beginPath(); ctx.arc(1600, 540, 200, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = '#52b788'; ctx.beginPath(); ctx.ellipse(1560, 470, 110, 70, 0.3, 0, Math.PI * 2); ctx.fill();
-    if (t > quebec) { ctx.fillStyle = '#ef233c'; ctx.beginPath(); ctx.arc(1530, 450, 20 + Math.sin(t * 10) * 4, 0, Math.PI * 2); ctx.fill(); popIn(ctx, t, quebec, 1450, 800, () => { card(ctx, -340, -80, 680, 160, '#fff', 30); text(ctx, 'QUEBEC 1989 · 9 HORAS', 0, 0, { size: 56, fill: '#1d3557', lw: 0, shadow: false }); }); }
+    globeGrids(ctx, 1600, 540, 210, 30 + t * 0.3, {});
+    if (t > quebec) { glow(ctx, 1560, 440, 70, '#ef233c', 0.9 * (0.6 + 0.4 * Math.sin(t * 10))); ctx.fillStyle = '#ef233c'; ctx.beginPath(); ctx.arc(1560, 440, 14, 0, Math.PI * 2); ctx.fill(); popIn(ctx, t, quebec, 1450, 800, () => { card(ctx, -340, -80, 680, 160, '#fff', 30); text(ctx, 'QUEBEC 1989 · 9 HORAS', 0, 0, { size: 56, fill: '#1d3557', lw: 0, shadow: false }); }); }
     popIn(ctx, t, a + 0.3, W / 2, 120, () => text(ctx, 'TORMENTA SOLAR', 0, 0, { size: 110, fill: FLAT.accent }));
   }, { mood: 'mystery' });
 }
@@ -425,8 +425,8 @@ const TITLE_AT = PE(0, 5) + 0.1, TITLE_LEN = 3.4;
   const a = PS(3, 7), planes = SS(3, 7, 1);
   fx(a + 0.4, 'impact', 0.4, 1.3); fx(planes, 'ding', 0.6, 1.2);
   shot(a, (ctx, lt, d, t) => {
-    ctx.fillStyle = '#000814'; ctx.fillRect(0, 0, W, H); for (let i = 0; i < 80; i++) { const r = rng(i + 77); ctx.fillStyle = 'rgba(255,255,255,0.7)'; ctx.fillRect(r() * W, r() * H, 2, 2); }
-    ctx.fillStyle = '#1d3557'; ctx.beginPath(); ctx.arc(960, 1500, 900, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#02030f'; ctx.fillRect(0, 0, W, H); starfield(ctx, t, 220, 77);
+    globeGrids(ctx, 960, 1560, 920, t * 0.4, { night: 0.7 });
     for (let i = 0; i < 3; i++) satellite(ctx, 400 + i * 560, 250 + Math.sin(t + i) * 30, 0.9, t + i, t > a + 0.5 && t < planes);
     transformer(ctx, 700, 860, 1, t, t > a + 0.5 && t < planes);
     if (t > planes) popIn(ctx, t, planes, 1350, 560, () => { shield(ctx, 0, 0, 1.4, t); text(ctx, 'PLANES DE PROTECCIÓN', 0, 220, { size: 56, fill: '#fff' }); });
@@ -443,7 +443,7 @@ const TITLE_AT = PE(0, 5) + 0.1, TITLE_LEN = 3.4;
       drawPerson(ctx, 560, 1000, 1.05, e0(t, { mouth: 'smile', talk: talking(t), handR: [120, -380], look: [1, -0.6] }), PEOPLE.cientifica);
       popIn(ctx, t, vig, 1300, 760, () => { card(ctx, -320, -60, 640, 120, '#fff', 60); text(ctx, 'VIGILAN EL SOL 24/7', 0, 0, { size: 56, fill: '#023047', lw: 0, shadow: false }); });
     } else {
-      bgFlat(ctx, t, '#000814', '#001d3d', 34);
+      ctx.fillStyle = '#02030f'; ctx.fillRect(0, 0, W, H); starfield(ctx, t, 220, 34);
       globeGrids(ctx, 700, 540, 340, t, { independent: true });
       popIn(ctx, t, prob, 1420, 540, () => { card(ctx, -380, -140, 760, 280, FLAT.accent, 40); text(ctx, 'MUY POCO', 0, -45, { size: 90, fill: FLAT.ink, lw: 0, shadow: false }); text(ctx, 'PROBABLE', 0, 55, { size: 100, fill: FLAT.ink, lw: 0, shadow: false }); });
     }
@@ -566,26 +566,6 @@ const TITLE_AT = PE(0, 5) + 0.1, TITLE_LEN = 3.4;
 }
 
 // ======================= ELEMENTOS PROPIOS =======================
-function sceneLivingRoom(ctx, t, o = {}) {
-  const on = o.lights ?? 1;
-  ctx.fillStyle = '#f2e8cf'; ctx.fillRect(0, 0, W, H); ctx.fillStyle = '#e9d8a6'; for (let x = 0; x < W; x += 120) ctx.fillRect(x, 0, 50, 860);
-  ctx.fillStyle = '#bc6c25'; ctx.fillRect(0, 860, W, 220);
-  // ventana con ciudad
-  ctx.save(); rrect(ctx, 1240, 150, 520, 380, 16); ctx.clip(); const g = ctx.createLinearGradient(0, 150, 0, 530); g.addColorStop(0, '#0b1640'); g.addColorStop(1, '#3a2470'); ctx.fillStyle = g; ctx.fillRect(1240, 150, 520, 380);
-  const r = rng(3); let bx = 1230; while (bx < 1770) { const bw = 50 + r() * 50, bh = 100 + r() * 140; ctx.fillStyle = '#1b1440'; ctx.fillRect(bx, 530 - bh, bw, bh); for (let wy = 530 - bh + 10; wy < 520; wy += 22) for (let wx = bx + 6; wx < bx + bw - 10; wx += 16) { if (on > 0.5 && Math.sin(wx * 5 + wy) > 0) { ctx.fillStyle = '#ffd166'; ctx.fillRect(wx, wy, 8, 10); } } bx += bw + 4; }
-  ctx.restore(); ctx.fillStyle = '#fff'; ctx.fillRect(1494, 150, 12, 380); ctx.fillRect(1240, 334, 520, 12);
-  // sillón, lámpara, ventilador de techo, tele
-  ctx.fillStyle = '#e76f51'; rrect(ctx, 440, 700, 760, 220, 50); ctx.fill(); rrect(ctx, 400, 760, 120, 200, 40); ctx.fill(); rrect(ctx, 1120, 760, 120, 200, 40); ctx.fill();
-  lampStand(ctx, 260, 860, on);
-  ctx.save(); ctx.translate(900, 60); ctx.fillStyle = '#6c757d'; ctx.fillRect(-6, 0, 12, 60); ctx.translate(0, 70); ctx.rotate(t * (on > 0.5 ? 9 : 9 * Math.max(0, 1 - (o.fanSlow || 1)))); ctx.fillStyle = '#adb5bd'; for (let i = 0; i < 4; i++) { ctx.rotate(Math.PI / 2); rrect(ctx, 0, -14, 220, 28, 14); ctx.fill(); } ctx.restore();
-  if (on > 0.5) { ctx.fillStyle = 'rgba(255,240,180,0.12)'; ctx.fillRect(0, 0, W, H); }
-}
-function lampStand(ctx, x, y, on) { if (on > 0.5) { const g = ctx.createRadialGradient(x, y - 420, 10, x, y - 300, 400); g.addColorStop(0, 'rgba(255,230,150,0.45)'); g.addColorStop(1, 'rgba(255,230,150,0)'); ctx.fillStyle = g; ctx.fillRect(x - 400, y - 800, 800, 800); } ctx.fillStyle = '#6c757d'; ctx.fillRect(x - 6, y - 400, 12, 400); ctx.fillRect(x - 60, y - 10, 120, 14); ctx.fillStyle = on > 0.5 ? '#ffd23f' : '#adb5bd'; ctx.beginPath(); ctx.moveTo(x - 80, y - 400); ctx.lineTo(x + 80, y - 400); ctx.lineTo(x + 50, y - 500); ctx.lineTo(x - 50, y - 500); ctx.fill(); }
-function sceneStreetDay(ctx, t, dim = 0) {
-  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, mix('#8ecae6', '#6c757d', dim)); g.addColorStop(1, mix('#caf0f8', '#adb5bd', dim)); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-  for (let i = 0; i < 9; i++) { const x = ((i * 260 - t * 30) % 2340 + 2340) % 2340 - 210, h = 360 + (i % 3) * 110; ctx.fillStyle = mix(['#ffb4a2', '#cdb4db', '#b5e48c', '#a2d2ff'][i % 4], '#6c757d', dim * 0.6); ctx.fillRect(x, 860 - h, 220, h); ctx.fillStyle = 'rgba(255,255,255,0.4)'; for (let r = 0; r < h / 90 - 1; r++) for (let c = 0; c < 3; c++) ctx.fillRect(x + 25 + c * 65, 860 - h + 30 + r * 90, 40, 50); }
-  ctx.fillStyle = '#adb5bd'; ctx.fillRect(0, 860, W, 60); ctx.fillStyle = '#495057'; ctx.fillRect(0, 920, W, 160);
-}
 function stopwatch(ctx, t, str) { ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(0, 0, 130, 0, Math.PI * 2); ctx.fill(); ctx.fillRect(-20, -170, 40, 40); ctx.strokeStyle = FLAT.coral; ctx.lineWidth = 14; ctx.beginPath(); ctx.arc(0, 0, 100, -Math.PI / 2, -Math.PI / 2 + (t * 2) % (Math.PI * 2)); ctx.stroke(); text(ctx, str, 0, 0, { size: 58, fill: FLAT.ink, lw: 0, shadow: false }); }
 function wifiIcon(ctx, x, y, s, t, ok) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.strokeStyle = '#fff'; ctx.lineCap = 'round'; for (let i = 0; i < 3; i++) { ctx.lineWidth = 22; ctx.globalAlpha = ok ? 1 : 0.4; ctx.beginPath(); ctx.arc(0, 60, 40 + i * 50, -Math.PI * 0.75, -Math.PI * 0.25); ctx.stroke(); } ctx.globalAlpha = 1; ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(0, 60, 16, 0, Math.PI * 2); ctx.fill(); if (!ok) { ctx.strokeStyle = '#ef233c'; ctx.lineWidth = 22; ctx.beginPath(); ctx.moveTo(-130, -110); ctx.lineTo(130, 110); ctx.stroke(); } ctx.restore(); }
 function cellTower(ctx, x, y, s, t) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.strokeStyle = '#adb5bd'; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(-70, 0); ctx.lineTo(0, -600); ctx.lineTo(70, 0); for (let i = 1; i < 6; i++) { ctx.moveTo(-70 + i * 12, -i * 100); ctx.lineTo(70 - i * 12, -i * 100); } ctx.stroke(); ctx.fillStyle = '#e9ecef'; for (const sx of [-1, 1]) rrect(ctx, sx * 40 - 15, -560, 30, 90, 8), ctx.fill(); for (let k = 0; k < 3; k++) { const p = (t * 0.8 + k / 3) % 1; ctx.strokeStyle = `rgba(255,255,255,${1 - p})`; ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(0, -600, 40 + p * 160, -0.6, 0.6); ctx.stroke(); ctx.beginPath(); ctx.arc(0, -600, 40 + p * 160, Math.PI - 0.6, Math.PI + 0.6); ctx.stroke(); } ctx.restore(); }
