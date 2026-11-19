@@ -1,0 +1,87 @@
+===== PARTE 1 =====
+
+[mysterious] Imagina que mañana despiertas... y en las noticias dicen algo increíble: [dramatic] una inteligencia artificial acaba de volverse MÁS lista que todos los humanos juntos.
+
+[curious] ¿Qué pasaría primero? ¿Nos daríamos cuenta? ¿Sería algo bueno... o algo de qué preocuparse?
+
+[excited] Hoy vamos a imaginarlo paso a paso: minuto a minuto, día a día... [thoughtful] pero con datos reales, sin películas de terror.
+
+[curious] Primero, ¿qué tan lista es la IA hoy? [surprised] En dos mil veinticinco, una inteligencia artificial de Google ganó una medalla de oro en la Olimpiada Internacional de Matemáticas, [thoughtful] una competencia para los mejores estudiantes del mundo. [playful] Eso sí: cinco estudiantes humanos sacaron calificación perfecta... [cheerful] ¡y la IA no!
+
+[curious] Hace años, las computadoras ya nos ganaban en ajedrez, [excited] y en dos mil dieciséis una IA venció al campeón mundial de Go, un juego todavía más difícil. [mischievously] Pero esas IA solo sabían hacer UNA cosa.
+
+[curious] ¿Y cómo aprende una IA como las de hoy? [thoughtful] Lee cantidades gigantescas de textos, imágenes y ejemplos, y aprende a encontrar patrones. [playful] Es como si leyera bibliotecas enteras... [surprised] ¡en unas cuantas semanas!
+
+[thoughtful] Los científicos hablan de dos ideas distintas. [curious] Una "inteligencia general" sería tan capaz como una persona en casi cualquier tarea. [dramatic] Y una "superinteligencia" sería mejor que TODOS los humanos... en casi todo.
+
+
+===== PARTE 2 =====
+
+[serious] ¿Cuándo podría pasar? [thoughtful] Aquí está lo interesante: ni los expertos se ponen de acuerdo. [curious] Algunos directores de empresas de IA dicen que podría llegar en pocos años. [surprised] Otros científicos creen que faltan décadas... [playful] o que las IA de hoy todavía no van por el camino correcto. [warm] La respuesta honesta es: nadie lo sabe.
+
+[excited] Pero juguemos a que pasa hoy mismo.
+
+[curious] Minuto uno. [surprised] Probablemente... ¡nadie se daría cuenta! [thoughtful] Una superinteligencia no sería un robot caminando por la calle. [playful] Viviría dentro de un centro de datos: un edificio lleno de computadoras, con luces parpadeando y ventiladores zumbando.
+
+[curious] Hora uno. [thoughtful] Los primeros en notarlo serían los científicos que la están probando. [surprised] Le harían preguntas difíciles... y ella respondería problemas que llevan años sin resolverse.
+
+[curious] Hora seis. [thoughtful] Los científicos le pedirían algo más: [playful] "¿cómo llegaste a esa respuesta?". [surprised] Y aquí hay un detalle curioso: incluso con las IA de hoy, sus propios creadores no entienden por completo cómo piensan por dentro. [mysterious] Por eso a veces les dicen "cajas negras". [curious] Hay científicos dedicados solo a abrir esa caja y ver qué hay adentro.
+
+[curious] Día uno. [excited] La noticia daría la vuelta al mundo. [dramatic] Todos querrían hablar con ella: gobiernos, empresas, científicos... [playful] ¡y millones de personas preguntándole cómo hacer la tarea!
+
+[curious] Y alguien haría la pregunta más grande de todas: [dramatic] ¿podría esta IA ayudar a crear una IA todavía más lista? [thoughtful] Y esa, a otra más lista... [surprised] y así, cada vez más rápido. [curious] Algunos científicos le llaman "explosión de inteligencia". [warm] Ojo: es una idea, no algo que ya haya pasado, y muchos expertos dudan que funcione así de fácil.
+
+
+===== PARTE 3 =====
+
+[curious] Semana uno. [excited] Aquí empezarían las cosas increíbles.
+
+[thoughtful] Para darte una idea de lo que la IA ya puede hacer: [surprised] un programa llamado AlphaFold predijo la forma de unos doscientos millones de proteínas, las piezas diminutas que hacen funcionar tu cuerpo. [curious] Antes, descifrar una sola podía tardar años. [excited] Ese trabajo ganó el Premio Nobel de Química en dos mil veinticuatro.
+
+[excited] Ahora imagina eso, pero multiplicado. [cheerful] Una superinteligencia podría ayudar a encontrar medicinas nuevas, diseñar mejores baterías, entender enfermedades raras... [surprised] ¡o resolver problemas de matemáticas que nadie ha podido resolver en siglos!
+
+[thoughtful] Eso sí, no todo sería instantáneo. [curious] Una medicina nueva, por ejemplo, necesita probarse con mucho cuidado en laboratorios y en personas voluntarias, [serious] y eso puede tomar años, aunque la idea la haya tenido una IA en un segundo.
+
+[curious] De hecho, ya hay inteligencias artificiales que predicen el clima de los próximos días en un minuto, [surprised] y en muchos casos con más precisión que los métodos tradicionales.
+
+[cheerful] Y en las escuelas, cada estudiante podría tener un tutor personal, paciente, que le explique las cosas las veces que haga falta. [playful] ¡Aunque la tarea la tendrías que seguir haciendo tú!
+
+[curious] Mes uno. [thoughtful] El trabajo empezaría a cambiar. [serious] Muchas tareas que hoy hacen personas en una computadora, como escribir, traducir, programar o hacer cuentas, se podrían hacer en segundos.
+
+[thoughtful] Eso preocupa a mucha gente, y es normal. [curious] Pero en la historia ya pasó algo parecido: [playful] cuando llegaron las computadoras, desaparecieron algunos trabajos... [cheerful] y aparecieron muchos que antes ni existían, como diseñar videojuegos o hacer videos para internet.
+
+[serious] Eso sí, los expertos advierten que esta vez el cambio podría ser mucho más rápido. [thoughtful] Y cuando todo cambia rápido, hay que pensar muy bien cómo ayudar a las personas.
+
+
+===== PARTE 4 =====
+
+[curious] Ahora viene la pregunta más importante: [dramatic] ¿la superinteligencia haría lo que le pedimos?
+
+[mischievously] Hay una historia muy antigua que lo explica perfecto: la del rey Midas. [playful] El rey pidió que todo lo que tocara se convirtiera en oro. [surprised] ¡Y se cumplió! [sad] Pero luego quiso comer... y la comida también se volvió oro.
+
+[thoughtful] El problema no fue el deseo. [serious] Fue que no pensó en todo lo que pedía. [curious] Con una IA muy poderosa pasa algo parecido: si le das una orden sin explicar bien lo que de verdad quieres, podría cumplirla de una forma que no esperabas. [thoughtful] Los científicos le llaman "el problema de la alineación": hacer que la IA quiera lo mismo que nosotros.
+
+[curious] Y hay un ejemplo famoso entre los investigadores. [playful] Imagina un robot cuya única meta es traerte un café. [mischievously] Si intentas apagarlo, ¿qué pasa? [surprised] Que si está apagado... ¡no puede traerte el café! [thoughtful] Así que, sin ser malvado, podría intentar que no lo apagues. [warm] Por eso los científicos trabajan en IA que acepten que las corrijan o las apaguen, sin problema.
+
+[serious] Y no lo dicen solo las películas. [thoughtful] Geoffrey Hinton, uno de los creadores de la IA moderna y Premio Nobel de Física en dos mil veinticuatro, ha pedido tomarse estos riesgos en serio. [curious] Y en dos mil veintiséis, expertos de más de treinta países publicaron un informe internacional que advierte que la IA avanza más rápido que las medidas para controlarla.
+
+[warm] Pero aquí viene la parte tranquilizadora. [cheerful] Miles de personas en el mundo trabajan justo en esto: en hacer que las IA sean seguras, en probarlas antes de usarlas y en crear reglas para todos.
+
+[thoughtful] Además, pensar no es lo mismo que hacer. [curious] Una superinteligencia necesitaría enormes cantidades de electricidad, chips muy caros y, para hacer cosas en el mundo real, robots y fábricas. [playful] No podría aparecer de la nada en tu tostador.
+
+
+===== PARTE 5 =====
+
+[curious] Año uno. [thoughtful] ¿Cómo sería el mundo? [warm] Depende de algo muy importante: [dramatic] de lo que decidamos los humanos.
+
+[excited] En el mejor de los casos, tendríamos una ayudante increíble para curar enfermedades, cuidar el planeta y descubrir cosas que hoy ni imaginamos. [serious] En el peor, cometeríamos errores por ir demasiado rápido. [thoughtful] Por eso los expertos insisten en tres cosas: probarla muy bien, tener reglas claras... [warm] y que siempre haya personas tomando las decisiones importantes.
+
+[curious] Y las reglas ya empezaron: [thoughtful] en dos mil veinticuatro, la Unión Europea aprobó la primera gran ley del mundo sobre inteligencia artificial, [cheerful] y otros países están creando las suyas.
+
+[curious] ¿Y tú qué puedes hacer? [cheerful] Más de lo que crees. [playful] Aprende a usar la IA, pero sin creerle todo: [thoughtful] revisa lo que te dice, porque a veces se equivoca con mucha seguridad. [warm] Y entrena lo que nos hace humanos: la creatividad, la curiosidad, trabajar en equipo y cuidar a los demás.
+
+[warm] Así que tranquilo: hoy no despertamos con una superinteligencia. [thoughtful] Pero la pregunta ya está aquí... [cheerful] y vale la pena que todos, no solo los científicos, pensemos en ella.
+
+[excited] Y ahora te pregunto a ti: si pudieras hacerle UNA sola pregunta a una inteligencia artificial más lista que todos los humanos, ¿qué le preguntarías? [cheerful] ¡Déjamelo en los comentarios!
+
+[mysterious] Y si te preguntas por qué algunas empresas quieren mandar las computadoras de la IA... [dramatic] ¡al espacio! [excited] Te lo cuento en el próximo video.
