@@ -283,7 +283,7 @@ function drawCounter(ctx, t, label, appear, bumpAt = []) {
   ctx.strokeStyle = OUT; ctx.lineWidth = 7; ctx.lineCap = 'round';
   const ha = t * 6; ctx.beginPath(); ctx.moveTo(-125, 0); ctx.lineTo(-125 + Math.cos(ha) * 24, Math.sin(ha) * 24); ctx.stroke();
   ctx.beginPath(); ctx.moveTo(-125, 0); ctx.lineTo(-125, -18); ctx.stroke();
-  ctx.font = '74px Lilita'; ctx.fillStyle = OUT; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.font = '74px Lilita'; const tw = ctx.measureText(label).width, fs = tw > 250 ? Math.floor(74 * 250 / tw) : 74; ctx.font = fs + 'px Lilita'; ctx.fillStyle = OUT; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   ctx.fillText(label, 40, 6);
   ctx.restore();
 }
