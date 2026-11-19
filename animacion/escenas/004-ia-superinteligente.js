@@ -667,6 +667,8 @@ const TITLE_AT = PE(0, 6) + 0.1, TITLE_LEN = 3.0;
     text(ctx, 'SIGUIENTE VIDEO', 500, 444, { size: 64, fill: '#fff' });
     ctx.fillStyle = 'rgba(255,255,255,0.12)'; ctx.beginPath(); ctx.arc(1500, 330, 150, 0, Math.PI * 2); ctx.fill();
     text(ctx, '¡SUSCRÍBETE!', 1500, 540, { size: 70, fill: FLAT.accent });
+    for (let i = 0; i < 24; i++) { const r = rng(i + 1500), p = (t * (0.1 + r() * 0.1) + r()) % 1; ctx.fillStyle = `rgba(255,224,102,${0.7 * Math.sin(p * Math.PI)})`; ctx.beginPath(); ctx.arc(r() * W, H - p * H, 4 + r() * 6, 0, Math.PI * 2); ctx.fill(); }
+    for (let i = 0; i < 3; i++) { const p = (t * 0.4 + i / 3) % 1; ctx.strokeStyle = `rgba(94,224,240,${0.6 * (1 - p)})`; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(1500, 330, 150 + p * 120, 0, Math.PI * 2); ctx.stroke(); }
     const fade = L(t, SCENE.duration - 1, SCENE.duration - 0.1); if (fade > 0) { ctx.fillStyle = `rgba(0,0,0,${fade})`; ctx.fillRect(0, 0, W, H); }
   }, { quiet: true, mood: 'happy' });
 }
