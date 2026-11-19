@@ -83,6 +83,13 @@ def sfx_tick(p=1.0, **_):
     return n * 0.8 + 0.4 * np.sin(2 * np.pi * 2600 * p * t) * adsr(len(t), 0.0005, 0.008)
 
 
+def sfx_crickets(p=1.0, **_):  # grillos: "nadie se dio cuenta"
+    t = t_axis(1.6)
+    chirp = np.sin(2 * np.pi * 4300 * p * t) * (np.sin(2 * np.pi * 30 * t) > 0.2)
+    env = ((t % 0.4) < 0.18).astype(float) * np.minimum(1, t / 0.05) * np.minimum(1, (1.6 - t) / 0.3)
+    return chirp * env * 0.35
+
+
 def sfx_yawn(p=1.0, **_):  # silbato deslizante hacia abajo
     t = t_axis(1.0)
     f = (900 - 560 * (t / 1.0) ** 0.8) * p * (1 + 0.025 * np.sin(2 * np.pi * 6 * t))
