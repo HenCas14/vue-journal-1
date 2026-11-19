@@ -1,0 +1,87 @@
+===== PARTE 1 =====
+
+[mysterious] Imagina que una noche miras al cielo... y ves una fila de puntitos brillantes moviéndose en línea recta. [surprised] No son estrellas. [dramatic] ¡Son computadoras!
+
+[curious] Suena a ciencia ficción, pero ya empezó. [excited] En dos mil veinticinco, una empresa llamada Starcloud mandó al espacio uno de los chips de inteligencia artificial más potentes del mundo... [surprised] ¡y hasta logró entrenar una pequeña inteligencia artificial allá arriba! [surprised] Y este año, Google lanzó su primer satélite de prueba para hacer lo mismo.
+
+[dramatic] Y SpaceX, la empresa de Elon Musk, pidió permiso para lanzar hasta UN MILLÓN de satélites... [curious] para llenar la órbita de computadoras.
+
+[thoughtful] Para que te des una idea: hoy funcionan alrededor de la Tierra más de diez mil satélites. [surprised] ¡Un millón serían decenas de veces más que todos los que existen ahora! [curious] Y no es el único plan: Starcloud pidió permiso para casi noventa mil, [excited] y en China ya hay satélites que procesan información en órbita.
+
+[excited] Así que hoy te pregunto: ¿qué pasaría si pusiéramos TODOS los centros de datos de inteligencia artificial en el espacio? [mischievously] La respuesta tiene cosas increíbles... [serious] y algunos problemas que nadie se imagina.
+
+
+===== PARTE 2 =====
+
+[curious] Primero, ¿qué es un centro de datos? [playful] Cada vez que le preguntas algo a una inteligencia artificial, tu pregunta no se queda en tu celular. [excited] ¡Viaja hasta un edificio gigante lleno de computadoras!
+
+[thoughtful] Ahí adentro hay miles de chips trabajando sin parar, día y noche.
+
+[curious] ¿Y qué hace un chip de inteligencia artificial? [playful] Imagina miles de calculadoras resolviendo operaciones al mismo tiempo, [excited] ¡millones de veces por segundo! [surprised] Y esos chips se calientan muchísimo. [playful] Tanto, que necesitan aire acondicionado, ventiladores enormes... y en muchos casos, agua para enfriarse.
+
+[curious] ¿Y cuánta electricidad gasta uno solo? [surprised] Según la Agencia Internacional de Energía, un centro de datos típico de inteligencia artificial puede consumir tanta electricidad como cien mil casas. [dramatic] ¡Y los más grandes que se están construyendo usarían hasta veinte veces más!
+
+[serious] Ahora viene el problema. [curious] En dos mil veinticuatro, los centros de datos usaron cerca del uno y medio por ciento de toda la electricidad del mundo. [dramatic] Y la Agencia Internacional de Energía calcula que para dos mil treinta esa cifra podría más que duplicarse. [surprised] ¡Sería casi lo que hoy consume un país entero como Japón!
+
+[thoughtful] Por eso, en algunos lugares, los vecinos se quejan de que los centros de datos usan demasiada agua y electricidad, y ocupan terrenos enormes. [curious] Entonces, a algunos científicos se les ocurrió una idea loca: [excited] ¿y si los mandamos al espacio?
+
+
+===== PARTE 3 =====
+
+[curious] ¿Por qué el espacio? [excited] Por el sol.
+
+[thoughtful] Aquí en la Tierra, los paneles solares tienen tres enemigos: la noche, las nubes y la atmósfera. [playful] Pero en el espacio, en la órbita correcta, ¡casi nunca se hace de noche! [surprised] Según Google, un panel solar en órbita puede producir hasta ocho veces más energía que en la Tierra.
+
+[curious] ¿Cuál es la órbita correcta? [thoughtful] Una que sigue la línea entre el día y la noche, como si el satélite volara siempre sobre el amanecer. [excited] ¡Así sus paneles casi nunca dejan de ver el sol!
+
+[excited] Además, en el espacio no necesitas terrenos, ni permisos para construir, ni pelearte con los vecinos. [playful] Hay espacio de sobra... literalmente.
+
+[curious] ¿Y cómo trabajarían juntas tantas computadoras? [thoughtful] El plan de Google es que los satélites vuelen en grupo, muy cerca unos de otros, a unos cuantos cientos de metros. [excited] ¡Y que se hablen entre ellos con rayos láser!
+
+[curious] ¿Y tu pregunta? [playful] Subiría al espacio y bajaría con la respuesta en menos de una centésima de segundo. [surprised] ¡Ni lo notarías!
+
+[curious] Y ahora, un mito que mucha gente cree: [mischievously] "en el espacio hace un frío terrible, así que enfriar las computadoras será facilísimo". [dramatic] Pues... no tanto.
+
+[thoughtful] En la Tierra, los ventiladores funcionan porque hay aire que se lleva el calor. [serious] Pero en el espacio no hay aire. [surprised] Es como estar dentro de un termo: el calor no tiene a dónde irse. [curious] La única forma de enfriarse es soltar el calor como luz invisible, con radiadores gigantes. [playful] Así que estos satélites necesitarían alas enormes: unas para recibir el sol... [excited] ¡y otras para sacar el calor!
+
+[surprised] Para un centro de datos grande, esas alas tendrían que medir lo mismo que varias canchas de fútbol.
+
+
+===== PARTE 4 =====
+
+[serious] Y aquí empiezan los problemas de verdad.
+
+[curious] Problema número uno: la radiación. [thoughtful] Fuera de la atmósfera, los chips reciben partículas que vienen del sol y del espacio. [surprised] ¡Pueden cambiar un cero por un uno en plena operación! [curious] Por eso Google bombardeó sus chips con un rayo de partículas en un laboratorio, para ver si aguantaban. [cheerful] Y resultaron más resistentes de lo que esperaban.
+
+[thoughtful] Aquí abajo casi no lo notamos, porque la Tierra tiene un escudo invisible: su campo magnético y la atmósfera. [curious] Allá arriba, los chips están mucho menos protegidos.
+
+[curious] Problema número dos: las reparaciones. [playful] En la Tierra, si una computadora falla, llega un técnico en unos minutos. [serious] En el espacio... no hay técnico. [thoughtful] Habría que usar robots, o simplemente aceptar que algunas piezas se van a descomponer.
+
+[curious] Y cuando un satélite se hace viejo, [thoughtful] lo bajan poco a poco hasta que cae y se quema en la atmósfera, [playful] como una estrella fugaz hecha a propósito.
+
+[curious] Problema número tres: el precio. [dramatic] Subir cada kilo al espacio todavía cuesta muchísimo dinero. [thoughtful] Google calcula que la idea empieza a tener sentido cuando lanzar sea mucho más barato, quizá a mediados de la década de dos mil treinta.
+
+[serious] Y problema número cuatro: el cielo. [thoughtful] Si de verdad lanzáramos cientos de miles de satélites, habría más basura espacial y más riesgo de choques. [sad] Y los astrónomos ya se quejan de que los satélites brillantes arruinan sus fotos del universo.
+
+[serious] Los científicos temen algo llamado efecto en cadena: [dramatic] si dos satélites chocan, se rompen en miles de pedazos... [thoughtful] y esos pedazos pueden chocar con otros satélites, y así sucesivamente. [curious] Por eso cada satélite nuevo debe poder esquivar la basura y bajar solo cuando termine su trabajo.
+
+[curious] ¿Y si TODOS los centros de datos se fueran al espacio? [dramatic] Harían falta miles y miles de lanzamientos de cohetes. [surprised] Y el cielo nocturno cambiaría para siempre: veríamos ríos de luces moviéndose sobre nuestras cabezas.
+
+
+===== PARTE 5 =====
+
+[curious] Entonces, ¿esto va a pasar de verdad? [thoughtful] Ya hay pruebas reales. [excited] China lanzó en dos mil veinticinco los primeros satélites de una "constelación de cómputo", que procesan información directamente en órbita. [curious] Google planea más satélites de prueba, y SpaceX dice que quiere empezar a lo grande en los próximos años.
+
+[serious] Pero muchos expertos creen que, por ahora, mandar centros de datos enormes al espacio es carísimo y muy difícil. [thoughtful] Lo más probable es que primero veamos pequeñas computadoras en órbita, y que los centros de datos gigantes sigan aquí, en la Tierra, por bastante tiempo.
+
+[curious] Y mientras tanto, en la Tierra también buscan ideas creativas. [surprised] Microsoft probó un centro de datos sumergido en el mar, frente a Escocia, ¡dentro de un tubo gigante! [excited] Y lo más curioso: sus computadoras fallaron mucho menos que las de tierra firme.
+
+[thoughtful] Y en países fríos como Finlandia, el calor que sueltan los centros de datos se usa para calentar casas. [cheerful] ¡Las computadoras se convierten en calefacción!
+
+[curious] ¿Y por qué tanta prisa? [dramatic] Porque los chips de inteligencia artificial más avanzados son tan valiosos que hay una verdadera carrera por ellos. [surprised] ¡Algunos países incluso limitan a quién se los pueden vender! [thoughtful] Quien tenga más energía y más chips, podrá entrenar inteligencias artificiales más poderosas.
+
+[warm] Así que la próxima vez que le hagas una pregunta a una inteligencia artificial, acuérdate: [playful] tu pregunta viaja a un edificio lleno de chips calientes... [excited] y tal vez, algún día, viaje hasta el espacio.
+
+[excited] Y ahora te pregunto a ti: ¿te gustaría ver centros de datos en el cielo, o prefieres que se queden en la Tierra? [cheerful] ¡Cuéntamelo en los comentarios!
+
+[mysterious] Y si te preguntas qué pasaría si una inteligencia artificial fuera MÁS lista que todos los humanos... [mischievously] esa pregunta es tan grande... [excited] ¡que merece su propio video!
